@@ -33,6 +33,7 @@ const Form2 = () => {
                         htmlFor="model"
                         fontSize="sm"
                         fontWeight="md"
+                       
                         color="gray.700"
                         _dark={{
                             color: 'gray.50',
@@ -48,6 +49,7 @@ const Form2 = () => {
                             placeholder="Type to search..."
                             style={{ width: "600px" }}
                             value={formData.model} onChange={handleInputChange}
+                            maxWidth={555}
                         />
                         <ManListOptions />
                     </div>
@@ -179,7 +181,7 @@ const Form2 = () => {
                             focusBorderColor="brand.400"
                             shadow="sm"
                             size="sm"
-                            w="full"
+                           
                             rounded="md"
                             value={formData.accessories} onChange={handleInputChange}
                         />
@@ -232,7 +234,8 @@ const Form2 = () => {
                             focusBorderColor="brand.400"
                             shadow="sm"
                             size="sm"
-                            w="full"
+                        fluid
+                        maxWidth={555}
                             rounded="md"
                             value={formData.options} onChange={handleInputChange}
                         />

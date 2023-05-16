@@ -10,12 +10,6 @@ import Form3 from './form3';
 import Form4 from './form4';
 import jsPDF from 'jspdf'
 
-const steps = [
-  { title: 'Customer', description: 'Contact Details' },
-  { title: 'Model', description: 'Vehicle Selection' },
-  { title: 'Confirmation', description: 'Finance' },
-];
-
 export default function Manitou() {
 
   // ------- print pdf --------
@@ -85,6 +79,7 @@ export default function Manitou() {
   //-----------
   const [step, setStep] = useState(1);
   const [progress, setProgress] = useState(0);
+
   const [formData, setFormData] = useRecoilState(formDataState);
   const [fetchedData, setFetchedData] = useRecoilState(fetchedDataState);
 
@@ -93,6 +88,14 @@ export default function Manitou() {
       fetchData();
     }
   }, [formData.model]);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const handleBack = () => {
     setStep(step - 1);
@@ -111,18 +114,6 @@ export default function Manitou() {
     }
   };
 
-  const { activeStep } = useSteps({
-    index: step - 1, // Adjust the index to match the step
-    count: 4, // Total number of steps
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
 
   const fetchData = () => {
     fetch(`http://localhost:3001/api/boats/${formData.model}`)
@@ -135,37 +126,17 @@ export default function Manitou() {
       });
   };
 
-  console.log(formData);
-  console.log(fetchedData);
   return (
     <>
     <form>
       <Box borderWidth="1px"
         rounded="lg"
+        maxWidth={600}
         shadow="1px 1px 3px rgba(0,0,0,0.3)"
-        maxWidth={800}
-        p={6}
+              p={6}
         m="10px auto"
         as="form">
-        <Stepper size="lg" index={activeStep}>
-          {steps.map((step, index) => (
-            <Step key={index}>
-              <StepIndicator>
-                <StepStatus
-                  complete={<StepIcon />}
-                  incomplete={<StepNumber />}
-                  active={<StepNumber />}
-                />
-              </StepIndicator>
-
-              <Box flexShrink="0">
-                <StepTitle>{step.title}</StepTitle>
-                <StepDescription>{step.description}</StepDescription>
-              </Box>
-              <StepSeparator />
-            </Step>
-          ))}
-        </Stepper>
+        
         {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : step === 3 ? <Form3 /> : <Form4 />}
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">
@@ -207,7 +178,7 @@ export default function Manitou() {
         borderWidth="1px"
         rounded="lg"
         shadow="1px 1px 3px rgba(0,0,0,0.3)"
-        maxWidth={800}
+        maxWidth={450}
         p={6}
         m="10px auto"
         as="form">
@@ -253,37 +224,7 @@ export default function Manitou() {
               <Text color={'gray.500'}>Address: {formData.address}</Text>
             </Box>
           </Box>
-          <Box
-            w="100%"
-            height="100%"
-            bg={useColorModeValue('white', 'gray.800')}
-            boxShadow={'2xl'}
-            rounded={'md'}
-            overflow={'hidden'}>
-            <Image
-              h={'120px'}
-              w={'full'}
-              src={
-                'https://www.manitoupontoonboats.com/content/dam/global/en/manitou/my23/photo/lifestyle/MANITOU-MY23-Lifestyle-ShawnJohnson-DSC05616-16x9-RGB.jpg'
-              }
-              objectFit={'cover'}
-            />
-            <Box p={6}>
-              <Stack spacing={0} align={'center'} mb={5}>
-                <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-
-                </Heading>
-                <Text color={'gray.500'}>  {formData.model}</Text>
-              </Stack>
-              <Text color={'gray.500'}>Stock Number: {formData.stockNum}</Text>
-              <Text color={'gray.500'}>Year: {formData.year}</Text>
-              <Text color={'gray.500'}>Trade: {formData.trade}</Text>
-              <Text color={'gray.500'}>Deposit: {formData.deposit}</Text>
-              <Text color={'gray.500'}>Labour Hours: {formData.options}</Text>
-              <Text color={'gray.500'}>Trade: {formData.trade}</Text>
-
-            </Box>
-          </Box>
+        
         </HStack>
       </Box>
       </form>

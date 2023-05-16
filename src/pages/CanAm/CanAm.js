@@ -10,12 +10,6 @@ import Form2 from './form2';
 import Form3 from './form3';
 import jsPDF from 'jspdf'
 
-const steps = [
-  { title: 'Customer', description: 'Contact Details' },
-  { title: 'Model', description: 'Vehicle Selection' },
-  { title: 'Confirmation', description: 'Finance' },
-];
-
 export default function CanAm() {
 
   // ------- print pdf --------
@@ -68,6 +62,14 @@ export default function CanAm() {
     }
   }, [formData.model]);
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   const handleBack = () => {
     setStep(step - 1);
     setProgress(progress - 33.33);
@@ -85,19 +87,6 @@ export default function CanAm() {
     }
   };
 
-  const { activeStep } = useSteps({
-    index: step - 1, // Adjust the index to match the step
-    count: 3, // Total number of steps
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
   const fetchData = () => {
     fetch(`http://localhost:3000/api/models/${formData.model}`)
       .then((response) => response.json())
@@ -109,38 +98,17 @@ export default function CanAm() {
       });
   };
 
-  console.log(formData);
-  console.log(fetchedData);
   return (
     <>
       <form>
         <Box borderWidth="1px"
           rounded="lg"
           shadow="1px 1px 3px rgba(0,0,0,0.3)"
-          maxWidth={800}
+          maxWidth={650}
           p={6}
           m="10px auto"
           as="form">
-          <Stepper size="lg" index={activeStep}>
-            {steps.map((step, index) => (
-              <Step key={index}>
-                <StepIndicator>
-                  <StepStatus
-                    complete={<StepIcon />}
-                    incomplete={<StepNumber />}
-                    active={<StepNumber />}
-                  />
-                </StepIndicator>
-
-                <Box flexShrink="0">
-                  <StepTitle>{step.title}</StepTitle>
-                  <StepDescription>{step.description}</StepDescription>
-                </Box>
-
-                <StepSeparator />
-              </Step>
-            ))}
-          </Stepper>
+         
           {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : <Form3 />}
           <ButtonGroup mt="5%" w="100%">
             <Flex w="100%" justifyContent="space-between">
@@ -167,8 +135,8 @@ export default function CanAm() {
               {step === 3 ? (
                 <Button
                   w="7rem"
-                  colorScheme="red"
-                  variant="solid"
+                  colorScheme="teal"
+                  variant="outline"
                   onClick={ModifyPdf}
                 >
                   Print
@@ -182,13 +150,10 @@ export default function CanAm() {
           borderWidth="1px"
           rounded="lg"
           shadow="1px 1px 3px rgba(0,0,0,0.3)"
-          maxWidth={800}
+          maxWidth={350}
           p={6}
           m="10px auto"
           as="form">
-
-          <HStack spacing={6}>
-
             <Box w="100%" h="100%"
               bg={useColorModeValue('white', 'gray.800')}
               boxShadow={'2xl'}
@@ -228,38 +193,7 @@ export default function CanAm() {
                 <Text color={'gray.500'}>Address: {formData.address}</Text>
               </Box>
             </Box>
-            <Box
-              w="100%"
-              height="100%"
-              bg={useColorModeValue('white', 'gray.800')}
-              boxShadow={'2xl'}
-              rounded={'md'}
-              overflow={'hidden'}>
-              <Image
-                h={'120px'}
-                w={'full'}
-                src={
-                  'https://www.utvsportsmag.com/wp-content/uploads/2021/04/6_GBC_Dirt_Commander_2_USM-7947-scaled.jpg'
-                }
-                objectFit={'cover'}
-              />
-              <Box p={6}>
-                <Stack spacing={0} align={'center'} mb={5}>
-                  <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-
-                  </Heading>
-                  <Text color={'gray.500'}>  {formData.model}</Text>
-                </Stack>
-                <Text color={'gray.500'}>Stock Number: {formData.stockNum}</Text>
-                <Text color={'gray.500'}>Year: {formData.year}</Text>
-                <Text color={'gray.500'}>Trade: {formData.trade}</Text>
-                <Text color={'gray.500'}>Deposit: {formData.deposit}</Text>
-                <Text color={'gray.500'}>Labour Hours: {formData.options}</Text>
-                <Text color={'gray.500'}>Trade: {formData.trade}</Text>
-              </Box>
-            </Box>
-          </HStack>
-        </Box >
+        </Box>
       </form>
     </>
   );

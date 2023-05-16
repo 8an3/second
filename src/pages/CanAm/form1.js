@@ -56,7 +56,7 @@ const Form1 = () => {
         >
 
             <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
-                Can-Am Customer Information
+                Can-Am Client Information
             </Heading>
             <Flex>
                 <FormControl mr="5%">

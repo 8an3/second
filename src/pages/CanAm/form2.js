@@ -45,8 +45,9 @@ const Form2 = () => {
                             id="model"
                             name="model"
                             placeholder="Type to search..."
-                            style={{ width: "600px" }}
+                            style={{ width: "555px" }}
                             value={formData.model} onChange={handleInputChange}
+                     
                         />
                         <ListOptions />
                     </div>
@@ -231,7 +232,7 @@ const Form2 = () => {
                             focusBorderColor="brand.400"
                             shadow="sm"
                             size="sm"
-                            w="full"
+                            style={{ width: "555px" }}
                             rounded="md"
                             value={formData.options} onChange={handleInputChange}
                         />

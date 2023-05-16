@@ -39,3 +39,4796 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+section {
+  display: block;
+}
+.price-header {
+  margin-bottom: 0px;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-GS-40);
+}
+.bottom-aligned {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+h3 {
+  font: normal 24px/32px var(--font-bmw-light);
+ 
+  word-break: break-word;
+  overflow-wrap: break-word;
+  text-transform: uppercase;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0px;
+}
+.hidden {
+  display: none !important;
+}
+.price-header {
+  margin-bottom: 0px;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-GS-40);
+}
+.price-overview {
+    padding-top: var(--space-6);
+}
+.price-overview {
+  padding-top: var(--space-6);
+}
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.price-label {
+  overflow: hidden;
+  display: flex;
+  flex: 1 0 50%;
+  margin: 0px;
+  padding-bottom: var(--space-6);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+}
+
+
+.price-value {
+  font: normal 16px/24px var(--font-bmw-light);
+ 
+  word-break: break-word;
+  overflow-wrap: break-word;
+  flex: 1 0 50%;
+  margin-bottom: px;
+  padding-bottom: var(--space-6);
+  text-align: right;
+  
+}
+
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: 3.5em
+  
+}
+.price-taxes > .price-label, .price-taxes > .price-value {
+  padding-bottom: var(--space-8);
+}
+
+.price-label p {
+  font: normal 16px/24px var(--font-bmw-light);
+ 
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 0px;
+}
+
+
+.price-overview {
+  padding-top: var(--space-6);
+}
+.price-summary > .price-label.divider-line, .price-summary > .price-value.divider-line {
+  padding-top: var(--space-6);
+  border-top: 2px solid var(--color-GS-80);
+}
+.price-summary > .price-label p, .price-summary > .price-value {
+  
+}
+.price-label {
+  overflow: hidden;
+  display: flex;
+  flex: 1 0 50%;
+  margin: 0px;
+  padding-bottom: var(--space-6);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.price-summary > .price-label.divider-line, .price-summary > .price-value.divider-line {
+  padding-top: var(--space-6);
+  border-top: 2px solid var(--color-GS-80);
+}
+.price-summary > .price-label p, .price-summary > .price-value {
+  font: normal 20px/32px var(--font-bmw-bold);
+  
+}
+.bottom-aligned {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+
+
+
+
+
+
+
+
+<style>
+
+sf-cf-finance-widget[page="Header"] .sf-cf-total-instalment-content,
+sf-cf-finance-widget[page="Header"] .sf-cf-header-label button {
+    color: var(--sf-conx-color-GS-80);
+    font: normal 14px/20px var(--sf-conx-font-bmw-bold);
+}
+
+sf-cf-finance-widget[page="Header"] .sf-cf-header-label button:hover {
+  color: var(--sf-conx-color-PB-20);
+}
+
+ sf-cf-finance-page sf-cf-finance-widget[page="Header"] .sf-cf-header-label button {
+  padding: 0 var(--sf-conx-space-two) 0 0;
+  background: transparent right var(--sf-conx-info-icon-background);
+}
+
+sf-cf-finance-widget[page="Header"] .sf-cf-total-instalment-content {
+  padding-left: 0;
+  background: none;
+}
+
+.sf-cf-modal { display: none; }
+.sf-cf-modal[opened] {
+  display: block;
+}
+sf-cf-button[type='close'] {
+    display: none;
+}
+
+@media not print {
+  .sf-cf-print {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  div,
+  sf-cf-finance-widget[page="Header"] .sf-cf-total-instalment-content,
+  sf-cf-finance-widget[page="Header"] .sf-cf-header-label button {
+    font: normal 14px/20px var(--sf-conx-font-bmw-bold);
+  }
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+/* Remove default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove anchor underline */
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:host {
+  --sf-conx-active-shadow-first: var(--active-shadow-first);
+  --sf-conx-active-shadow-second: var(--active-shadow-second);
+  --sf-conx-active-slider-thumb-margin: var(--active-slider-thumb-margin);
+  --sf-conx-active-slider-thumb-size: var(--active-slider-thumb-size);
+  --sf-conx-arrow-icon: var(--arrow-icon);
+  --sf-conx-arrow-icon-horizontal-padding: var(--arrow-icon-horizontal-padding);
+  --sf-conx-arrow-icon-hover: var(--arrow-icon-hover);
+  --sf-conx-close-icon: var(--close-icon);
+  --sf-conx-button-icon-position: var(--button-icon-position);
+  --sf-conx-button-icon-size: var(--button-icon-size);
+  --sf-conx-button-secondary_-_background-color: var(--button-secondary_-_background-color);
+  --sf-conx-button-secondary_-_border: var(--button-secondary_-_border);
+  --sf-conx-button-secondary_-_color: var(--button-secondary_-_color);
+  --sf-conx-button-square-size: var(--button-square-size);
+  --sf-conx-size-1 : var(--size-1);
+  --sf-conx-size-2 : var(--size-2);
+  --sf-conx-size-3 : var(--size-3);
+  --sf-conx-size-4 : var(--size-4);
+  --sf-conx-size-5 : var(--size-5);
+  --sf-conx-size-6 : var(--size-6);
+  --sf-conx-size-7 : var(--size-7);
+  --sf-conx-size-8 : var(--size-8);
+  --sf-conx-size-9 : var(--size-9);
+  --sf-conx-size-10 : var(--size-10);
+  --sf-conx-size-11 : var(--size-11);
+  --sf-conx-size-12 : var(--size-12);
+  --sf-conx-size-13 : var(--size-13);
+  --sf-conx-size-14 : var(--size-14);
+  --sf-conx-checkmark: var(--checkmark);
+  --sf-conx-checkmark-white: var(--checkmark-white);
+  --sf-conx-checkbox-top: var(--checkbox-top);
+  --sf-conx-checkbox-right: var(--checkbox-right);
+  --sf-conx-color-DB-10: var(--color-DB-10);
+  --sf-conx-color-GR-80: var(--color-GR-80);
+  --sf-conx-color-GS-0: var(--color-GS-0);
+  --sf-conx-color-GS-10: var(--color-GS-10);
+  --sf-conx-color-GS-20: var(--color-GS-20);
+  --sf-conx-color-GS-30: var(--color-GS-30);
+  --sf-conx-color-GS-40: var(--color-GS-40);
+  --sf-conx-color-GS-50: var(--color-GS-50);
+  --sf-conx-color-GS-60: var(--color-GS-60);
+  --sf-conx-color-GS-70: var(--color-GS-70);
+  --sf-conx-color-GS-80: var(--color-GS-80);
+  --sf-conx-color-PB-10: var(--color-PB-10);
+  --sf-conx-color-PB-20: var(--color-PB-20);
+  --sf-conx-color-PB-30: var(--color-PB-30);
+  --sf-conx-color-WO-10: var(--color-WO-10);
+  --sf-conx-color-WO-20: var(--color-WO-20);
+  --sf-conx-color-blur: var(--color-blur);
+  --sf-conx-color-transparent: var(--color-transparent);
+  --sf-conx-default-border: var(--default-border);
+  --sf-conx-dialog-background: var(--dialog-background);
+  --sf-conx-dialog-blur: var(--dialog-blur);
+  --sf-conx-dialog-content: var(--dialog-content);
+  --sf-conx-dialog-icon-size: var(--dialog-icon-size);
+  --sf-conx-dialog-warn-icon: var(--dialog-warn-icon);
+  --sf-conx-dropdown-chevron-down: var(--dropdown-chevron-down);
+  --sf-conx-dropdown-chevron-up: var(--dropdown-chevron-up);
+  --sf-conx-error-warn-icon: var(--error-warn-icon);
+  --sf-conx-expand-arrow: var(--expand-arrow);
+  --sf-conx-font-bmw-bold: var(--font-bmw-bold);
+  --sf-conx-font-bmw-light: var(--font-bmw-light);
+  --sf-conx-font-bmw-regular: var(--font-bmw-regular);
+  --sf-conx-font-size-strong: var(--font-size-strong);
+  --sf-conx-grid-space: var(--grid-space);
+  --sf-conx-icon-size-l: var(--icon-size-l);
+  --sf-conx-icon-size-m: calc(var(--icon-size-m ) - 3px);
+  --sf-conx-icon-size-xl: var(--icon-size-xl);
+  --sf-conx-info-icon-background: var(--info-icon-background);
+  --sf-conx-input-size: var(--input-size);
+  --sf-conx-interaction-transition: var(--interaction-transition);
+  --sf-conx-line-height: var(--line-height);
+  --sf-conx-line-height-h4: var(--line-height-h4);
+  --sf-conx-link-icon-margin-right: var(--link-icon-margin-right);
+  --sf-conx-min-height: var(--min-height);
+  --sf-conx-modal-close-button-margin: var(--modal-close-button-margin);
+  --sf-conx-modal-close-icon-background: var(--modal-close-icon-background);
+  --sf-conx-modal-content-horizontal-padding: var(--modal-content-horizontal-padding);
+  --sf-conx-modal-content-vertical-padding: var(--modal-content-vertical-padding);
+  --sf-conx-modal-z-index: var(--modal-z-index);
+  --sf-conx-pagination-arrow-width: var(--pagination-arrow-width);
+  --sf-conx-pagination-next-arrow: var(--pagination-next-arrow);
+  --sf-conx-pagination-prev-arrow: var(--pagination-prev-arrow);
+  --sf-conx-paginator-dots-active: var(--paginator-dots-active);
+  --sf-conx-paginator-dots-hover: var(--paginator-dots-hover);
+  --sf-conx-paginator-dots-idle: var(--paginator-dots-idle);
+  --sf-conx-paginator-dots-margin: var(--paginator-dots-margin);
+  --sf-conx-paginator-dots-size-l: var(--paginator-dots-size-l);
+  --sf-conx-paginator-dots-size-m: var(--paginator-dots-size-m);
+  --sf-conx-paginator-dots-size-xl: var(--paginator-dots-size-xl);
+  --sf-conx-paginator-dots-spacing: var(--paginator-dots-spacing);
+  --sf-conx-pos: var(--pos);
+  --sf-conx-product-name-min-height: var(--product-name-min-height);
+  --sf-conx-sf-cf-icon-negative-margin: var(--sf-cf-icon-negative-margin);
+  --sf-conx-sf-cf-info-arrow-size: var(--sf-cf-info-arrow-size);
+  --sf-conx-sf-cf-video-width: var(--sf-cf-video-width);
+  --sf-conx-sf-checkbox-size: var(--sf-checkbox-size);
+  --sf-conx-sf-default-spacing: var(--sf-default-spacing);
+  --sf-conx-shadow-color-default: var(--shadow-color-default);
+  --sf-conx-shadow-default: var(--shadow-default);
+  --sf-conx-single-product-min-height: var(--single-product-min-height);
+  --sf-conx-slider-thumb-margin: var(--slider-thumb-margin);
+  --sf-conx-slider-thumb-size: var(--slider-thumb-size);
+  --sf-conx-slideshow-container-arrow-height: var(--slideshow-container-arrow-height);
+  --sf-conx-slideshow-container-arrow-width: var(--slideshow-container-arrow-width);
+  --sf-conx-slideshow-container-next-arrow: var(--slideshow-container-next-arrow);
+  --sf-conx-slideshow-container-next-arrow-hover: var(--slideshow-container-next-arrow-hover);
+  --sf-conx-slideshow-container-prev-arrow: var(--slideshow-container-prev-arrow);
+  --sf-conx-slideshow-container-prev-arrow-hover: var(--slideshow-container-prev-arrow-hover);
+  --sf-conx-space-four: var(--space-11);
+  --sf-conx-space-four-thirds: var(--space-6);
+  --sf-conx-space-one: var(--space-5);
+  --sf-conx-space-one-third: var(--space-2);
+  --sf-conx-space-six: var(--space-six);
+  --sf-conx-space-ten-thirds: var(--space-10);
+  --sf-conx-space-three: var(--space-10);
+  --sf-conx-space-two: var(--space-8);
+  --sf-conx-space-two-thirds: var(--space-3);
+  --sf-conx-space-seven: var(--space-7);
+  --sf-conx-spinner-blur: var(--spinner-blur);
+  --sf-conx-spinner-icon-blue: var(--spinner-icon-blue);
+  --sf-conx-spinner-page-size: var(--spinner-page-size);
+  --sf-conx-total-instalment-min-height: var(--total-instalment-min-height);
+  --sf-conx-wcag-outline: var(--wcag-outline);
+}
+
+
+    h1 {
+      color: var(--sf-conx-color-GS-80);
+      font: normal 48px/1 var(--sf-conx-font-bmw-light);
+      word-break: break-word;
+      overflow-wrap: break-word;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      color: var(--sf-conx-color-GS-80);
+      font: normal 32px/40px var(--sf-conx-font-bmw-light);
+      word-break: break-word;
+      overflow-wrap: break-word;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: var(--sf-conx-color-GS-80);
+      font: normal 24px/32px var(--sf-conx-font-bmw-light);
+      word-break: break-word;
+      overflow-wrap: break-word;
+      text-transform: uppercase;
+    }
+
+    h4 {
+      color: var(--sf-conx-color-GS-80);
+      font: normal 20px/28px var(--sf-conx-font-bmw-light);
+      word-break: break-word;
+      overflow-wrap: break-word;
+      text-transform: uppercase;
+    }
+
+    h5 {
+      color: var(--sf-conx-color-GS-80);
+      font: normal 16px/24px var(--sf-conx-font-bmw-light);
+      word-break: break-word;
+      overflow-wrap: break-word;
+      text-transform: uppercase;
+    }
+
+    h6 {
+      color: var(--sf-conx-color-GS-80);
+      font: normal 20px/28px var(--sf-conx-font-bmw-regular);
+      word-break: break-word;
+      margin-bottom: var(--sf-conx-space-two-thirds);
+    }
+
+    .h7 {
+      color: var(--sf-conx-color-GS-80);
+      font: normal 16px/24px var(--sf-conx-font-bmw-regular);
+      word-break: break-word;
+      overflow-wrap: break-word;
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--sf-conx-color-GS-80);
+      font: normal 14px/20px var(--sf-conx-font-bmw-bold);
+      display: inline-flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
+      max-width: 100%;
+      height: auto;
+      padding: 0;
+      border: none;
+      outline: none; /* Handle outline only on :focus */
+      background-color: transparent;
+      text-align: left;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--sf-conx-interaction-transition);
+
+      /* Disable text selection */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    a:hover,
+    .disclaimer a:hover {
+      color: var(--sf-conx-color-PB-20);
+    }
+
+    a:focus,
+    .disclaimer a:focus {
+      color: var(--sf-conx-color-GS-70);
+      outline: var(--sf-conx-wcag-outline);
+      outline-offset: -1px;
+    }
+
+    a:active,
+    .disclaimer a:active {
+      color: var(--sf-conx-color-GS-80);
+    }
+
+    p {
+      color: var(--sf-conx-color-GS-80);
+      font: normal 16px/24px var(--sf-conx-font-bmw-light);
+      margin-bottom: var(--sf-conx-space-one);
+    }
+
+    b,
+    strong {
+      font-family: var(--sf-conx-font-bmw-bold);
+    }
+
+
+:host {
+  --check-size: 29px;
+}
+
+sf-cf-button[type='close'] {
+  display: none;
+}
+
+.sf-cf-buttons {
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 1;
+  bottom: 0;
+  display: flex;
+  padding: var(--sf-conx-space-one) 0px;
+  border-top: var(--sf-conx-default-border);
+  margin: var(--sf-conx-space-one) calc(var(--sf-conx-modal-content-horizontal-padding) * -1) calc(var(--sf-conx-modal-content-vertical-padding) * -1);
+  background: var(--sf-conx-color-GS-0);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+button,
+input[type="button"],
+input[type="button"]:active,
+.button {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 14px/20px var(--sf-conx-font-bmw-bold);
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 100%;
+  height: var(--sf-conx-size-10);
+  padding: 0 var(--sf-conx-space-four-thirds);
+  border: none;
+  outline: none;
+  color: var(--sf-conx-color-GS-0);
+  cursor: pointer;
+  transition: var(--sf-conx-interaction-transition);
+
+  /* Disable text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button.disabled,
+button[disabled],
+input[type="button"].disabled,
+input[type="button"][disabled],
+.button.disabled,
+.button[disabled] {
+  pointer-events: none;
+  opacity: 0.3;
+  cursor: default;
+}
+
+button.not-disabled,
+button[not-disabled],
+input[type="button"].not-disabled,
+input[type="button"][not-disabled],
+.button.not-disabled,
+.button[not-disabled] {
+  pointer-events: auto;
+  opacity: 1;
+  cursor: pointer;
+}
+
+a.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.icon-left,
+.icon-right {
+  padding: 0 var(--sf-conx-size-10);
+}
+
+.icon-left iron-icon,
+.icon-right iron-icon {
+  position: absolute;
+  top: calc(50% - var(--sf-conx-button-icon-size) / 2);
+  width: var(--sf-conx-button-icon-size);
+  height: var(--sf-conx-button-icon-size);
+}
+
+.icon-left iron-icon {
+  left: var(--sf-conx-button-icon-position);
+}
+
+.icon-right iron-icon {
+  right: var(--sf-conx-button-icon-position);
+}
+
+.icon-reverse iron-icon {
+  transform: rotate(180deg);
+}
+
+.button-primary {
+  background-color: var(--sf-conx-color-PB-20);
+  color: var(--sf-conx-color-GS-0);
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: var(--sf-conx-color-PB-30);
+  color: var(--sf-conx-color-GS-0);
+}
+
+.button-secondary {
+   border: 1px solid var(--sf-conx-color-GS-80);
+   background-color: rgba(255, 255, 255, 0.7);
+   color: var(--sf-conx-color-GS-80);
+   transition: var(--sf-conx-interaction-transition), border 0.1s ease-in-out;
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+  border-width: 2px;
+}
+
+.button-secondary iron-icon {
+  color: var(--sf-conx-color-GS-80);
+}
+
+.button-tertiary {
+  background-color: var(--sf-conx-color-GS-70);
+  color: var(--sf-conx-color-GS-0);
+}
+
+.button-tertiary:hover,
+.button-tertiary:focus {
+  background-color: var(--sf-conx-color-GS-80);
+}
+
+.button-tertiary iron-icon {
+  color: var(--sf-conx-color-GS-0);
+}
+
+.button-text {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: var(--sf-conx-color-GS-80);
+  text-align: left;
+}
+
+.button-text:focus {
+  outline: var(--sf-conx-wcag-outline);
+  outline-offset: -1px;
+}
+
+.button-text:hover,
+.button-text:focus {
+  color: var(--sf-conx-color-GS-70);
+}
+
+.button-text iron-icon {
+  margin-right: var(--sf-conx-space-one-third);
+  transition: var(--sf-conx-interaction-transition);
+}
+
+.button-text:hover iron-icon,
+.button-text:focus iron-icon {
+  transform: translateX(var(--sf-conx-space-one-third));
+}
+
+.button-select {
+  border: 2px solid var(--sf-conx-color-GS-30);
+  background-color: var(--sf-conx-color-GS-0);
+  color: var(--sf-conx-color-GS-80);
+}
+
+.button-select:hover,
+.button-select:focus {
+  border-color: var(--sf-conx-color-GS-40);
+}
+
+.button-select.selected {
+  border-color: var(--sf-conx-color-PB-10);
+  color: var(--sf-conx-color-PB-20);
+}
+
+.button-select.selected:focus {
+  border-color: var(--sf-conx-color-PB-20);
+}
+
+.button-select.disabled {
+  border-color: var(--sf-conx-color-GS-70);
+  color: var(--sf-conx-color-GS-70);
+}
+
+.button-select.selected.single {
+  pointer-events: none;
+}
+
+.button-select iron-icon {
+  color: var(--sf-conx-color-transparent);
+}
+
+.button-select.selected iron-icon {
+  color: var(--sf-conx-color-PB-20);
+}
+
+.button-select.disabled iron-icon {
+  color: var(--sf-conx-color-GS-70);
+}
+
+.button-square {
+  width: var(--sf-conx-size-10);
+  height: var(--sf-conx-size-10);
+  padding: 0;
+  background-color: var(--sf-conx-color-GS-70);
+  color: var(--sf-conx-color-GS-0);
+}
+
+.button-square:hover,
+.button-square:focus {
+  background-color: var(--sf-conx-color-GS-80);
+}
+
+sf-cf-button[type = 'link'] {
+  display: flex;
+  align-items: center;
+}
+
+:host {
+    .link {
+      color: var(--sf-conx-color-GS-80);
+      font: normal 14px/20px var(--sf-conx-font-bmw-bold);
+      display: inline-flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
+      max-width: 100%;
+      height: auto;
+      padding: 0;
+      border: none;
+      outline: none; /* Handle outline only on :focus */
+      background-color: transparent;
+      color: var(--sf-conx-color-GS-80);
+      text-align: left;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--sf-conx-interaction-transition);
+
+      /* Disable text selection */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .link,
+    .link:active {
+      color: var(--sf-conx-color-PB-30);
+    }
+
+    .link:focus {
+      color: var(--sf-conx-color-GS-70);;
+      outline: var(--wcag-outline);
+      outline-offset: -1px;
+    }
+
+    .link.disabled,
+    .link[disabled] {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    .link iron-icon {
+      margin: 0 var(--sf-conx-link-icon-margin-right) 0 0;
+      align-self: flex-start;
+      flex-shrink: 0;
+      pointer-events: none;
+      transition: var(--interaction-transition);
+    }
+
+    /* Compensate for arrow padding within the SVG. */
+    .link .arrow {
+      margin-left: calc(var(--arrow-icon-horizontal-padding) * -1);
+    }
+
+    /* Helper classes */
+    .link-wrapper {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .link.fullwidth {
+      width: 100%;
+    }
+
+    .link.centered {
+      justify-content: center;
+    }
+
+    .link.reverse-icon iron-icon {
+      transform: scale(-1);
+    }
+
+    .change-link {
+      margin: var(--space-one) 0 0;
+    }
+
+    @media (hover: hover) {
+      .link:hover {
+        color: var(--sf-conx-color-PB-20);;
+      }
+
+      .link.animated:hover iron-icon:not(.disable-animation),
+      .link.animated:focus iron-icon:not(.disable-animation) {
+        transform: translateX(var(--sf-conx-link-icon-margin-right));
+      }
+
+      .link.animated.reverse-icon:hover iron-icon:not(.disable-animation),
+      .link.animated.reverse-icon:focus iron-icon:not(.disable-animation) {
+        transform: translateX(var(--sf-conx-link-icon-margin-right)) scale(-1);
+      }
+    }
+}
+sf-cf-accessories-disclaimer {
+  display: block;
+  padding: var(--sf-conx-space-one);
+  padding-left: calc(var(--sf-conx-space-one) * 2 + var(--sf-conx-icon-size-l));
+  margin-bottom: var(--sf-conx-space-two);
+  background: var(--sf-conx-info-icon-background);
+  background-color: var(--sf-conx-color-DB-10);
+  background-position: var(--sf-conx-space-one) var(--sf-conx-space-one);
+}
+
+sf-cf-accessories-disclaimer[disabled] {
+  display: none;
+}
+
+
+
+/* All the classes, id and tags are not set by us, this is added by the finance team */
+/* As soon as they will fix this, we will have to refactor this file */
+:host {
+  --dialog-blur: rgba(0, 0, 0, 0.2);
+  --dialog-background: var(--sf-conx-color-GS-0);
+  --dialog-content: var(--sf-conx-color-GS-30);
+  --dialog-icon-size: var(--sf-conx-icon-size-l);
+  --dialog-icon: {
+    padding-left: calc(var(--sf-conx-dialog-icon-size) + var(--sf-conx-space-one) * 2);
+    background-color: var(--sf-conx-dialog-content);
+    background-image: var(--sf-conx-dialog-warn-icon);
+    background-position-x: calc(var(--sf-conx-space-one));
+    background-position-y: center;
+    background-size: var(--sf-conx-dialog-icon-size);
+    background-repeat: no-repeat;
+  };
+}
+
+sf-cf-dialog {
+  display: none;
+}
+
+/* sf-cf-dialog */
+sf-cf-dialog[visible] {
+  position: fixed;
+  z-index: calc(var(--sf-conx-modal-z-index) + 1);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--sf-conx-dialog-blur);
+}
+
+sf-cf-dialog > .sf-cf-dialog {
+  display: grid;
+  grid-template-areas: 'title close' 'content content' 'buttons buttons';
+  grid-template-columns: calc(100% - var(--sf-conx-icon-size-xl)) min-content;
+  grid-row-gap: var(--sf-conx-space-one);
+  box-sizing: border-box;
+  max-width: 50%;
+  padding: 0;
+  background: var(--sf-conx-dialog-background);
+}
+
+sf-cf-dialog .sf-cf-dialog-title {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  grid-area: title;
+  box-sizing: border-box;
+  height: 100%;
+  padding: var(--sf-conx-space-two) 0 0 var(--sf-conx-space-two);
+  margin: 0;
+}
+
+sf-cf-dialog .sf-cf-dialog-content {
+  grid-area: content;
+  padding: 0 var(--sf-conx-space-two) var(--sf-conx-space-one);
+}
+
+sf-cf-dialog .sf-cf-button-container {
+  grid-area: buttons;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: right;
+  padding: var(--sf-conx-space-one) var(--sf-conx-space-two);
+  border-top: 1px solid  var(--sf-conx-color-GS-30);
+}
+
+sf-cf-dialog sf-cf-button[type='close'] {
+  display: block;
+  align-self: flex-start;
+  grid-area: close;
+}
+
+sf-cf-dialog sf-cf-button[type='close'] .close {
+  box-shadow: initial;
+}
+
+sf-cf-dialog sf-cf-button[type='cancel'] {
+  margin: 0 var(--sf-conx-space-two-thirds);
+}
+
+sf-cf-dialog .sf-confi-cancel {
+  border: var(--sf-conx-button-secondary_-_border);
+  background-color: var(--sf-conx-button-secondary_-_background-color);
+  color: var(--sf-conx-button-secondary_-_color);
+}
+
+sf-cf-dialog .sf-confi-cancel:hover {
+  border-width: 2px;
+  background-color: var(--sf-conx-button-secondary_-_background-color);
+  color: var(--sf-conx-button-secondary_-_color);
+}
+
+@media screen and (max-width: 520px) {
+  sf-cf-dialog > .sf-cf-dialog {
+    max-width: 100%;
+  }
+
+  sf-cf-dialog .sf-cf-button-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  sf-cf-dialog sf-cf-button[type='cancel'] {
+    margin: var(--sf-conx-space-one) 0;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 521px) and (max-width: 1024px) {
+  sf-cf-dialog > .sf-cf-dialog {
+    max-width: 75%;
+  }
+}
+
+
+:host {
+  --sf-conx-total-instalment-min-height: 2em;
+  --sf-conx-product-name-min-height: 3em;
+
+  --sf-conx-slider-thumb-size: 11px;
+  --sf-conx-slider-thumb-margin: -4px 0 0;
+  --sf-conx-active-shadow-first: 0 0 0 var(--sf-conx-space-one-third) #a1b6d8;
+  --sf-conx-active-shadow-second: 0 0 0 var(--sf-conx-space-two-thirds) #e2e7f1;
+  --sf-conx-active-slider-thumb-size: 19px;
+  --sf-conx-active-slider-thumb-margin: -8px 0 0;
+
+  --sf-conx-input-size: 50px;
+
+  --slider-thumb: {
+    -webkit-appearance: none;
+    position: relative;
+    width: var(--sf-conx-slider-thumb-size);
+    height: var(--sf-conx-slider-thumb-size);
+    border-radius: 50%;
+    margin: var(--sf-conx-slider-thumb-margin);
+    background: var(--sf-conx-color-PB-30);
+    cursor: pointer;
+    outline: none;
+    border-style: none;
+  };
+
+  --slider-thumb-hover: {
+    width: var(--sf-conx-active-slider-thumb-size);
+    height: var(--sf-conx-active-slider-thumb-size);
+    box-shadow: var(--sf-conx-active-shadow-first), var(--sf-conx-active-shadow-second);
+    margin: var(--sf-conx-active-slider-thumb-margin);
+  };
+
+  --slider-thumb-active: {
+    width: var(--sf-conx-active-slider-thumb-size);
+    height: var(--sf-conx-active-slider-thumb-size);
+    box-shadow: var(--sf-conx-active-shadow-second);
+    margin: var(--sf-conx-active-slider-thumb-margin);
+  };
+
+  --slider-track: {
+    width: 100%;
+    height: 3px;
+    background: var(--sf-conx-color-GS-30);
+    cursor: pointer;
+  };
+
+  --button-select: {
+    border: 2px solid var(--sf-conx-color-GS-30);
+    background-color: var(--sf-conx-color-GS-0);
+    color: var(--sf-conx-color-GS-80);
+  };
+
+  --button-select-selected: {
+    border: 2px solid var(--sf-conx-color-PB-20);
+    background-color: var(--sf-conx-color-GS-0);
+    color: var(--sf-conx-color-PB-20);
+  };
+}
+/* shared styles between con and confi */
+
+section.sf-cf-finance-compare {
+  display: flex;
+  flex-direction: column;
+}
+
+section.sf-cf-finance-compare section {
+  margin: 0 1ex;
+}
+
+.sf-cf-finance-compare-row.sf-cf-finance-compare-header {
+  justify-content: flex-end;
+}
+
+section.sf-cf-finance-compare section.sf-cf-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: inherit;
+  align-items: center;
+  flex-grow: 1;
+}
+
+section.sf-cf-finance-compare .sf-cf-finance-compare-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+section.sf-cf-finance-compare .sf-cf-finance-compare-row > * {
+  flex-grow: 1;
+  width: 50%;
+  max-width: 50%;
+  margin: 0 1ex;
+}
+
+section.sf-cf-finance-compare .sf-cf-finance-compare-row.sf-cf-finance-compare-header {
+  justify-content: flex-end;
+}
+
+section.sf-cf-finance-compare .sf-cf-edit-field-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.sf-cf-finance-compare .sf-cf-finance-compare-row.sf-cf-finance-compare-header {
+  margin-bottom: var(--sf-conx-space-four-thirds);
+}
+
+sf-cf-finance-compare-page sf-cf-button[type=close] {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100%;
+}
+
+sf-cf-finance-compare-page .sf-cf-finance-compare-header sf-cf-select select {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  width: 50%;
+  max-width: 285px;
+  height: var(--sf-conx-input-size);
+  padding: 0 var(--sf-conx-input-size) 0 var(--sf-conx-space-four-thirds);
+  border: 2px solid var(--sf-conx-color-GS-30);
+  border-radius: 0;
+  margin-top: 0;
+  margin-right: var(--sf-conx-grid-space);
+  background: var(--sf-conx-dropdown-chevron-down) no-repeat calc(100% - var(--sf-conx-space-four-thirds)) center;
+  outline: none;
+  cursor: pointer;
+}
+
+sf-cf-finance-compare-page .sf-cf-finance-details .sf-cf-content-key-value {
+  flex: 0 0 100%;
+}
+
+sf-cf-finance-compare-page .sf-cf-finance-details .sf-cf-summary-parameters > tbody > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: var(--sf-conx-default-border);
+  color: var(--sf-conx-color-GS-80);
+}
+
+sf-cf-finance-compare-page sf-cf-finance-product-configuration {
+  margin: 0 1ex;
+}
+
+sf-cf-finance-compare-page .sf-cf-finance-details .sf-cf-content-key {
+  flex-grow: 1;
+}
+
+sf-cf-finance-compare-page .sf-cf-finance-details .sf-cf-content-value {
+  padding-bottom: inherit;
+}
+
+sf-cf-finance-compare-page .sf-cf-edit-field-container > label {
+  min-width: 50%;
+}
+
+sf-cf-finance-compare-page .sf-cf-edit-field-container .sf-cf-input,
+sf-cf-finance-compare-page .sf-cf-edit-field-container .select-class {
+  width: 33%;
+  margin-top: 0;
+}
+
+sf-cf-finance-compare-page .sf-cf-grouped-params .sf-cf-edit-field-container .sf-cf-input,
+sf-cf-finance-compare-page .sf-cf-grouped-params .sf-cf-edit-field-container .select-class {
+  width: 100%;
+}
+
+sf-cf-finance-compare-page section.sf-cf-finance-compare section.sf-cf-buttons {
+  margin: var(--sf-conx-space-three) 0 var(--sf-conx-space-six) 0;
+}
+
+
+
+:host {
+  --sf-default-spacing: var(--sf-conx-space-two-thirds);
+}
+
+sf-cf-select[hidden],
+sf-cf-input[hidden],
+sf-cf-oneslider[hidden],
+sf-cf-checkbox[hidden],
+.sf-cf-content-key-value[hidden] {
+  display: none;
+}
+
+/* Close icon */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Finance details */
+
+sf-cf-finance-details {
+  display: block;
+  margin-bottom: var(--sf-conx-space-three);
+}
+
+.sf-cf-finance-details .sf-cf-headline {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: var(--sf-conx-sf-default-spacing);
+}
+
+.sf-cf-modal sf-cf-finance-page .sf-cf-total-instalment-content {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.sf-cf-market-ru .sf-cf-total-instalment-content {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.sf-cf-finance-details .sf-cf-total-instalment-content {
+  margin-top: var(--sf-conx-space-two);
+}
+
+sf-cf-finance-services-configuration .sf-cf-header-top {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+sf-cf-finance-services-configuration .sf-cf-content-key,
+.sf-cf-finance-details .sf-cf-content-key {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--sf-conx-sf-default-spacing) 0;
+  border-top: var(--sf-conx-default-border);
+}
+
+.sf-cf-finance-details .sf-cf-content-key .sf-cf-info-icon::before {
+  top: calc(var(--sf-conx-icon-size-m) - var(--sf-conx-sf-cf-info-arrow-size) + var(--sf-conx-sf-default-spacing));
+}
+
+.sf-cf-finance-details .sf-cf-content-key .sf-cf-info-icon.popup sf-cf-popup {
+  top: calc(var(--sf-conx-icon-size-m) + var(--sf-conx-sf-cf-info-arrow-size) + var(--sf-conx-sf-default-spacing));
+}
+
+.sf-cf-finance-details .sf-cf-finance-page-subheadline {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+sf-cf-finance-services-configuration .sf-cf-content-value,
+.sf-cf-finance-details .sf-cf-content-value {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: block;
+  padding-bottom: var(--sf-conx-sf-default-spacing);
+  color: var(--sf-conx-color-GS-80);
+}
+
+sf-cf-finance-services-configuration .sf-cf-service-parameters,
+sf-cf-finance-services-configuration .sf-cf-summary-parameters:nth-child(5) {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - var(--sf-conx-space-two));
+  margin-top: var(--sf-conx-space-two);
+  margin-bottom: var(--sf-conx-space-two);
+  margin-left: var(--sf-conx-space-two);
+}
+
+/* overwrite product selection dropdown */
+sf-cf-finance-services-configuration .sf-cf-finance-product sf-cf-select .sf-cf-edit-field-container {
+  display: block;
+}
+
+.sf-cf-finance-details .sf-cf-summary-parameters {
+  width: calc(100% - var(--sf-conx-space-two));
+  margin-top: var(--sf-conx-space-two);
+  margin-bottom: var(--sf-conx-space-two);
+  margin-left: var(--sf-conx-space-two);
+}
+
+sf-cf-finance-services-configuration .sf-cf-content-key-value,
+.sf-cf-finance-details .sf-cf-summary-parameters > tbody > * {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 calc(var(--sf-conx-grid-space) / 2);
+}
+
+@media screen and (max-width: 520px) {
+  .sf-cf-finance-details .sf-cf-summary-parameters {
+    margin-bottom: var(--sf-conx-space-two);
+  }
+  sf-cf-finance-services-configuration .sf-cf-service-parameters,
+  sf-cf-finance-services-configuration .sf-cf-summary-parameters:nth-child(5) {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 521px) {
+  .sf-cf-finance-details .sf-cf-summary-parameters > tbody {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--sf-conx-grid-space) / -2);
+  }
+
+  .sf-cf-finance-details .sf-cf-market-de .sf-cf-summary-parameters > tbody {
+    display: inline-flex;
+    flex-direction: row;
+    columns: 2;
+    column-gap: 0;
+  }
+
+  .sf-cf-finance-details .sf-cf-market-de .sf-cf-summary-parameters > tbody > [hidden] {
+    display: none;
+  }
+
+  .sf-cf-columns .sf-cf-market-de .sf-cf-product-details .sf-cf-content-key-value {
+    display: inline-table;
+    width: 100%;
+  }
+
+  sf-cf-finance-services-configuration .sf-cf-content-key-value,
+  .sf-cf-finance-details .sf-cf-market-de .sf-cf-summary-parameters > tbody > * {
+    display: flex;
+    flex-direction: column;
+  }
+
+  sf-cf-finance-services-configuration .sf-cf-content-key-value,
+  .sf-cf-finance-details .sf-cf-market-de .sf-cf-summary-parameters > tbody > tr.sf-cf-content-title-key-value {
+    width: 100%;
+  }
+}
+
+.sf-cf-finance-details .sf-cf-market-de .sf-cf-summary-parameters > tbody > tr.sf-cf-content-title-key-value {
+  margin-top: var(--sf-conx-space-ten-thirds);
+  margin-left: calc(var(--sf-conx-space-two) * -1);
+}
+
+sf-cf-finance-services-configuration .sf-cf-content-key-value,
+.sf-cf-finance-details .sf-cf-content-key-value {
+  flex: 0 0 50%;
+}
+
+.sf-cf-finance-details .sf-cf-title {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin: 0 0 var(--sf-conx-space-four-thirds) 0;
+}
+
+sf-cf-finance-services-configuration .sf-cf-legal,
+sf-cf-finance-services-configuration .sf-cf-disclaimer,
+.sf-cf-finance-details .sf-cf-legal,
+.sf-cf-finance-details .sf-cf-disclaimer {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+}
+
+.sf-cf-finance-details .sf-cf-disclaimer {
+  margin-block-start: 0;
+}
+
+sf-cf-chainman[inactive] {
+  display: none;
+}
+
+:host {
+  --sf-conx-total-instalment-min-height: 2.1em;
+  --sf-conx-product-name-min-height: 3em;
+
+  --sf-conx-slider-thumb-size: 11px;
+  --sf-conx-slider-thumb-margin: -4px 0 0;
+  --sf-conx-active-shadow-first: 0 0 0 var(--sf-conx-space-one-third) #a1b6d8;
+  --sf-conx-active-shadow-second: 0 0 0 var(--sf-conx-space-two-thirds) #e2e7f1;
+  --sf-conx-active-slider-thumb-size: 19px;
+  --sf-conx-active-slider-thumb-margin: -8px 0 0;
+
+  --sf-conx-input-size: 52px;
+  --sf-conx-sf-checkbox-size: 27px;
+  --sf-conx-footer-icon-size: 20px;
+
+  --sf-conx-slider-thumb: {
+    -webkit-appearance: none;
+    position: relative;
+    width: var(--sf-conx-slider-thumb-size);
+    height: var(--sf-conx-slider-thumb-size);
+    border-radius: 50%;
+    margin: var(--sf-conx-slider-thumb-margin);
+    background: var(--sf-conx-color-PB-30);
+    cursor: pointer;
+    outline: none;
+    border-style: none;
+  };
+
+  --slider-thumb-hover: {
+    width: var(--sf-conx-active-slider-thumb-size);
+    height: var(--sf-conx-active-slider-thumb-size);
+    box-shadow: var(--sf-conx-active-shadow-first), var(--sf-conx-active-shadow-second);
+    margin: var(--sf-conx-active-slider-thumb-margin);
+  };
+
+  --slider-thumb-active: {
+    width: var(--sf-conx-active-slider-thumb-size);
+    height: var(--sf-conx-active-slider-thumb-size);
+    box-shadow: var(--sf-conx-active-shadow-second);
+    margin: var(--sf-conx-active-slider-thumb-margin);
+  };
+
+  --slider-track: {
+    width: 100%;
+    height: 3px;
+    background: var(--sf-conx-color-GS-30);
+    cursor: pointer;
+  };
+
+  --sf-conx-grid-template:
+    "chain-man"
+    "headline"
+    "accessories"
+    "product-description"
+    "error-message"
+    "product-configuration"
+    "finance-details"
+    "finance-terms"
+    "services-configuration"
+    "insurances-configuration"
+    "disclaimer"
+    "buttons";
+
+  --sf-conx-grid-template-de:
+    "chain-man"
+    "headline"
+    "accessories"
+    "product-description"
+    "error-message"
+    "product-configuration"
+    "finance-details"
+    "disclaimer"
+    "finance-terms"
+    "services-configuration"
+    "insurances-configuration"
+    "buttons";
+
+  --sf-conx-grid-template-at:
+    "chain-man"
+    "headline"
+    "accessories"
+    "product-description"
+    "error-message"
+    "product-configuration"
+    "finance-details"
+    "finance-terms"
+    "services-configuration"
+    "insurances-configuration"
+    "disclaimer"
+    "motor-insurances"
+    "buttons";
+}
+
+sf-cf-finance-details {
+  display: block;
+  margin-bottom: var(--sf-conx-space-three);
+}
+
+/* grid-layout */
+sf-cf-finance-page {
+  display: grid;
+  grid-template-areas: var(--sf-conx-grid-template);
+}
+
+sf-cf-finance-page.sf-cf-market-de {
+  grid-template-areas: var(--sf-conx-grid-template-de);
+}
+
+sf-cf-finance-page.sf-cf-market-at {
+  grid-template-areas: var(--sf-conx-grid-template-at);
+}
+
+sf-cf-finance-page > sf-cf-chainman {
+  grid-area: chain-man;
+  padding-right: calc(var(--sf-conx-icon-size-xl) * 1.5);
+}
+
+sf-cf-finance-page > sf-cf-representative-example[open] {
+  grid-column: 1;
+  grid-row-start: headline;
+  grid-row-end: buttons;
+}
+
+sf-cf-finance-page > h3.sf-cf-finance-page-headline {
+  grid-area: headline;
+}
+
+sf-cf-finance-page > section.sf-cf-accessories-disclaimer {
+  grid-area: accessories;
+}
+
+sf-cf-finance-page > section.sf-cf-finance-product {
+  grid-area: product-description;
+}
+
+sf-cf-finance-page > sf-cf-error-message {
+  grid-area: error-message;
+}
+
+sf-cf-finance-page > div.sf-cf-columns,
+sf-cf-finance-page > section.sf-cf-finance-product-configuration {
+  grid-area: product-configuration;
+}
+
+sf-cf-finance-page > section.sf-cf-finance-details {
+  grid-area: finance-details;
+}
+
+sf-cf-finance-page > section.sf-cf-finance-terms {
+  grid-area: finance-terms;
+}
+
+sf-cf-finance-page > section.sf-cf-finance-services-configuration {
+  grid-area: services-configuration;
+}
+
+sf-cf-finance-page > section.sf-cf-finance-insurances-configuration {
+  grid-area: insurances-configuration;
+}
+
+sf-cf-finance-page > section.sf-cf-finance-motorInsurance {
+  grid-area: motor-insurances;
+}
+
+sf-cf-finance-page > section.sf-cf-finance-terms .sf-cf-motor-insurance {
+  margin-bottom: var(--sf-conx-space-four-thirds);
+}
+
+sf-cf-finance-page > section.sf-cf-finance-disclaimer {
+  grid-area: disclaimer;
+}
+
+sf-cf-finance-page > section.sf-cf-buttons {
+  grid-area: buttons;
+  z-index: 101;
+}
+
+/* Disable outlines */
+[tabindex] {
+  outline: none;
+}
+
+input[type=text] {
+  outline: none;
+}
+
+sf-cf-tooltip {
+  display: inline-flex;
+}
+
+/* Slider */
+.sf-cf-slider {
+  width: 100%;
+}
+
+/*
+* The 'height' property is needed in Edge so that the thumb's borders added extra for hover
+* and active states are fully visible.
+*/
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: var(--sf-conx-input-size);
+  background: transparent;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  border-color: transparent;
+}
+
+/*
+* https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+*/
+input[type=range]::-webkit-slider-thumb ,
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  position: relative;
+  width: var(--sf-conx-slider-thumb-size);
+  height: var(--sf-conx-slider-thumb-size);
+  border-radius: 50%;
+  margin: var(--sf-conx-slider-thumb-margin);
+  background: var(--sf-conx-color-PB-30);
+  cursor: pointer;
+  outline: none;
+  border-style: none;
+}
+/*
+* Css variables and mixins don't work in Edge for pseudo-elements
+*/
+input[type=range]::-ms-thumb {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  margin-top: -1px;
+  background: #0653b6;
+  cursor: pointer;
+  outline: none;
+  border-style: none;
+}
+
+input[type=range]::-webkit-slider-thumb:hover,
+input[type=range]::-moz-range-thumb:hover{
+  width: var(--sf-conx-active-slider-thumb-size);
+  height: var(--sf-conx-active-slider-thumb-size);
+  box-shadow: var(--sf-conx-active-shadow-first), var(--sf-conx-active-shadow-second);
+  margin: var(--sf-conx-active-slider-thumb-margin);
+}
+
+
+/*
+* Css variables and mixins don't work in Edge for pseudo-elements
+*/
+input[type=range]::-ms-thumb:hover {
+  width: 19px;
+  height: 19px;
+  box-shadow: 0 0 0 var(--sf-conx-space-one-third) #a1b6d8, 0 0 0 var(--sf-conx-space-two-thirds) #e2e7f1;
+  margin-top: -3px;
+}
+
+input[type=range]::-webkit-slider-thumb:active,
+input[type=range]::-moz-range-thumb:active {
+  width: var(--sf-conx-active-slider-thumb-size);
+  height: var(--sf-conx-active-slider-thumb-size);
+  box-shadow: var(--sf-conx-active-shadow-second);
+  margin: var(--sf-conx-active-slider-thumb-margin);
+}
+
+/*
+* Css variables and mixins don't work in Edge for pseudo-elements
+*/
+input[type=range]::-ms-thumb:active {
+  width: 19px;
+  height: 19px;
+  box-shadow: 0 0 0 var(--sf-conx-space-two-thirds) #e2e7f1;
+  margin-top: -3px;
+}
+
+input[type=range]::-webkit-slider-runnable-track,
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  background: var(--sf-conx-color-GS-30);
+  cursor: pointer
+}
+
+/*
+* Css variables and mixins don't work in Edge for pseudo-elements
+*/
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 3px;
+  overflow: visible;
+  background: var(--sf-conx-color-GS-30);
+  cursor: pointer;
+}
+
+sf-cf-checkbox input[type=checkbox] {
+  -webkit-appearance: none;
+  outline: 0;
+  margin: var(--sf-conx-space-four-thirds) 0 0 0;
+  background-color: var(--sf-conx-color-GS-0);
+  background-image: none;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+sf-cf-checkbox input[type=checkbox]:checked {
+  background-image: var(--sf-conx-checkmark);
+}
+
+.sf-cf-labels {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: var(--sf-conx-space-two-thirds);
+  color: var(--sf-conx-color-GS-80);
+  font-size: 14px;
+  order: -1;
+}
+
+.sf-cf-slider-value {
+  display: none;
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-left: var(--sf-conx-space-two-thirds);
+  color: var(--sf-conx-color-GS-80);
+}
+
+.select-class .sf-cf-title {
+  margin: var(--sf-conx-space-three) 0 var(--sf-conx-space-four-thirds) 0;
+}
+
+.sf-cf-edit-field-container {
+  margin-top: var(--sf-conx-space-one);
+}
+
+sf-cf-checkbox .sf-cf-edit-field-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+sf-cf-checkbox .sf-cf-edit-field-container label {
+  margin-top: var(--sf-conx-space-one);
+  margin-right: var(--sf-conx-grid-space);
+}
+
+.sf-cf-edit-field-container .sf-cf-input,
+.sf-cf-edit-field-container .sf-cf-checkbox,
+sf-cf-select select,
+.sf-cf-edit-field-container .select-class {
+  color: var(--sf-conx-color-GS-60);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--sf-conx-input-size);
+  border: 2px solid var(--sf-conx-color-GS-30);
+  border-radius: 0;
+  margin-top: var(--sf-conx-space-two-thirds);
+  margin-right: var(--sf-conx-grid-space);
+  outline: none;
+}
+
+.sf-cf-market-de sf-cf-finance-services-configuration .sf-cf-edit-field-container .select-class,
+.sf-cf-market-de sf-cf-finance-services-configuration sf-cf-select select {
+  max-width: inherit;
+}
+
+.sf-cf-edit-field-container .sf-cf-checkbox {
+  width: var(--sf-conx-sf-checkbox-size);
+  height: var(--sf-conx-sf-checkbox-size);
+  box-shadow: var(--sf-conx-shadow-default);
+  margin-top: var(--sf-conx-space-one);
+}
+
+.sf-cf-edit-field-container .sf-cf-input[disabled],
+.sf-cf-edit-field-container .sf-cf-checkbox[disabled],
+sf-cf-select select[disabled],
+.sf-cf-edit-field-container .select-class[disabled] {
+  opacity: 1;
+  box-shadow: inset 0px 0px 0px 1px var(--sf-conx-color-GS-40);
+  background-color: var(--sf-conx-color-GS-20);
+  color: var(--sf-conx-color-GS-50);
+  pointer-events: none;
+}
+
+.sf-cf-edit-field-container .sf-cf-input {
+  padding: 0 var(--sf-conx-space-four-thirds);
+  box-shadow: inset 0px 0px 0px 1px var(--sf-conx-color-GS-40);
+  border: 0px none;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.sf-cf-edit-field-container .sf-cf-checkbox:hover,
+.sf-cf-edit-field-container .sf-cf-checkbox:focus,
+.sf-cf-edit-field-container .sf-cf-input:hover,
+.sf-cf-edit-field-container .sf-cf-input:focus {
+  box-shadow: inset 0px 0px 0px 2px var(--sf-conx-color-GS-70);
+}
+
+.sf-cf-edit-field-container .sf-cf-input[disabled] {
+  box-shadow: inset 0px 0px 0px 1px var(--sf-conx-color-GS-40);
+  background-color: var(--sf-conx-color-GS-20);
+}
+
+sf-cf-select select,
+.sf-cf-edit-field-container .select-class {
+  padding: 0 var(--sf-conx-input-size) 0 var(--sf-conx-space-four-thirds);
+  background: var(--sf-conx-dropdown-chevron-down) no-repeat calc(100% - var(--sf-conx-space-four-thirds)) center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  border: 0px none;
+  box-shadow: inset 0px 0px 0px 1px var(--sf-conx-color-GS-40);
+}
+
+sf-cf-select select:focus,
+sf-cf-select select:hover,
+.sf-cf-edit-field-container .select-class:focus,
+.sf-cf-edit-field-container .select-class:hover,
+sf-cf-select select:focus-within:hover,
+.sf-cf-edit-field-container .select-class:focus-within:hover {
+  box-shadow: inset 0px 0px 0px 2px var(--sf-conx-color-GS-70);
+  background-image: var(--sf-conx-dropdown-chevron-down);
+}
+
+.sf-cf-edit-field-container > label {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  pointer-events: none;
+}
+
+.sf-cf-finance-product-configuration .sf-cf-edit-field-container > label sf-cf-tooltip {
+  pointer-events: auto;
+}
+
+sf-cf-select.sf-cf-product-selector .sf-cf-edit-field-container,
+.sf-cf-finance-product sf-cf-select .sf-cf-edit-field-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 0;
+  margin-bottom: var(--sf-conx-space-one);
+}
+sf-cf-select.select-class > .sf-cf-edit-field-container {
+  width: 50%;
+}
+
+sf-cf-select.sf-cf-product-selector .sf-cf-edit-field-container > label,
+.sf-cf-finance-product sf-cf-select .sf-cf-edit-field-container > label {
+  padding-right: var(--sf-conx-space-one);
+  word-break: normal;
+}
+
+.sf-cf-edit-field-container {
+            color: var(--sf-conx-color-GS-80);
+          font: normal 18px/25px var(--sf-conx-font-bmw-light);
+          word-break: break-word;
+          overflow-wrap: break-word;
+}
+
+.sf-cf-input .sf-cf-title {
+  position: relative;
+  display: flex;
+}
+
+.sf-cf-conflict-popup {
+  position: relative;
+}
+
+.sf-cf-input .sf-cf-info-icon.popup .sf-cf-popup::before,
+.sf-cf-edit-field-container .sf-cf-info-icon.popup .sf-cf-popup::before {
+  top: 100%;
+}
+
+.sf-cf-input .sf-cf-info-icon .sf-cf-popuptext,
+.sf-cf-edit-field-container  .sf-cf-info-icon .sf-cf-popuptext {
+  transform: translateY(calc(100% + 15px)); /* Unable to use variable space value */
+}
+
+.sf-cf-input .sf-cf-conflict-popup .sf-cf-popup,
+.sf-cf-edit-field-container .sf-cf-conflict-popup .sf-cf-popup {
+            color: var(--sf-conx-color-GS-80);
+          font: normal 18px/25px var(--sf-conx-font-bmw-light);
+          word-break: break-word;
+          overflow-wrap: break-word;
+  padding: var(--sf-conx-space-one);
+  border-radius: 3px;
+  box-shadow: 0 0 var(--sf-conx-space-one) 0 var(--sf-conx-shadow-color-default), 0 0 var(--sf-conx-space-one) 0 var(--sf-conx-shadow-color-default);
+  margin: var(--sf-conx-space-two-thirds) 0 var(--sf-conx-space-one);
+  background-color: var(--sf-conx-color-GS-0);
+  color: var(--sf-conx-color-GS-80);
+}
+
+.sf-cf-input .sf-cf-conflict-popup .sf-cf-popup {
+  margin-top: 0;
+}
+
+.sf-cf-input .sf-cf-conflict-popup::before,
+.sf-cf-edit-field-container .sf-cf-conflict-popup::before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: -10px;
+  border: var(--sf-conx-space-one-third) solid;
+  margin-left: 8px;
+  border-color: transparent transparent var(--sf-conx-color-GS-0) transparent;
+}
+
+.select-class .sf-cf-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sf-cf-input sf-cf-popup:not(.sf-cf-conflict-popup) > .sf-cf-popup {
+  --pos: 0; /* Initial position value */
+  bottom: var(--sf-conx-space-three);
+  left: calc(100% * var(--sf-conx-pos) - 50% + var(--sf-conx-space-one));
+  box-sizing: border-box;
+  width: 100%;
+  color: var(--sf-conx-color-GS-80);
+}
+
+.sf-cf-input sf-cf-popup:not(.sf-cf-conflict-popup) > .sf-cf-popup .sf-cf-popuptext {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: block;
+  text-align: center;
+}
+
+.sf-cf-input sf-cf-popup:not(.sf-cf-conflict-popup) {
+  display: block;
+}
+
+.sf-cf-input .sf-cf-conflict-popup .sf-cf-popup {
+  position: static;
+}
+
+/* Make sure only the last popup is displayed */
+.sf-cf-input .sf-cf-conflict-popup[show]:first-of-type,
+.sf-cf-edit-field-container .sf-cf-conflict-popup[show]:first-of-type {
+  display: block;
+}
+
+.sf-cf-input .sf-cf-conflict-popup[show]:first-of-type {
+  margin-bottom: var(--sf-conx-space-four-thirds);
+}
+
+sf-cf-button[type='close'] {
+  align-self: flex-end;
+}
+
+/* Heading and description */
+sf-cf-finance-page sf-cf-finance-product-name {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.sf-cf-finance-header,
+.sf-cf-finance-page-headline {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding-right: 35px;
+  margin-bottom: var(--sf-conx-space-two-thirds);
+}
+
+.sf-cf-finance-services-configuration .sf-cf-finance-page-headline {
+  margin: var(--sf-conx-space-two) 0;
+}
+
+.sf-cf-model-name {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+.sf-cf-productname {
+  margin-bottom: var(--sf-conx-sf-default-spacing);
+}
+
+sf-cf-finance-page .sf-cf-product-description {
+  overflow: hidden;
+  margin-bottom: var(--sf-conx-space-four-thirds);
+}
+
+.sf-cf-show-more-less {
+  cursor: pointer;
+}
+
+.sf-cf-show-more-less::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 8px;
+  margin-left: var(--sf-conx-space-two-thirds);
+  background: var(--sf-conx-expand-arrow);
+}
+
+.sf-cf-show-less::after {
+  transform: rotate(180deg);
+}
+
+.sf-cf-more {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: flex;
+  justify-content: center;
+}
+
+.sf-cf-finance-product-configuration-view {
+  margin-bottom: var(--sf-conx-space-two);
+}
+
+.sf-cf-modal-overview .sf-cf-description {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  margin: 0;
+}
+
+.sf-cf-modal-overview .sf-cf-description[collapsed] {
+  overflow: hidden;
+}
+
+.sf-cf-product-details .sf-cf-disclaimer {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+}
+
+.sf-cf-header-top {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+sf-cf-finance-product-configuration fieldset {
+  padding: 0;
+  border: 0;
+  margin: var(--sf-conx-space-one) 0 0 0;
+}
+
+sf-cf-finance-product-configuration legend {
+  padding: 0;
+}
+
+sf-cf-finance-page sf-cf-finance-services-configuration .sf-cf-header-top {
+  margin-top: 0;
+}
+
+sf-cf-finance-page sf-cf-total-instalment {
+  display: block;
+  min-height: var(--sf-conx-total-instalment-min-height);
+}
+
+.sf-cf-title {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+  margin: 0 0 var(--sf-conx-space-four-thirds) 0;
+}
+
+sf-cf-finance-services-configuration .sf-cf-title,
+.sf-cf-product-details .sf-cf-title {
+  margin-top: var(--sf-conx-sf-default-spacing);
+  margin-bottom: var(--sf-conx-sf-default-spacing);
+}
+
+.sf-cf-finance-terms .sf-cf-product-details .sf-cf-title {
+  margin: 0 0 var(--sf-conx-space-four-thirds) 0;
+}
+
+.sf-cf-finance-terms .sf-cf-legal {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+sf-cf-product-details[type = 'terms'].sf-cf-market-fr > section.sf-cf-finance-product {
+  margin-bottom: var(--sf-conx-space-four-thirds);
+}
+
+.sf-cf-legal {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Total Installment */
+
+sf-cf-finance-page sf-cf-total-instalment {
+  margin-top: var(--sf-conx-space-two);
+}
+
+sf-cf-finance-page sf-cf-total-instalment[type="Net"].sf-cf-hidden {
+  display: none;
+}
+
+sf-cf-finance-page sf-cf-total-instalment[type="Net"] .sf-cf-total-instalment-content {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+sf-cf-finance-page sf-cf-total-instalment .sf-cf-total-instalment-content {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 20px/28px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+sf-cf-finance-page sf-cf-total-instalment.sf-cf-market-ru .sf-cf-total-instalment-content {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Configuration */
+
+.sf-cf-slider-title {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+section.sf-cf-finance-product-configuration {
+  margin-top: calc(var(--sf-conx-space-four-thirds) + var(--sf-conx-space-one));
+}
+
+/* Buttons */
+
+.sf-confi-commit {
+  background-color: var(--sf-conx-color-PB-20);
+  color: var(--sf-conx-color-GS-0);
+}
+
+.sf-confi-commit:hover,
+.sf-confi-commit:focus {
+  background-color: var(--sf-conx-color-PB-30);
+  color: var(--sf-conx-color-GS-0);
+}
+
+.sf-confi-cancel {
+  border: 1px solid var(--sf-conx-color-GS-80);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: var(--sf-conx-color-GS-80);
+}
+
+.sf-confi-cancel:hover {
+  border-width: 2px;
+}
+
+sf-cf-button[type='toggle'] > .sf-confi-toggle {
+  border: 1px solid var(--sf-conx-color-GS-80);
+  background-color: var(--sf-conx-color-GS-0);
+  color: var(--sf-conx-color-GS-80);
+  margin-top: var(--sf-conx-space-four-thirds);
+}
+sf-cf-button[type='toggle'] > .sf-confi-toggle:hover {
+  border: 2px solid var(--sf-conx-color-GS-80);
+}
+
+
+sf-cf-button[type='toggle'][selected] > .sf-confi-toggle {
+  border: 2px solid var(--sf-conx-color-PB-20);
+  background-color: var(--sf-conx-color-GS-0);
+  color: var(--sf-conx-color-PB-20);
+  opacity: initial;
+  margin-top: var(--sf-conx-space-four-thirds);
+}
+
+.sf-cf-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: var(--sf-conx-space-two) 0;
+}
+
+sf-cf-button {
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+sf-cf-button[type='cancel'] {
+  margin-right: var(--sf-conx-space-two-thirds);
+}
+
+.sf-cf-param-group {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+  gap: var(--sf-conx-space-one);
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  margin: 0;
+}
+
+.sf-cf-grouped-params .sf-cf-edit-field-container {
+  margin: 0;
+}
+
+/* Details */
+
+sf-cf-finance-page .sf-cf-finance-details {
+  margin-top: var(--sf-conx-space-one);
+  margin-bottom: var(--sf-conx-space-one);
+}
+
+sf-cf-product-details[type="disclaimer"] .sf-cf-title {
+  margin-top: var(--sf-conx-space-two);
+}
+
+sf-cf-product-details[type="disclaimer"] .sf-cf-disclaimer {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Hidden elements */
+.sf-cf-more[hidden],
+sf-cf-info-icon[disabled],
+.sf-cf-product-details[disabled],
+sf-cf-select sf-cf-option[disabled],
+.sf-cf-finance-product-configuration-view[disabled],
+sf-cf-select.sf-cf-product-selector[disabled],
+.finance-error-disclaimer[disabled],
+.finance-headline[disabled],
+.sf-cf-finance-product-configuration .sf-cf-conflict-popup,
+.sf-cf-input sf-cf-popup:not(.sf-cf-conflict-popup) > .sf-cf-popup .sf-cf-popuptext:not(.show),
+sf-cf-finance-page .sf-cf-finance-page-adjust-financing,
+.sf-cf-modal-overview sf-cf-chainman[inactive] {
+  display: none;
+}
+
+.sf-cf-finance-product-configuration-view > sf-cf-button > button {
+  width: 285px;
+}
+
+sf-cf-error-message[show] {
+  padding: var(--sf-conx-space-two-thirds);
+  padding-left: calc(var(--sf-conx-icon-size-l) + var(--sf-conx-space-two-thirds) * 2);
+  background-color: var(--sf-conx-color-WO-20);
+  background-image: var(--sf-conx-error-warn-icon);
+  background-position-x: var(--sf-conx-space-two-thirds);
+  background-position-y: center;
+  background-size: var(--sf-conx-icon-size-l);
+  background-repeat: no-repeat;
+  color: var(--sf-conx-color-GS-80);
+  font: normal 14px/20px var(--sf-conx-font-bmw-light);
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: row;
+  min-height: var(--sf-conx-min-height);
+  margin-top: var(--sf-conx-space-two);
+}
+
+sf-cf-error-message[show] li {
+  display: block;
+}
+
+sf-cf-error-message[show] li::before {
+  content: '- ';
+}
+
+sf-cf-select select[error],
+.sf-cf-edit-field-container .select-class[error],
+.sf-cf-edit-field-container .sf-cf-input[error] {
+  border-color: var(--sf-conx-color-WO-10);
+}
+
+input[type="range"]::-ms-tooltip {
+  display: none;
+}
+
+@media screen and (max-width: 520px) {
+  sf-cf-finance-page sf-cf-total-instalment {
+    margin-top: var(--sf-conx-space-two);
+  }
+
+  .sf-cf-edit-field-container .sf-cf-input,
+  sf-cf-select select,
+  .sf-cf-edit-field-container .select-class {
+    max-width: none;
+    margin-right: 0;
+  }
+
+  .sf-cf-param-group {
+    display: none;
+  }
+
+  .sf-cf-grouped-params {
+    margin-top: var(--sf-conx-space-one);
+  }
+
+  sf-cf-select.select-class > .sf-cf-edit-field-container {
+    width: 100%;
+  }
+
+  sf-cf-finance-page > section.sf-cf-buttons {
+    flex-direction: column;
+  }
+
+  sf-cf-button[type='cancel'] {
+    margin-right: 0;
+    margin-bottom: var(--sf-conx-space-two-thirds);
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 521px) and (max-width: 1024px) {
+  .sf-cf-more {
+    margin-bottom: var(--sf-conx-space-three);
+  }
+
+  sf-cf-finance-page sf-cf-total-instalment {
+    margin-top: var(--sf-conx-space-two);
+  }
+
+  section.sf-cf-finance-product-configuration {
+    margin-top: 0;
+  }
+
+  sf-cf-finance-page .sf-cf-finance-details {
+    margin-top: var(--sf-conx-space-three);
+  }
+}
+
+sf-cf-finance-page .sf-cf-finance-details .sf-cf-summary-parameters {
+  margin-bottom: var(--sf-conx-space-one);
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  sf-cf-finance-page .sf-cf-product-description {
+    max-height: none !important;
+  }
+
+  sf-cf-finance-page sf-cf-total-instalment {
+    margin-top: var(--sf-conx-space-four-thirds);
+    margin-bottom: 0;
+  }
+
+  sf-cf-total-instalment {
+    margin-bottom: var(--sf-conx-space-one);
+  }
+
+  section.sf-cf-finance-product-configuration {
+    margin-top: var(--sf-conx-space-one);
+  }
+
+  sf-cf-button {
+    max-width: 285px;
+  }
+
+  input[type=range] {
+    height: var(--sf-conx-space-four);
+  }
+
+  .sf-cf-input sf-cf-popup:not(.sf-cf-conflict-popup) > .sf-cf-popup {
+    bottom: 55px;
+  }
+
+  /* Collapsed text */
+  .sf-cf-modal-overview .sf-cf-description[collapsed] {
+    max-height: none !important; /* Removes inline style */
+    overflow: unset;
+  }
+
+  .sf-cf-more {
+    display: none;
+  }
+
+  sf-cf-finance-page .sf-cf-columns {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'configuration details';
+    align-content: start;
+    grid-column-gap: 0;
+    box-sizing: border-box;
+  }
+
+  sf-cf-finance-page .sf-cf-columns > .sf-cf-summary-parameters:nth-child(1),
+  sf-cf-finance-page .sf-cf-columns > section.sf-cf-finance-product-configuration {
+    grid-area: configuration;
+    margin-top: var(--sf-conx-space-one);
+  }
+
+  sf-cf-finance-page .sf-cf-columns > .sf-cf-summary-parameters:nth-child(2),
+  sf-cf-finance-page .sf-cf-columns > section.sf-cf-finance-details {
+    grid-area: details;
+    padding-left: var(--sf-conx-space-one);
+    border-left: 1px solid var(--sf-conx-color-GS-30);
+  }
+
+  sf-cf-finance-page .sf-cf-finance-page-adjust-financing {
+    display: inherit;
+  }
+
+  sf-cf-finance-page .sf-cf-finance-page-adjust-financing,
+  sf-cf-finance-page .sf-cf-finance-details .sf-cf-finance-page-subheadline {
+    color: var(--sf-conx-color-GS-80);
+    font: normal 24px/32px var(--sf-conx-font-bmw-light);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin-top: 0;
+    margin-bottom: var(--sf-conx-space-two);
+  }
+
+  sf-cf-error-message[show] {
+    margin-top: 0;
+    margin-bottom: var(--sf-conx-space-one);
+  }
+}
+
+/* Tablet and Desktop */
+@media screen and (min-width: 521px) {
+  sf-cf-select.sf-cf-product-selector select,
+  .sf-cf-finance-product sf-cf-select select {
+    width: auto;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .sf-cf-finance-product-configuration-view > form > sf-cf-select.select-class > .sf-cf-edit-field-container {
+    padding-right: 8px;
+  }
+  .sf-cf-finance-product-configuration-view > form > sf-cf-input > .sf-cf-edit-field-container {
+    padding-right: 8px;
+    width: 50%;
+  }
+
+  .sf-cf-grouped-params {
+    display: flex;
+  }
+  .sf-cf-grouped-params > sf-cf-select:nth-child(1),
+  .sf-cf-grouped-params > sf-cf-input:nth-child(1) {
+    padding-right: 8px;
+  }
+  .sf-cf-grouped-params > sf-cf-select:nth-child(2),
+  .sf-cf-grouped-params > sf-cf-input:nth-child(2) {
+    padding-left: 8px;
+  }
+
+  .sf-cf-grouped-params > sf-cf-select > .sf-cf-edit-field-container {
+    width: 100%;
+  }
+
+  .sf-cf-finance-product-configuration-view {
+    padding-right: var(--sf-conx-space-three);
+  }
+
+  .sf-cf-grouped-params label {
+    display: none;
+  }
+
+  .sf-cf-grouped-params > * {
+    width: 50%;
+  }
+  .sf-cf-grouped-params > .sf-cf-edit-field-container {
+    width: 100%;
+  }
+}
+
+
+:host {
+  --sf-cf-info-arrow-size: var(--sf-conx-space-one-third);
+  --sf-cf-icon-negative-margin: calc(var(--sf-conx-space-two-thirds) * -1);
+}
+
+sf-cf-info-icon,
+sf-cf-video-icon[type="link"],
+.sf-cf-info-icon {
+  display: block;
+  box-sizing: content-box;
+  width: var(--sf-conx-icon-size-m);
+  height: var(--sf-conx-icon-size-m);
+  padding: 0 0 var(--sf-conx-space-two-thirds) var(--sf-conx-space-two-thirds);
+  background: var(--sf-conx-space-two-thirds) 0 var(--sf-conx-info-icon-background);
+  background-size: var(--sf-conx-icon-size-m);
+  cursor: pointer;
+}
+
+sf-cf-info-icon[disabled],
+sf-cf-info-icon:not([open]) .sf-cf-modal {
+  display: none;
+}
+
+.sf-cf-tooltip {
+  display: inline-block;
+  height: var(--sf-conx-icon-size-m);
+  margin: 0px 0 0 var(--sf-conx-space-one-third);
+}
+
+.sf-cf-info-icon.popup sf-cf-popup {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  position: absolute;
+  z-index: 100;
+  top: calc(var(--sf-conx-icon-size-l) + var(--sf-conx-sf-cf-info-arrow-size));
+  left: 0;
+  display: none;
+  width: 100%;
+  padding: var(--sf-conx-space-two-thirds);
+  border-radius: 3px;
+  box-shadow: 0 0 var(--sf-conx-space-one) 0 rgba(0, 0, 0, 0.2), 0 0 var(--sf-conx-space-one) 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--sf-conx-color-GS-0);
+  color: var(--sf-conx-color-GS-80);
+  cursor: initial;
+}
+
+.sf-cf-info-icon.popup sf-cf-popup[show] {
+  display: block;
+}
+
+.sf-cf-info-icon.popup:hover::before {
+  content: "";
+  position: absolute;
+  z-index: 101;
+  border: var(--sf-conx-sf-cf-info-arrow-size) solid;
+  margin-left: 7px;
+  border-color: transparent transparent var(--sf-conx-color-GS-0) transparent;
+}
+
+.sf-cf-info-icon.popup .sf-cf-popup {
+  max-height: 8.5em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sf-cf-info-icon.popup [show] .sf-cf-popup,
+.sf-cf-info-icon.popup:hover sf-cf-popup {
+  display: block;
+}
+
+sf-cf-popup:not([show]) {
+  display: none;
+}
+
+/* Desktop */
+@media screen and (min-width: 1275px) {
+  .sf-cf-info-icon.popup .sf-cf-popup::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+  }
+
+  .sf-cf-info-icon.popup .sf-cf-popup::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: var(--sf-conx-color-GS-30);
+  }
+
+  [data-parameterid="BreakdownOfPayments"] .sf-cf-info-icon.popup::before,
+  #BreakdownOfPayments .sf-cf-info-icon.popup::before {
+    border-color: transparent var(--sf-conx-color-GS-0) transparent transparent;
+    top: calc(var(--sf-conx-icon-size-l) / 2 - var(--sf-conx-sf-cf-info-arrow-size));
+    right: 69%;
+  }
+
+  [data-parameterid="BreakdownOfPayments"] .sf-cf-info-icon.popup sf-cf-popup,
+  #BreakdownOfPayments .sf-cf-info-icon.popup sf-cf-popup {
+    position: fixed;
+    top: 150px;
+    left: auto;
+    width: 33%;
+  }
+
+  .sf-cf-finance-details .sf-cf-content-key [trackingname="Payment Summary"] .sf-cf-info-icon.popup::before {
+    border-color: transparent var(--sf-conx-color-GS-0) transparent transparent;
+    top: calc(var(--sf-conx-icon-size-l) / 2);
+    right: 71%;
+  }
+
+  .sf-cf-finance-details .sf-cf-content-key [trackingname="Payment Summary"] .sf-cf-info-icon.popup sf-cf-popup {
+    top: -350px;
+    left: 29%;
+  }
+
+  .sf-cf-finance-details .sf-cf-content-key [trackingname="Payment Summary"] .sf-cf-info-icon.popup .sf-cf-popup,
+  [data-parameterid="BreakdownOfPayments"] .sf-cf-info-icon.popup .sf-cf-popup,
+  #BreakdownOfPayments .sf-cf-info-icon.popup .sf-cf-popup {
+    max-height: 100%;
+  }
+}
+
+sf-cf-finance-widget .sf-cf-header-headline,
+sf-cf-finance-calculator .sf-cf-modal,
+sf-cf-calculator-icon,
+sf-cf-finance-widget > .sf-cf-modal,
+.app-header sf-cf-info-icon:not([open]) .sf-cf-modal {
+  display: none;
+}
+
+.sf-cf-total-instalment,
+.sf-cf-total-instalment-content {
+  display: flex;
+  align-items: center;
+}
+
+.sf-cf-header-label button,
+ sf-cf-total-instalment[type="SummaryHeader"] .sf-cf-total-instalment-content {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 14px/20px var(--sf-conx-font-bmw-bold);
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: none;
+  outline: none; /* Handle outline only on :focus */
+  background-color: transparent;
+  color: var(--sf-conx-color-GS-80);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--sf-conx-interaction-transition);
+
+  /* Disable text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: auto;
+  min-height: var(--sf-conx-size-5);
+  color: inherit;
+}
+
+
+
+.header-navigation .sf-cf-header-label button,
+.header-navigation .sf-cf-total-instalment-content {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 14px/17px var(--sf-conx-font-bmw-bold);
+}
+
+.sf-cf-total-instalment-content {
+  flex-wrap: wrap;
+}
+
+.sf-cf-header-label button:focus,
+.sf-cf-total-instalment-value:focus,
+.sf-cf-total-instalment-value:focus + sf-cf-finance-product-frequency {
+  color: var(--sf-conx-color-GS-70);
+}
+
+@media (hover: hover) {
+  con-header .sf-cf-header-label button:hover,
+  con-header .sf-cf-total-instalment-content:hover {
+    color: var(--sf-conx-color-GS-70);
+    background-image: var(--sf-conx-arrow-icon-hover);
+    background-position-x: calc(var(--sf-conx-link-icon-margin-right) - var(--sf-conx-arrow-icon-horizontal-padding));
+  }
+}
+
+.sf-cf-total-instalment-content sf-cf-finance-product-frequency {
+  margin-right: var(--sf-conx-space-one-third);
+}
+
+/* MOBILE & TABLET: MQ 1 & 2 & 3 */
+@media screen and (max-width: 1024px) {
+  sf-cf-total-instalment[type="SummaryHeader"] .sf-cf-header-label button,
+  sf-cf-total-instalment[type="SummaryHeader"] .sf-cf-total-instalment,
+  sf-cf-total-instalment[type="SummaryHeader"] .sf-cf-total-instalment-content {
+    align-items: flex-start;
+  }
+
+  sf-cf-finance-widget[page="Header"] .sf-cf-total-instalment-content, sf-cf-finance-widget[page="Header"] .sf-cf-header-label {
+    font: normal 14px/20px var(--sf-conx-font-bmw-bold);
+  }
+
+  sf-cf-total-instalment[type="SummaryHeader"] .sf-cf-header-label button,
+  sf-cf-total-instalment[type="SummaryHeader"] .sf-cf-total-instalment-content {
+    --sf-conx-icon-size-l: 17px;
+    min-height: 0;
+    background-position: -3px -2px;
+    background-size: var(--sf-conx-icon-size-l);
+  }
+
+  sf-cf-total-instalment[type="SummaryHeader"] .sf-cf-total-instalment-content sf-cf-info-icon {
+    margin-top: -2px;
+  }
+
+  sf-cf-total-instalment[type="SummaryHeader"] .sf-cf-header-label button:hover,
+  sf-cf-total-instalment[type="SummaryHeader"] .sf-cf-total-instalment-content:hover {
+    background-position-x: 2px;
+  }
+
+  sf-cf-total-instalment[type="SummaryHeader"] sf-cf-info-icon {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+
+:host {
+  --sf-conx-spinner-icon-blue: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCiAgICAgd2lkdGg9IjMwMC4wMDAwMDBwdCIgaGVpZ2h0PSIzMDAuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCAzMDAuMDAwMDAwIDMwMC4wMDAwMDAiDQogICAgIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiPg0KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLDI5OS4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiDQogICAgICAgZmlsbD0iIzFjNjlkNCIgc3Ryb2tlPSJub25lIj4NCiAgICAgICAgPHBhdGggZD0iTTEzMzUgMjk2MyBjLTI0OSAtMzIgLTQ3NSAtMTE3IC02ODAgLTI1NyAtMTA4IC03MyAtMjc5IC0yNDEgLTM1Ng0KLTM1MSAtMTY1IC0yMzMgLTI2NCAtNTIxIC0yNzEgLTc5MCBsLTMgLTkwIDM1IC0zIGMxOSAtMiA4NiAtMSAxNDggMyBsMTEyIDcNCjAgNTYgYzAgNzUgMjIgMjA5IDUwIDMwMSA2OSAyMzIgMjIzIDQ1MiA0MjMgNjAyIDE1NSAxMTcgMzg2IDIwOSA1NjUgMjI0IDEyNA0KMTEgMTEyIC02IDExMiAxNjAgbDAgMTQ1IC01MiAtMSBjLTI5IC0xIC02NiAtNCAtODMgLTZ6Ii8+DQogICAgICAgIDxwYXRoIGQ9Ik0yNzYzIDE1MjMgbC04MyAtNCAwIC02MyBjMCAtMzUgLTcgLTEwMiAtMTUgLTE0OSAtODggLTUwMyAtNDY4DQotODg1IC05NjUgLTk3MSAtNTEgLTkgLTExMyAtMTYgLTEzOCAtMTYgbC00NCAwIDcgLTE0NyBjNCAtODIgOCAtMTQ5IDkgLTE1MA0KMSAtMSA0OSAzIDEwNyA4IDYxMyA1MyAxMTM3IDUwMiAxMjg5IDExMDMgMjkgMTEzIDU4IDM1MSA0NyAzODEgLTcgMTYgLTEyIDE2DQotMjE0IDh6Ii8+DQogICAgPC9nPg0KPC9zdmc+);
+
+  --expand-arrow: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDE3LjYyMUwzLjkzODk2IDkuNTYxMDNMNi4wNjA5NiA3LjQzOTAzTDEyIDEzLjM3OUwxNy45MzkgNy40MzkwM0wyMC4wNjEgOS41NjEwM0wxMiAxNy42MjFaIiBmaWxsPSIjMjYyNjI2Ii8+Cjwvc3ZnPg==") no-repeat;
+
+  --dialog-warn-icon: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjExIiBzdHJva2U9IiNCQkIiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiM0RDRENEQiIGQ9Ik0xMSAxNGgyVjdoLTJ2N3ptMCA0aDJ2LTJoLTJ2MnptMS0xOEM1LjM3MyAwIDAgNS4zNzMgMCAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMlMxOC42MjcgMCAxMiAweiI+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4K");
+  --error-warn-icon: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjExIiBzdHJva2U9IiNmZmFkMWYiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNmZmFkMWYiIGQ9Ik0xMSAxNGgyVjdoLTJ2N3ptMCA0aDJ2LTJoLTJ2MnptMS0xOEM1LjM3MyAwIDAgNS4zNzMgMCAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMlMxOC42MjcgMCAxMiAweiI+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4K");
+
+  --modal-close-icon-background: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB3aWR0aD0iMTcuNjgiIGhlaWdodD0iNTAiID48ZyBpZD0iY2xvc2UiIHZpZXdCb3g9IjAgMCA1MCA1MCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE1Ljg4OTgzMSwtMC40MjM3Mjg4MSkiIHN0eWxlPSJmaWxsOiMyNjI2MjYiPjxwYXRoIGQ9Ik0gMTguMjgyLDE2LjE2MSAzMy44NCwzMS43MTggMzEuNzE5LDMzLjgzOCAxNi4xNiwxOC4yODMgWiIgIC8+PHBhdGggZD0iTSAzMy44MzksMTguMjgyIDE4LjI4MiwzMy44NCAxNi4xNjIsMzEuNzE5IDMxLjcxNywxNi4xNiBaIiAvPjwvZz48L3N2Zz4=") no-repeat;
+
+  --checkmark-white: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuOTk5OTYgMTkuNjIxTDMuOTM4OTYgMTMuNTYxTDYuMDYwOTYgMTEuNDM5TDkuOTk5OTYgMTUuMzc5TDE3LjkzOSA3LjQzODk2TDIwLjA2MSA5LjU2MDk2TDkuOTk5OTYgMTkuNjIxWiIgZmlsbD0iI2ZmZmZmZiIvPgo8L3N2Zz4=");
+
+  --arrow-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid meet' focusable='false' style='pointer-events: none; display: block; width: 100%25; height: 100%25;'%3E%3Cg%3E%3Cpath d='M9.56096 20.061L7.43896 17.939L13.379 12L7.43896 6.06103L9.56096 3.93903L17.621 12L9.56096 20.061Z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  --arrow-icon-hover: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid meet' focusable='false' style='pointer-events: none%3b display: block%3b width: 100%25%3b height: 100%25%3b'%3e%3cg%3e%3cpath fill='%231c69d4' d='M9.56096 20.061L7.43896 17.939L13.379 12L7.43896 6.06103L9.56096 3.93903L17.621 12L9.56096 20.061Z'%3e%3c/path%3e%3c/g%3e%3c/svg%3e");
+
+  --sf-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid meet' focusable='false' style='pointer-events: none; display: block; width: 100%25; height: 100%25;'%3E%3Cg%3E%3Cpath d='M12 5.4C15.6395 5.4 18.6 8.3605 18.6 12C18.6 15.6395 15.6395 18.6 12 18.6C8.3605 18.6 5.4 15.6395 5.4 12C5.4 8.3605 8.3605 5.4 12 5.4ZM12 4C7.582 4 4 7.582 4 12C4 16.4185 7.582 20 12 20C16.418 20 20 16.4185 20 12C20 7.582 16.418 4 12 4Z'%3E%3C/path%3E%3Cpath d='M13 7.5H11V9.5H13V7.5ZM13 11.5H11V16.5H13V11.5Z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") no-repeat;
+  --sf-info-icon-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid meet' focusable='false' style='pointer-events: none; display: block; width: 100%25; height: 100%25;'%3E%3Cg%3E%3Cpath fill='%231c69d4' d='M12 5.4C15.6395 5.4 18.6 8.3605 18.6 12C18.6 15.6395 15.6395 18.6 12 18.6C8.3605 18.6 5.4 15.6395 5.4 12C5.4 8.3605 8.3605 5.4 12 5.4ZM12 4C7.582 4 4 7.582 4 12C4 16.4185 7.582 20 12 20C16.418 20 20 16.4185 20 12C20 7.582 16.418 4 12 4Z'%3E%3C/path%3E%3Cpath fill='%231c69d4' d='M13 7.5H11V9.5H13V7.5ZM13 11.5H11V16.5H13V11.5Z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") no-repeat;
+
+  --slideshow-container-next-arrow: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIHdpZHRoPSIxOSIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDE5IDMwIiBmaWxsPSIjNGQ0ZDRkIj48cGF0aCBkPSJNMy44IDBMMCAzLjc1IDExLjQgMTUgMCAyNi4yNSAzLjggMzAgMTkgMTV6Ij48L3BhdGg+PC9nPjwvc3ZnPg==") no-repeat;
+  --slideshow-container-next-arrow-hover: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIHdpZHRoPSIxOSIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDE5IDMwIiBmaWxsPSIjMTAxMDEwIj48cGF0aCBkPSJNMy44IDBMMCAzLjc1IDExLjQgMTUgMCAyNi4yNSAzLjggMzAgMTkgMTV6Ij48L3BhdGg+PC9nPjwvc3ZnPg==") no-repeat;
+  --slideshow-container-prev-arrow: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIHdpZHRoPSIxOSIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDE5IDMwIiBmaWxsPSIjNGQ0ZDRkIj48cGF0aCBkPSJNMTUuMiAwTDE5IDMuNzUgNy42IDE1IDE5IDI2LjI1IDE1LjIgMzAgMCAxNXoiPjwvcGF0aD48L2c+PC9zdmc+") no-repeat;
+  --slideshow-container-prev-arrow-hover: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIHdpZHRoPSIxOSIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDE5IDMwIiBmaWxsPSIjMTAxMDEwIj48cGF0aCBkPSJNMTUuMiAwTDE5IDMuNzUgNy42IDE1IDE5IDI2LjI1IDE1LjIgMzAgMCAxNXoiPjwvcGF0aD48L2c+PC9zdmc+") no-repeat;
+  --pagination-prev-arrow: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48cGF0aCBmaWxsPSIjNEQ0RDREIiBkPSJNMjcgMzNsMi0yLTYtNiA2LTYtMi0yLTggOHoiPjwvcGF0aD48L3N2Zz4K") no-repeat;
+  --pagination-next-arrow: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48cGF0aCBmaWxsPSIjNEQ0RDREIiBkPSJNMjMgMzNsLTItMiA2LTYtNi02IDItMiA4IDh6Ij48L3BhdGg+PC9zdmc+Cg==") no-repeat;
+
+  --close-icon: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.7175 5.0508L14.9492 3.28247L10 8.23247L5.05083 3.28247L3.2825 5.0508L8.2325 9.99997L3.2825 14.9491L5.05083 16.7175L10 11.7675L14.9492 16.7175L16.7175 14.9491L11.7675 9.99997L16.7175 5.0508Z' fill='%23666666'/%3E%3C/svg%3E%0A") no-repeat;
+}
+
+
+:host {
+  --sf-conx-single-product-min-height: 300px;
+
+  --sf-conx-product-overview-grid-template:
+    "chain-man"
+    "product-title"
+    "total-instalment-net"
+    "total-instalment"
+    "product-description"
+    "video"
+    "summary-parameters"
+    "finance-services"
+    "finance-insurances"
+    "title" /* The next arrangement sounds strange, I know. */
+    "disclaimer-legal"
+    "title-legal"
+    "disclaimer";
+
+  --sf-conx-product-overview-grid-template-services:
+    "product-title"
+    "total-instalment"
+    "summary-parameters"
+    "title"
+    "disclaimer-legal"
+    "title-legal"
+    "disclaimer";
+}
+
+/* Disable outlines */
+[tabindex] {
+  outline: none;
+}
+
+sf-cf-finance-widget .sf-cf-finance-page-headline {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 32px/40px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+sf-cf-finance-widget[page="Summary"] .sf-cf-finance-page-headline {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+sf-cf-finance-widget[page="Summary"] .sf-cf-finance-product-overview {
+  margin-bottom: 0;
+}
+
+.sf-cf-product-selector-title {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: none;
+  margin-bottom: var(--sf-conx-space-two);
+}
+
+.sf-cf-finance-product-overview sf-cf-chainman {
+  grid-area: chain-man;
+}
+
+.sf-cf-finance-product-overview sf-cf-representative-example {
+  grid-column: 1;
+  grid-row-start: product-title;
+  grid-row-end: disclaimer;
+}
+
+sf-cf-finance-page sf-cf-total-instalment[type="Net"].sf-cf-hidden {
+  display: none;
+}
+
+.sf-cf-finance-product-overview sf-cf-total-instalment[type="Net"] {
+  grid-area: total-instalment-net;
+}
+
+.sf-cf-finance-product-overview sf-cf-total-instalment {
+  grid-area: total-instalment;
+}
+
+.sf-cf-finance-product-overview .sf-cf-total-instalment-content {
+  justify-content: flex-start;
+}
+
+.sf-cf-finance-product-overview .sf-cf-product-description {
+  grid-area: product-description;
+  padding-bottom: var(--sf-conx-space-one);
+  border-bottom: var(--sf-conx-default-border);
+  margin-bottom: var(--sf-conx-space-two-thirds);
+}
+
+.sf-cf-finance-product-overview .sf-cf-market-de .sf-cf-product-description {
+  padding-top: var(--sf-conx-space-one);
+  padding-bottom: inherit;
+  border-top: var(--sf-conx-default-border);
+  border-bottom: inherit;
+}
+
+.sf-cf-finance-product-overview sf-cf-video-icon[type="embedded"] {
+  grid-area: video;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  margin-bottom: var(--sf-conx-space-four-thirds);
+}
+
+.sf-cf-finance-product-overview sf-cf-video-icon[type="embedded"] sf-cf-video,
+.sf-cf-finance-product-overview sf-cf-video-icon[type="embedded"] sf-cf-youtube-video {
+  width: 100%;
+  height: calc(var(--sf-conx-sf-cf-video-width) / 4 * 3);
+  background: var(--sf-conx-color-GS-30);
+}
+
+sf-cf-video video,
+sf-cf-youtube-video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+sf-cf-video-icon[type="link"] {
+  margin-left: 0;
+}
+
+sf-cf-video-icon[type="link"] a {
+  display: block;
+  width: var(--sf-conx-icon-size-l);
+  height: var(--sf-conx-icon-size-l);
+  text-decoration: none;
+}
+
+.sf-cf-finance-product-overview .sf-cf-market-de .sf-cf-product-description {
+  padding-top: var(--sf-conx-space-one);
+  padding-bottom: inherit;
+  border-top: var(--sf-conx-default-border);
+  border-bottom: inherit;
+}
+
+.sf-cf-finance-product-overview .sf-cf-disclaimer {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  margin: 0;
+  grid-area: disclaimer;
+}
+
+sf-cf-finance-widget[page="Summary"] .sf-cf-disclaimer {
+  margin-bottom: var(--sf-conx-space-one);
+}
+
+.sf-cf-finance-product-overview .sf-cf-finance-services {
+  grid-area: finance-services;
+}
+
+.sf-cf-finance-product-overview .sf-cf-finance-insurances {
+  grid-area: finance-insurances;
+}
+.sf-cf-finance-product-overview .sf-cf-motor-insurance {
+  grid-area: finance-insurances;
+}
+
+.sf-cf-finance-product-configuration-view {
+  margin-bottom: var(--sf-conx-space-two);
+}
+
+sf-cf-finance-services-configuration[editable="false"] sf-cf-select select[disabled],
+sf-cf-finance-services-configuration[editable="false"] sf-cf-button button[disabled] {
+  display: none;
+}
+
+sf-cf-finance-service-configuration .sf-cf-disclaimer {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  margin-bottom: var(--sf-conx-space-one);
+}
+
+.sf-cf-finance-product-overview .sf-cf-title:nth-of-type(1),
+.sf-cf-finance-product-overview > div > .sf-cf-disclaimer-title {
+  grid-area: title;
+}
+
+.sf-cf-finance-product-overview .sf-cf-title:nth-of-type(2),
+.sf-cf-finance-product-overview > div > .sf-cf-legal-title {
+  grid-area: title-legal;
+}
+
+.sf-cf-finance-product-overview .sf-cf-legal {
+  margin: 0;
+  grid-area: disclaimer-legal;
+}
+
+.sf-cf-finance-product-overview .sf-cf-total-instalment-value,
+.sf-cf-finance-product-overview sf-cf-finance-product-frequency {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 0;
+}
+
+.sf-cf-finance-product-overview .sf-cf-market-ru .sf-cf-total-instalment-value,
+.sf-cf-finance-product-overview .sf-cf-market-ru sf-cf-finance-product-frequency {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.sf-cf-finance-product-overview sf-cf-total-instalment[type="Net"] .sf-cf-total-instalment-content {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.sf-cf-finance-product-overview sf-cf-total-instalment .sf-cf-total-instalment-content {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.sf-cf-finance-product-overview .sf-cf-title {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-top: var(--sf-conx-space-one);
+}
+
+.finance-error-disclaimer {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  margin-bottom: var(--sf-conx-space-one);
+}
+
+.sf-cf-finance-product-overview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-top: 2px solid var(--sf-conx-color-GS-30);
+  border-bottom: 2px solid var(--sf-conx-color-GS-30);
+  margin-bottom: var(--sf-conx-space-two);
+}
+
+.sf-cf-finance-product-overview > div:nth-of-type(1) {
+  display: grid;
+  grid-template-areas: var(--sf-conx-product-overview-grid-template);
+  grid-column-gap: var(--sf-conx-space-one);
+  padding: var(--sf-conx-space-four-thirds) var(--sf-conx-space-four-thirds) 0;
+  border-right: 2px solid var(--sf-conx-color-GS-30);
+  border-left: 2px solid var(--sf-conx-color-GS-30);
+}
+
+.singleproduct  .sf-cf-finance-product-overview {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.sf-cf-finance-product-overview .sf-cf-summary-parameters {
+  display: block;
+  grid-area: summary-parameters;
+  width: calc(100% - var(--sf-conx-space-two));
+  margin-bottom: var(--sf-conx-space-four-thirds);
+  margin-left: var(--sf-conx-space-two);
+}
+
+.singleproduct .sf-cf-finance-product-overview .sf-cf-summary-parameters {
+  margin-bottom: 0;
+}
+
+.sf-cf-finance-product-overview .sf-cf-total-instalment {
+  margin-bottom: var(--sf-conx-space-two-thirds);
+}
+
+.sf-cf-finance-product-overview .sf-cf-total-instalment sf-cf-info-icon,
+.sf-cf-finance-product-overview .sf-cf-finance-product-title sf-cf-info-icon {
+  margin-left: 0;
+}
+
+.sf-cf-finance-product-overview .sf-cf-finance-product-title {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: var(--sf-conx-product-name-min-height);
+  margin-bottom: var(--sf-conx-space-one);
+  grid-area: product-title;
+}
+
+.sf-cf-finance-product-overview .sf-cf-summary-parameters .sf-cf-content-key {
+  margin-right: var(--sf-conx-space-one-third);
+}
+
+.sf-cf-finance-product-overview .sf-cf-summary-parameters .sf-cf-content-value {
+  display: inline-block;
+  color: var(--sf-conx-color-GS-80);
+}
+
+.sf-cf-finance-product-overview .sf-cf-summary-parameters td {
+  margin: 0;
+}
+
+.sf-cf-finance-product-overview .sf-cf-content-key-value {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  margin-bottom: 12px;
+}
+
+.sf-cf-finance-product-overview .sf-cf-content-key-value sf-cf-number {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.sf-cf-finance-product-overview .sf-cf-content-key {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+sf-cf-product-details[type="insurance"] .sf-cf-product-details,
+sf-cf-product-details[type="service"] .sf-cf-product-details {
+  display: grid;
+  grid-template-areas: var(--sf-conx-product-overview-grid-template-services);
+}
+
+sf-cf-product-details[type="insurance"] .sf-cf-legal,
+sf-cf-product-details[type="service"] .sf-cf-legal,
+sf-cf-product-details[type="insurance"] .sf-cf-disclaimer,
+sf-cf-product-details[type="service"] .sf-cf-disclaimer {
+  margin-bottom: var(--sf-conx-space-one);
+}
+
+.sf-cf-disclaimer,
+.sf-cf-legal {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+}
+
+/* Buttons */
+sf-cf-product-selector .sf-cf-finance-product-overview > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.sf-cf-product-selector-toggle-buttons .sf-cf-buttons {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin: 0 calc(var(--sf-conx-space-four-thirds) + var(--sf-conx-space-one));
+}
+
+.sf-cf-product-selector-toggle-buttons sf-cf-button {
+  padding-right: var(--sf-conx-space-one);
+}
+
+.sf-cf-product-selector-toggle-buttons sf-cf-button > button {
+  border: 2px solid var(--sf-conx-color-GS-30);
+  background-color: var(--sf-conx-color-GS-0);
+  color: var(--sf-conx-color-GS-80);
+}
+
+.sf-cf-product-selector-toggle-buttons sf-cf-button[selected] > button {
+  background-color: var(--sf-conx-color-GS-60);
+  border-color: var(--sf-conx-color-GS-60);
+  color: var(--sf-conx-color-GS-0);
+  cursor: default;
+}
+
+/* hide compare and toggle on Tablet and Mobile */
+@media screen and (max-width: 1024px) {
+  .sf-cf-product-selector-toggle-buttons,
+  .sf-cf-button.sf-cf-compare-financing {
+    display: none;
+  }
+}
+
+/* show compare on Desktop */
+@media screen and (min-width: 1025px) {
+  .sf-cf-button.sf-cf-compare-financing {
+    display: inline-block;
+  }
+}
+
+.sf-cf-button.sf-cf-compare-financing,
+.sf-cf-button.sf-cf-product-navigator,
+.sf-cf-button.sf-cf-adjust-financing {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 14px/20px var(--sf-conx-font-bmw-bold);
+  height: auto;
+  padding: var(--sf-conx-space-two) 0 var(--sf-conx-space-two) calc(var(--sf-conx-space-four-thirds) * 2);
+  border: 2px solid var(--sf-conx-color-GS-30);
+  border-top: 0;
+  background-color: initial;
+  color: var(--sf-conx-color-GS-80);
+  text-align: left;
+}
+
+.sf-cf-button.sf-cf-compare-financing,
+.sf-cf-button.sf-cf-product-navigator {
+  padding: var(--sf-conx-space-two) 0 0 calc(var(--sf-conx-space-four-thirds) * 2);
+  border-bottom: none;
+}
+
+.sf-cf-button.sf-cf-compare-financing:hover,
+.sf-cf-button.sf-cf-product-navigator:hover,
+.sf-cf-button.sf-cf-adjust-financing:hover {
+  color: var(--sf-conx-color-GS-70);
+  transition: var(--sf-conx-interaction-transition);
+}
+
+.sf-cf-button.sf-cf-compare-financing::before,
+.sf-cf-button.sf-cf-product-navigator::before,
+.sf-cf-adjust-financing::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  display: inline-block;
+  width: var(--sf-conx-icon-size-l);
+  height: var(--sf-conx-icon-size-l);
+  background: var(--sf-conx-arrow-icon);
+  transform: translateY(-50%);
+  transition: left 0.1s ease-in-out;
+}
+
+.sf-cf-button.sf-cf-compare-financing:hover::before,
+.sf-cf-button.sf-cf-product-navigator:hover::before,
+.sf-cf-button.sf-cf-adjust-financing:hover::before {
+  left: 18px;
+  background: var(--sf-conx-arrow-icon-hover);
+}
+
+.sf-cf-button.sf-cf-selected {
+  border: 2px solid var(--sf-conx-color-PB-20);
+  background-color: var(--sf-conx-color-GS-0);
+  color: var(--sf-conx-color-PB-20);
+  opacity: initial;
+  margin-top: var(--sf-conx-space-four-thirds);
+}
+
+.sf-cf-button.sf-cf-selected::before {
+  content: '';
+  position: absolute;
+  left: var(--sf-conx-space-four-thirds);
+  display: inline-block;
+  width: var(--sf-conx-space-four-thirds);
+  height: var(--sf-conx-space-four-thirds);
+  margin-top: 2px;
+  background: var(--sf-conx-checkmark);
+  background-size: var(--sf-conx-icon-size-m);
+}
+
+.sf-cf-button.sf-cf-choose {
+  border: 2px solid var(--sf-conx-color-GS-30);
+  background-color: var(--sf-conx-color-GS-0);
+  color: var(--sf-conx-color-GS-80);
+  margin-top: var(--sf-conx-space-four-thirds);
+}
+
+/* Hidden elements */
+sf-cf-swipe[disabled],
+.sf-cf-product-selector-toggle-buttons[disabled],
+sf-cf-video-icon[type="embedded"][disabled],
+sf-cf-finance-product-overview .sf-cf-modal-overview,
+sf-cf-finance-product-overview[selected] .sf-cf-choose,
+sf-cf-finance-product-overview:not([selected]) .sf-cf-selected,
+.sf-cf-finance-product-configuration-view[disabled],
+sf-cf-product-details[type="service"] .sf-cf-product-details[disabled],
+sf-cf-product-details[type="insurance"] .sf-cf-product-details[disabled],
+.sf-cf-finance-product-overview .sf-cf-market-de .sf-cf-summary-parameters > tbody tr[hidden],
+.sf-cf-finance-product-overview sf-cf-chainman[inactive] {
+  display: none;
+}
+
+/* Tablet */
+@media screen and (min-width: 521px) and (max-width: 1024px) {
+  .sf-cf-finance-product-overview .sf-cf-summary-parameters > tbody > tr {
+    flex: 0 0 50%;
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-finance-product-title,
+  .sf-cf-finance-product-overview sf-cf-total-instalment {
+    margin-bottom: var(--sf-conx-space-one-third);
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-product-description {
+    padding-bottom: calc(var(--sf-conx-space-four-thirds) + var(--sf-conx-space-one-third));
+  }
+
+  .sf-cf-button.sf-cf-selected,
+  .sf-cf-button.sf-cf-choose {
+    margin-top: var(--sf-conx-space-four-thirds);
+  }
+
+  .singleproduct .sf-cf-finance-product-overview {
+    margin: 0 2px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  .sf-cf-finance-product-overview .sf-cf-summary-parameters > tbody > tr {
+    flex: 0 0 50%;
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-finance-product-title,
+  .sf-cf-finance-product-overview sf-cf-total-instalment {
+    margin-bottom: var(--sf-conx-space-two-thirds);
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-product-description {
+    padding-bottom: var(--sf-conx-space-four-thirds);
+  }
+
+  .sf-cf-button.sf-cf-selected,
+  .sf-cf-button.sf-cf-choose {
+    margin-top: var(--sf-conx-space-one);
+  }
+
+  /* Arrows */
+  .singleproduct .sf-cf-finance-product-overview {
+    margin: 0 calc(var(--sf-conx-space-four-thirds) + var(--sf-conx-space-one));
+  }
+
+  .sf-cf-finance-product-overview sf-cf-video-icon[type="embedded"] sf-cf-video,
+  .sf-cf-finance-product-overview sf-cf-video-icon[type="embedded"] sf-cf-youtube-video {
+    width: 50%;
+    height: calc(var(--sf-conx-sf-cf-video-width) / 8 * 3);
+  }
+}
+
+/* Tablet and Desktop */
+@media screen and (min-width: 521px) {
+  :host {
+    --paginator-height: var(--sf-conx-paginator-dots-size-xl);
+    --paginator-dots-spacing: 8px;
+  }
+
+  .sf-cf-choose,
+  .sf-cf-selected {
+    max-width: 331px;
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-product-description {
+    margin-top: var(--sf-conx-space-one-third);
+    margin-bottom: var(--sf-conx-space-one-third);
+  }
+
+  .sf-cf-finance-product-overview {
+    box-sizing: border-box;
+    border-top: 2px solid var(--sf-conx-color-GS-30);
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-total-instalment {
+    margin: 0;
+  }
+
+  .sf-cf-finance-product-overview > div:nth-of-type(2) {
+    padding-bottom: calc(var(--sf-conx-space-four-thirds) + 2px);
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-market-de .sf-cf-summary-parameters > tbody {
+    display: inline-flex;
+    flex-direction: row;
+    columns: 2;
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-market-de .sf-cf-summary-parameters > tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  sf-cf-finance-product-overview .sf-cf-market-de .sf-cf-summary-parameters > tbody > tr.sf-cf-content-title-key-value {
+    flex: 0 0 100%;
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-market-de .sf-cf-summary-parameters > tbody tr.sf-cf-dummy[hidden] {
+    display: block;
+    min-height: var(--sf-conx-space-three);
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-summary-parameters > tbody {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-summary-parameters .sf-cf-content-key {
+    word-wrap: break-word;
+  }
+
+  .sf-cf-product-dot-sel {
+    width: var(--sf-conx-paginator-dots-size-l);
+    height: var(--sf-conx-paginator-dots-size-l);
+  }
+
+  .sf-cf-product-dot-sel.active {
+    width: var(--sf-conx-paginator-dots-size-xl);
+    height: var(--sf-conx-paginator-dots-size-xl);
+  }
+
+  .sf-cf-finance-product-overview .sf-cf-summary-parameters .sf-cf-content-value {
+    display: block;
+  }
+}
+
+sf-cf-finance-product-overview .sf-cf-market-de .sf-cf-summary-parameters > tbody > tr.sf-cf-content-title-key-value {
+  margin-top: var(--sf-conx-space-ten-thirds);
+  margin-left: calc(var(--sf-conx-space-two) * -1);
+}
+
+sf-cf-finance-product-overview .sf-cf-market-de .sf-cf-summary-parameters > tbody > tr.sf-cf-content-title-key-value
+td.sf-cf-content-title-key h4 {
+  color: var(--sf-conx-color-GS-80);
+font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  text-transform: none;
+}
+
+:host {
+  --single-product-min-height: 150px;
+}
+
+sf-cf-product-swipe {
+  display: inline-grid;
+  grid-template-columns: 33% 66%;
+  grid-column-gap: var(--sf-conx-space-one);
+  width: 100%;
+  margin-bottom: var(--sf-conx-space-two);
+}
+
+sf-cf-product-swipe[disabled] {
+  display: none;
+}
+
+sf-cf-product-swipe sf-cf-product-option {
+  visibility: visible;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 2px solid var(--sf-conx-color-GS-30);
+  background: var(--sf-conx-color-GS-0);
+}
+
+sf-cf-swipe sf-cf-product-option:hover{
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16), 0px 0px 1px rgba(0, 0, 0, 0.24);
+}
+
+sf-cf-product-option .sf-cf-product-box {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: var(--sf-conx-space-one);
+  cursor: pointer;
+}
+
+.sf-cf-product-box .sf-cf-product-header {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+  padding-bottom: var(--sf-conx-space-two-thirds);
+  border-bottom: 1px solid var(--sf-conx-color-GS-30);
+  margin: 0;
+}
+
+.sf-cf-product-box .sf-cf-product-description {
+  flex-grow: 1;
+  clear: both;
+  margin: var(--sf-conx-space-one) 0 0;
+}
+
+.sf-cf-product-box .sf-cf-productname {
+  cursor: pointer;
+  display: block;
+  margin-right: var(--sf-conx-space-two);
+}
+
+.sf-cf-product-header .sf-cf-total-instalment-content {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+sf-cf-product-option input[type=checkbox]{
+  display: none;
+}
+
+sf-cf-product-option input[type=checkbox]:checked {
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  z-index: 100;
+  top: -5px;
+  right: -10px;
+  width: var(--sf-conx-space-seven);
+  height: var(--sf-conx-space-seven);
+  border-radius: 50%;
+  margin: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%234D4D4D'/%3E%3Cpath d='M10.6666 16.2878L6.62598 12.2478L8.04064 10.8332L10.6666 13.4598L15.9593 8.1665L17.374 9.58117L10.6666 16.2878Z' fill='white'/%3E%3C/svg%3E%0A");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+sf-cf-product-swipe sf-cf-swipe {
+  grid-column: 2;
+}
+
+sf-cf-product-swipe .singleproduct {
+  position: relative;
+  visibility: visible;
+}
+
+sf-cf-product-swipe .sf-cf-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+sf-cf-product-swipe .prev,
+sf-cf-product-swipe .next {
+  z-index: 100;
+  display: block;
+  width: var(--sf-conx-slideshow-container-arrow-width);
+  height: var(--sf-conx-slideshow-container-arrow-height);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: transparent;
+  cursor: pointer;
+}
+
+sf-cf-product-swipe .prev {
+  margin-right: var(--sf-conx-space-two-thirds);
+  background: var(--sf-conx-slideshow-container-prev-arrow);
+}
+
+sf-cf-product-swipe .prev:hover {
+  background: var(--sf-conx-slideshow-container-prev-arrow-hover);
+}
+
+sf-cf-product-swipe .next {
+  margin-left: var(--sf-conx-space-two-thirds);
+  background: var(--sf-conx-slideshow-container-next-arrow);
+}
+
+sf-cf-product-swipe .next:hover {
+  background: var(--sf-conx-slideshow-container-next-arrow-hover);
+}
+
+sf-cf-product-swipe .sf-cf-grid-container {
+  display: grid;
+  grid-template-columns: calc(50% - var(--sf-conx-space-one)) calc(50% - var(--sf-conx-space-one));
+  grid-column-gap: var(--sf-conx-space-one);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+sf-cf-product-swipe sf-cf-finance-product-name > div {
+  margin: 0;
+}
+
+sf-cf-product-swipe .sf-cf-total-instalment {
+  margin: 0;
+}
+
+sf-cf-product-swipe .sf-cf-total-instalment-content {
+  margin: 0;
+}
+
+.sf-cf-swipe > ul {
+  display: none;
+}
+
+.sf-cf-swipe > input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+sf-cf-select[carousel],
+sf-cf-product-swipe sf-cf-product-option[disabled] {
+  display: none;
+}
+
+sf-cf-product-swipe > .singleproduct.sf-cf-slide:not(:nth-child(1)) sf-cf-product-option {
+  border-color: var(--sf-conx-color-GS-70);
+  background-color: var(--sf-conx-color-GS-10);
+  pointer-events: none;
+}
+
+sf-cf-product-swipe > .singleproduct.sf-cf-slide:not(:nth-child(1)) .sf-cf-product-box .sf-cf-productname {
+  cursor: default;
+  pointer-events: none;
+}
+
+sf-cf-product-swipe > .singleproduct.sf-cf-slide:not(:nth-child(1)) {
+  padding: 5px 0 13px 0px;
+}
+
+.sf-cf-swipe .sf-cf-grid-container {
+  padding: 5px 0 13px 13px;
+}
+
+@media screen and (max-width: 520px) {
+  sf-cf-product-swipe {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  sf-cf-select[carousel] {
+    display: inherit;
+  }
+
+  sf-cf-select[carousel][disabled],
+  section.sf-cf-product-selector-carousel {
+    display: none;
+  }
+}
+:host {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  --sf-conx-font-size-strong: 120%;
+  --sf-conx-close-icon-size: var(--sf-conx-icon-size-l);
+  --sf-conx-color-blur: rgba(255, 255, 255, 1);
+}
+
+.close {
+  display: block;
+  width: var(--sf-conx-icon-size-xl);
+  height: var(--sf-conx-icon-size-xl);
+  margin: var(--sf-conx-modal-close-button-margin);
+  background: center center var(--sf-conx-modal-close-icon-background);
+  cursor: pointer;
+}
+
+sf-cf-representative-example[open][disabled],
+sf-cf-representative-example {
+  display: none;
+}
+
+sf-cf-representative-example[open] {
+  z-index: 101;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: calc(100% - 4px); /* subtract margin 2 x 2px to keep border "unblured" */
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: var(--sf-conx-color-blur);
+}
+
+sf-cf-representative-example[open] .sf-cf-modal-overview.overlay[opened] {
+  z-index: 102;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 50vh;
+  max-height: 75vh;
+  padding: 0 var(--sf-conx-space-four-thirds);
+  overflow: auto;
+  border: 2px solid var(--sf-conx-color-GS-30);
+  background: var(--sf-conx-color-GS-0);
+}
+
+.sf-cf-representative-example {
+  position: relative;
+}
+
+.sf-cf-finance-product-overview .sf-cf-representative-example .sf-cf-product-name {
+  padding-top: var(--sf-conx-space-one);
+  border-bottom: 0;
+}
+
+.sf-cf-finance-product-overview .sf-cf-representative-example .sf-cf-product-description {
+  padding-bottom: var(--sf-conx-space-one-third);
+  border-bottom: 0;
+}
+
+.sf-cf-representative-example .sf-cf-product-parameter {
+  padding: var(--sf-conx-space-one-third) 0 var(--sf-conx-space-two-thirds) 0;
+  border-top: var(--sf-conx-default-border);
+  border-bottom: var(--sf-conx-default-border);
+}
+
+.sf-cf-representative-example .sf-cf-table-wrapper tbody > * {
+  position: relative;
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 0 calc(var(--sf-conx-grid-space) / 2);
+}
+
+.sf-cf-representative-example .sf-cf-table-wrapper tbody td:first-child {
+  color: var(--sf-conx-color-GS-80);font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  position: relative;
+  display: flex;
+  padding: var(--sf-conx-space-two-thirds) 0;
+  border-top: var(--sf-conx-default-border);
+}
+
+.sf-cf-representative-example p {
+  color: var(--sf-conx-color-GS-80);font: normal 16px/24px var(--sf-conx-font-bmw-light);
+}
+
+.sf-cf-representative-example .sf-cf-table-wrapper {
+  justify-content: space-between;
+}
+
+.sf-cf-representative-example .sf-cf-table-wrapper div {
+  width: 100%;
+  margin-bottom: var(--sf-conx-space-two-thirds);
+}
+
+.sf-cf-representative-example .sf-cf-table-wrapper p {
+  margin: 0;
+  color: var(--sf-conx-color-GS-80);
+}
+
+.sf-cf-representative-example .sf-cf-table-wrapper td:nth-child(2) {
+  display: block;
+  padding-bottom: var(--sf-conx-space-two-thirds);
+  color: var(--sf-conx-color-GS-80);
+}
+
+.sf-cf-representative-example .sf-cf-table-wrapperdiv:first-child {
+  margin-right: var(--sf-conx-space-three);
+}
+
+.sf-cf-representative-example .sf-cf-table-wrapper td strong {
+  color: var(--sf-conx-color-GS-80);
+  font-size: var(--sf-conx-font-size-strong);
+}
+
+.sf-cf-representative-example .sf-cf-sub-headline {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin: 0 0 var(--sf-conx-space-two-thirds) 0;
+}
+
+.sf-cf-representative-example .sf-cf-headline {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.sf-cf-representative-example .sf-confi-cancel {
+  border: 1px solid var(--sf-conx-color-GS-80);
+  margin: var(--sf-conx-space-two) 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: var(--sf-conx-color-GS-80);
+}
+
+.sf-cf-representative-example .sf-confi-cancel:hover,
+.sf-cf-representative-example .sf-confi-cancel:focus {
+  border-width: 2px;
+}
+
+.sf-cf-representative-example sf-cf-button[type=close] {
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  max-width: none;
+  justify-content: flex-end;
+  margin-top: var(--sf-conx-space-four-thirds);
+  background-color: var(--sf-conx-color-transparent);
+}
+
+.sf-cf-representative-example .sf-cf-chain-man {
+  line-height: 1;
+}
+
+.sf-cf-representative-example sf-cf-chainman[inactive] {
+  display: none;
+}
+
+@media screen and (max-width: 520px) {
+  .sf-cf-representative-example .sf-cf-table-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 521px) {
+  .sf-cf-representative-example .sf-cf-table-wrapper tbody {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--sf-conx-grid-space) / -2);
+  }
+}
+
+:host {
+  --sf-conx-line-height: 32px;
+  --sf-conx-spinner-page-size: 80px;
+  --sf-conx-spinner-blur: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 520px) {
+  :host {
+    --line-height: 27px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+sf-cf-finance-widget[page="Header"][inactive][hidden] > div.sf-cf-spinner,
+sf-cf-finance-widget[page="Header"] > div.sf-cf-spinner,
+sf-cf-finance-widget[page="Header"] > div.sf-cf-modal,
+div.sf-cf-spinner {
+  display: none;
+}
+
+sf-cf-finance-widget[page="Header"] > div {
+  display: inherit;
+  visibility: inherit;
+}
+
+sf-cf-finance-widget[page="Header"][inactive],
+sf-cf-finance-widget[page="Header"][disabled],
+sf-cf-total-instalment[type="FinancePage"][disabled] {
+  display: grid;
+  grid-template-areas: 'spinner content';
+  grid-template-columns: max-content;
+}
+
+sf-cf-finance-widget[page="Header"][inactive] > div,
+sf-cf-finance-widget[page="Header"][disabled] > div,
+sf-cf-total-instalment[type="FinancePage"][disabled] > div {
+  visibility: hidden;
+  margin: 0;
+}
+
+sf-cf-finance-widget[page="Header"][inactive] > div.sf-cf-spinner,
+sf-cf-finance-widget[page="Header"][disabled] > div.sf-cf-spinner,
+sf-cf-total-instalment[type="FinancePage"][disabled] > div.sf-cf-spinner {
+  display: block;
+  visibility: visible;
+  grid-area: spinner;
+  width: 20px;
+  height: 20px;
+}
+
+.sf-cf-spinner > div {
+  width: 100%;
+  height: 100%;
+  background: center center no-repeat var(--sf-conx-spinner-icon-blue);
+  background-size: contain;
+  animation: spin 1s linear infinite;
+}
+
+sf-cf-total-instalment[type="FinancePage"][disabled] > div.sf-cf-spinner {
+  width: var(--sf-conx-line-height);
+  height: var(--sf-conx-line-height);
+}
+
+sf-cf-finance-page[blured] > div.sf-cf-spinner {
+  display: inline-flex;
+  width: calc(100% + 2 * var(--sf-conx-space-two));
+  height: 100%;
+  padding-top: 25%;
+  margin: calc(0px - var(--sf-conx-space-two));
+  background-color: var(--sf-conx-spinner-blur);
+  justify-content: center;
+  align-items: flex-start;
+  grid-column: 1;
+  grid-row-start: product-description;
+  grid-row-end: insurances-configuration;
+}
+
+sf-cf-finance-page[blured] > div.sf-cf-spinner > div {
+  width: var(--sf-conx-spinner-page-size);
+  max-width: 98%;
+  height: var(--sf-conx-spinner-page-size);
+  max-height: 98%;
+}
+
+@media screen and (max-width: 1024px) {
+  sf-cf-total-instalment[type="FinancePage"][disabled] > div.sf-cf-spinner {
+    margin-top: var(--sf-conx-space-two-thirds);
+  }
+
+  sf-cf-finance-page[blured] > div.sf-cf-spinner {
+    padding-top: 30%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  sf-cf-finance-page[blured] > div.sf-cf-spinner {
+    padding-top: 90%;
+  }
+}
+
+
+/* All the classes, id and tags are not set by us, this is added by the finance team */
+/* As soon as they will fix this, we will have to refactor this file */
+
+:host {
+  --sf-conx-slideshow-container-arrow-width: var(--sf-conx-space-four-thirds);
+  --sf-conx-slideshow-container-arrow-height: var(--sf-conx-space-two);
+  --sf-conx-pagination-arrow-width: 50px;
+
+  --sf-conx-paginator-dots-idle: #bbb;
+  --sf-conx-paginator-dots-hover: #000;
+  --sf-conx-paginator-dots-active: #1c69d4;
+  --sf-conx-paginator-dots-size-s: 6px;
+  --sf-conx-paginator-dots-size-m: 8px;
+  --sf-conx-paginator-dots-size-l: 10px;
+  --sf-conx-paginator-dots-size-xl: 12px;
+  --sf-conx-paginator-dots-spacing: 4px;
+  --sf-conx-paginator-dots-margin: 0 var(--sf-conx-paginator-dots-spacing);
+  --sf-conx-paginator-top-margin: var(--sf-conx-space-four-thirds);
+  --sf-conx-paginator-height: var(--sf-conx-paginator-dots-size-l);
+}
+
+/* Pagination */
+sf-cf-swipe[pagination="number"] .sf-cf-swipe {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+sf-cf-swipe[pagination="number"] .sf-cf-product-pagination {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 100%;
+  max-width: 285px;
+  height: var(--sf-conx-pagination-arrow-width, 50px);
+  justify-content: space-between;
+  background-color: var(--sf-conx-color-GS-0);
+  color: var(--sf-conx-color-GS-70);
+  color: var(--sf-conx-color-GS-80);
+  font: normal 14px/20px var(--sf-conx-font-bmw-bold);
+}
+
+sf-cf-swipe[pagination="number"] .sf-cf-product-pagination .placeholder,
+sf-cf-swipe[pagination="number"] .sf-cf-product-pagination label {
+  display: block;
+  width: var(--sf-conx-pagination-arrow-width, 50px);
+  height: var(--sf-conx-pagination-arrow-width, 50px);
+  cursor: pointer;
+}
+
+sf-cf-swipe[pagination="number"] .sf-cf-product-pagination label.prev {
+  background: var(--sf-conx-pagination-prev-arrow);
+  background-size: contain;
+}
+
+sf-cf-swipe[pagination="number"] .sf-cf-product-pagination label.next {
+  background: var(--sf-conx-pagination-next-arrow);
+  background-size: contain;
+}
+
+.sf-cf-swipe > ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+sf-cf-swipe input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.sf-cf-product-dot-sel {
+  display: inline-block;
+  width: var(--sf-conx-paginator-dots-size-m);
+  height: var(--sf-conx-paginator-dots-size-m);
+  border-radius: 50%;
+  margin: var(--sf-conx-paginator-dots-margin);
+  background-color: var(--sf-conx-paginator-dots-idle);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.sf-cf-product-dot-sel:hover {
+  background-color: var(--sf-conx-paginator-dots-hover);
+}
+
+.sf-cf-product-dot-sel.active {
+  width: var(--sf-conx-paginator-dots-size-l);
+  height: var(--sf-conx-paginator-dots-size-l);
+  background-color: var(--sf-conx-paginator-dots-active);
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  sf-cf-swipe[pagination="number"] .sf-cf-product-pagination {
+    justify-content: center;
+  }
+
+  sf-cf-swipe[pagination="number"] .sf-cf-product-pagination .placeholder,
+  sf-cf-swipe[pagination="number"] .sf-cf-product-pagination label {
+    display: none;
+  }
+
+  .slideshow-container .prev,
+  .slideshow-container .next {
+    position: absolute;
+    z-index: 100;
+    top: calc(var(--sf-conx-single-product-min-height) / 2 - var(--sf-conx-slideshow-container-arrow-height));
+    display: block;
+    width: var(--sf-conx-slideshow-container-arrow-width);
+    height: var(--sf-conx-slideshow-container-arrow-height);
+    background-color: rgba(255, 255, 255, 0.3);
+    color: transparent;
+    cursor: pointer;
+  }
+
+  .slideshow-container .prev {
+    left: 0;
+    margin-right: var(--sf-conx-space-two-thirds);
+    background: var(--sf-conx-slideshow-container-prev-arrow);
+  }
+
+  .slideshow-container .prev:hover {
+    background: var(--sf-conx-slideshow-container-prev-arrow-hover);
+  }
+
+  .slideshow-container .next {
+    right: 0;
+    margin-left: var(--sf-conx-space-two-thirds);
+    background: var(--sf-conx-slideshow-container-next-arrow);
+  }
+
+  .slideshow-container .next:hover {
+    background: var(--sf-conx-slideshow-container-next-arrow-hover);
+  }
+}
+
+sf-cf-total-instalment[type="Overview"] > .sf-cf-total-instalment {
+  display: inline-grid;
+}
+
+.sf-cf-total-instalment-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.total-instalment .sf-cf-total-instalment-value,
+.total-instalment sf-cf-finance-product-frequency {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.total-instalment .financeProductTitle,
+.sf-cf-finance-product-overview .financeProductTitle {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 24px/32px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+sf-cf-total-instalment[type="Overview"] > .sf-cf-total-instalment > .sf-cf-total-instalment-content {
+  max-height: var(--sf-conx-line-height-h4);
+}
+
+sf-cf-total-instalment[type="Delta"] > .sf-cf-total-instalment,
+sf-cf-total-instalment[type="Delta"] > .sf-cf-total-instalment .sf-cf-total-instalment-value,
+sf-cf-total-instalment[type="Delta"] > .sf-cf-total-instalment .sf-cf-number,
+sf-cf-total-instalment[type="Delta"] > .sf-cf-total-instalment sf-cf-finance-product-frequency,
+sf-cf-total-instalment[type="Transmission"] > .sf-cf-total-instalment,
+sf-cf-total-instalment[type="Transmission"] > .sf-cf-total-instalment .sf-cf-total-instalment-value,
+sf-cf-total-instalment[type="Transmission"] > .sf-cf-total-instalment .sf-cf-number,
+sf-cf-total-instalment[type="Transmission"] > .sf-cf-total-instalment sf-cf-finance-product-frequency,
+sf-cf-total-instalment[type="Line"] > .sf-cf-total-instalment,
+sf-cf-total-instalment[type="Line"] > .sf-cf-total-instalment .sf-cf-total-instalment-value,
+sf-cf-total-instalment[type="Line"] > .sf-cf-total-instalment .sf-cf-number,
+sf-cf-total-instalment[type="Line"] > .sf-cf-total-instalment sf-cf-finance-product-frequency,
+sf-cf-total-instalment[type="Garage"] > .sf-cf-total-instalment,
+sf-cf-total-instalment[type="Garage"] > .sf-cf-total-instalment .sf-cf-total-instalment-value,
+sf-cf-total-instalment[type="Garage"] > .sf-cf-total-instalment .sf-cf-number,
+sf-cf-total-instalment[type="Garage"] > .sf-cf-total-instalment sf-cf-finance-product-frequency {
+  color: var(--sf-conx-color-GS-60);
+  font: normal 13px/19px var(--sf-conx-font-bmw-light)
+}
+
+sf-cf-total-instalment[type="Delta"].tooltip-total-instalment > .sf-cf-total-instalment .sf-cf-output,
+sf-cf-total-instalment[type="Delta"].tooltip-total-instalment > .sf-cf-total-instalment .sf-cf-number,
+sf-cf-total-instalment[type="Delta"].tooltip-total-instalment > .sf-cf-total-instalment sf-cf-finance-product-frequency {
+  font: normal 12px/16px var(--sf-conx-font-bmw-light);
+}
+
+sf-cf-total-instalment[type="Garage"] > .sf-cf-total-instalment sf-cf-finance-product-name {
+  flex: none;
+  padding: 0 var(--sf-conx-space-one);
+  margin: 0;
+}
+
+sf-cf-total-instalment[type="Garage"] .sf-cf-total-instalment-content {
+  flex-wrap: nowrap;
+}
+
+sf-cf-total-instalment[type="Garage"] .sf-cf-total-instalment-content > iron-icon {
+  margin: var(--sf-conx-space-two-thirds) var(--sf-conx-link-icon-margin-right) 0 calc(-1 * var(--sf-conx-link-icon-margin-right));
+  color: var(--sf-conx-color-GS-80);
+  transition: var(--sf-conx-interaction-transition);
+}
+
+sf-cf-total-instalment[type="Garage"] .sf-cf-total-instalment-content > button {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 14px/20px var(--sf-conx-font-bmw-bold);
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  border: none;
+  outline: none; /* Handle outline only on :focus */
+  background-color: transparent;
+  color: var(--sf-conx-color-GS-80);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--sf-conx-interaction-transition);
+
+  /* Disable text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-bold);
+  max-width: max-content;
+  height: auto;
+  min-height: var(--sf-conx-icon-size-l);
+  padding: 0;
+  margin: var(--sf-conx-space-two-thirds) 0 0;
+}
+
+/** totalInstalment with arrows icon */
+sf-cf-finance-widget[page="Header"] .sf-cf-header-label button,
+sf-cf-total-instalment[type="Overview"] .sf-cf-total-instalment-content button{
+    background: transparent center right var(--arrow-icon) no-repeat;
+    padding: 0 var(--sf-conx-size-5) 0 0;
+}
+
+sf-cf-finance-widget[page="Header"] .sf-cf-header-label button:hover,
+sf-cf-total-instalment[type="Overview"] .sf-cf-total-instalment-content button:hover {
+    background: transparent center right var(--arrow-icon-hover) no-repeat;
+}
+
+sf-cf-finance-widget[page="Header"] sf-cf-info-icon:hover {
+  background: transparent right var(--sf-info-icon-hover);
+}
+
+/** totalInstalment with no arrow icon */
+sf-cf-total-instalment[type="Header"] div:hover,
+sf-cf-total-instalment[type="SummaryHeader"] .sf-cf-total-instalment-content:hover {
+   color: var(--sf-conx-color-PB-20);
+}
+
+sf-cf-total-instalment[type="Delta"] sf-cf-info-icon:hover,
+sf-cf-total-instalment[type="Overview"] sf-cf-info-icon:hover {
+  background: var(--sf-conx-space-two-thirds) 0 var(--sf-info-icon-hover);
+  background-position: 0;
+}
+
+@media (hover: hover) {
+  sf-cf-total-instalment[type="Garage"]:hover .sf-cf-total-instalment-content,
+  sf-cf-total-instalment[type="Garage"]:hover .sf-cf-total-instalment-content > iron-icon,
+  sf-cf-total-instalment[type="Garage"]:hover .sf-cf-total-instalment-content > button {
+    color: var(--sf-conx-color-GS-70);
+  }
+
+  sf-cf-total-instalment[type="Garage"]:hover .sf-cf-total-instalment-content > iron-icon {
+    transform: translateX(var(--sf-conx-link-icon-margin-right));
+  }
+}
+
+sf-cf-total-instalment[type="Delta"] > .sf-cf-total-instalment .sf-cf-total-instalment-content,
+sf-cf-total-instalment[type="Transmission"] > .sf-cf-total-instalment .sf-cf-total-instalment-content,
+sf-cf-total-instalment[type="Line"] > .sf-cf-total-instalment .sf-cf-total-instalment-content,
+sf-cf-total-instalment[type="Garage"] > .sf-cf-total-instalment .sf-cf-total-instalment-content {
+  justify-content: flex-start;
+}
+
+/* Remove space occupied by empty character */
+sf-cf-total-instalment[type="Garage"] .sf-cf-total-instalment-content {
+  line-height: 0;
+}
+
+/* SFCFCALC-10987 hide visibility when disabled */
+sf-cf-total-instalment[type="Garage"][disabled] .sf-cf-total-instalment-content {
+  visibility: hidden;
+}
+
+sf-cf-select sf-cf-option[disabled],
+sf-cf-total-instalment > .sf-cf-modal,
+.sf-cf-total-instalment .sf-cf-modal,
+.hide-info-icon sf-cf-info-icon {
+  display: none;
+}
+
+:host(.price-for-summary) .total-instalment .sf-cf-total-instalment-value,
+:host(.price-for-summary) .total-instalment sf-cf-finance-product-frequency {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+:host(.price-for-summary) .financeProductTitle {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 18px/25px var(--sf-conx-font-bmw-light);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.sf-cf-product-description {
+ color: var(--sf-conx-color-GS-80);
+ font: normal 16px/24px var(--sf-conx-font-bmw-light);
+}
+
+.sf-cf-finance-details .sf-cf-product-description {
+  max-height: none;
+}
+
+.sf-cf-total-instalment-incl-freight,
+.sf-cf-total-instalment-incl-taxes,
+.sf-cf-total-instalment-incl-freight-and-taxes {
+  color: var(--sf-conx-color-GS-80);
+  font: normal 16px/24px var(--sf-conx-font-bmw-light);
+  color: var(--sf-conx-color-GS-50);
+}
+
+sf-cf-info-icon {
+  position: relative;
+  left: 0;
+  display: inline;
+  width: var(--sf-conx-icon-size-m);
+  height: var(--sf-conx-icon-size-m);
+  padding: 0;
+  margin-left: var(--sf-conx-space-one-third);
+  background-position: 0;
+  background-size: var(--sf-conx-icon-size-m);
+  cursor: pointer;
+}
+/*Desktop */
+@media screen and (min-width: 1025px) {
+    sf-cf-info-icon {
+        margin-left: -1px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+  .total-instalment sf-cf-finance-product-name,
+  .sf-cf-finance-product-overview sf-cf-finance-product-name {
+    flex: 0 0 100%;
+    margin-bottom: var(--sf-conx-space-one);
+  }
+}
+
+@media screen and (min-width: 521px) {
+  .total-instalment .sf-cf-total-instalment-content,
+  .sf-cf-finance-product-overview .sf-cf-total-instalment-content {
+    justify-content: flex-end;
+  }
+
+  sf-cf-finance-product-name {
+    flex: 0 0 66.6666%;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  sf-cf-finance-product-name {
+    flex: 0 0 50%;
+  }
+
+  sf-cf-info-icon::before {
+    margin-top: 1px;
+  }
+}
+
+
+/* All the classes, id and tags are not set by us, this is added by the finance team */
+
+/* visibile only for screen readers */
+.sf-cf-aria-description {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+}
+
+sf-cf-dialog {
+  display: none;
+}
+
+.sf-cf-visible {
+  visibility: visible;
+}
+
+.sf-cf-hidden {
+  visibility: hidden;
+}
+
+sf-cf-error-message {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: row;
+  min-height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+
+@media print {
+  :host {
+    --qr-code-size: 97px;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  /* Make sure the summary modal has a higher z-index than DTM content. */
+  .con-modal-summary {
+    position: relative !important;
+    z-index: 100000 !important;
+  }
+
+  .modal-summary {
+    position: static !important;
+    max-width: max-content !important;
+    max-height: none !important;
+  }
+
+  .modal-backdrop {
+    position: static !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    background-color: var(--color-GS-0) !important;
+  }
+
+  .modal {
+    position: relative !important;
+    z-index: 200 !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    margin: 0 !important;
+    background-color: var(--color-GS-0);
+  }
+
+  /* Main sections of the print layout, where page break would be required */
+  .config-link,
+  #priceSection {
+    page-break-after: always;
+  }
+
+  .accordion-group {
+    page-break-before: always;
+  }
+
+  #summarySalesGroupSection .accordion-group:last-of-type {
+    page-break-before: unset;
+  }
+
+  .print-avoid-break-inside {
+    page-break-inside: avoid !important;
+  }
+
+  /* Elements that should be shown on print */
+  #includedOptionalOptions,
+  .print-title,
+  #image,
+  .config-link,
+  #efficiencyDetailsSection,
+  #summarySalesGroupSection,
+  #priceSection,
+  .disclaimer,
+  .print-avoid-break-inside,
+  .sf-cf-finance-product-overview .sf-cf-total-instalment .sf-cf-finance-product-title,
+  .sf-cf-finance-product-overview .sf-cf-total-instalment .sf-cf-product-description,
+  .sf-cf-finance-product-overview .sf-cf-total-instalment .sf-cf-summary-parameters,
+  .sf-cf-finance-details > sf-cf-total-instalment .sf-cf-total-instalment-value,
+  .sf-cf-finance-details > sf-cf-total-instalment sf-cf-finance-product-frequency,
+  .sf-cf-finance-details > div,
+  .sf-cf-finance-product-overview > div .sf-cf-total-instalment,
+  sf-cf-info-icon .sf-cf-modal,
+  .sf-cf-total-instalment-content sf-cf-info-icon,
+  .sf-cf-product-details,
+  .sf-cf-summary-parameters > tbody tr .sf-cf-content-value,
+  #configId {
+    display: block !important;
+  }
+
+  .sf-cf-print sf-cf-product-details[type="product"] .sf-cf-summary-parameters {
+    width: 100%;
+  }
+
+  .sf-cf-print sf-cf-product-details[type="product"] .sf-cf-summary-parameters > tbody {
+    display: flex;
+  }
+
+  .sf-cf-print sf-cf-product-details[type="service"] .sf-cf-product-details,
+  .sf-cf-print sf-cf-product-details[type="insurance"] .sf-cf-product-details {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .sf-cf-print sf-cf-product-details[type="service"] .sf-cf-product-details .sf-cf-disclaimer,
+  .sf-cf-print sf-cf-product-details[type="insurance"] .sf-cf-product-details .sf-cf-disclaimer {
+    order: 2;
+  }
+
+  .sf-cf-print sf-cf-product-details[type="service"] .sf-cf-product-details .sf-cf-legal,
+  .sf-cf-print sf-cf-product-details[type="insurance"] .sf-cf-product-details .sf-cf-legal {
+    order: 1;
+  }
+
+  /* Elements that should not be shown on print */
+  iframe, /* Disable all iframes on print */
+  app-header,
+  con-layout-helper,
+  app-header-layout,
+  con-tabs,
+  con-rfx-layout,
+  con-rfx-layout-buttons-and-links,
+  con-rfx-layout-links,
+  con-rfx-layout-icons,
+  sf-cf-finance-widget[page="Price"],
+  .sf-cf-finance-product-overview,
+  .footer-content,
+  .value .info,
+  sf-cf-product-details.sf-cf-market-de[type="product"] .sf-cf-finance-page-subheadline,
+  sf-cf-finance-widget sf-cf-finance-details .sf-cf-product-details .sf-cf-motor-insurance-title,
+  sf-cf-finance-widget sf-cf-finance-details .sf-cf-product-details .sf-cf-motor-insurance,
+  .sf-cf-total-instalment-content > sf-cf-finance-product-name,
+  .sf-cf-total-instalment-content sf-cf-finance-product-frequency,
+  .sf-cf-total-instalment-content > sf-cf-info-icon::before,
+  sf-cf-info-icon .close,
+  .sf-cf-summary-parameters > tbody tr sf-cf-tooltip .sf-cf-aria-description,
+  .sf-cf-summary-parameters > tbody tr sf-cf-tooltip span.sf-cf-tooltip,
+  .sf-cf-representative-example .sf-confi-cancel,
+  .sf-cf-representative-example sf-cf-button[type="close"],
+  .change-link,
+  .accordion-icon-container,
+  .config-id .hide-with-transition {
+    display: none !important;
+  }
+
+  .sf-cf-print .sf-cf-finance-details > .sf-cf-headline,
+  .sf-cf-print .sf-cf-title {
+    @apply --font-style-h4;
+  }
+
+  sf-cf-finance-widget > .finance-error-disclaimer {
+    @apply --font-style-body;
+  }
+
+  .sf-cf-total-instalment-content > .sf-cf-total-instalment-value,
+  .sf-cf-total-instalment-content > .sf-cf-total-instalment-or,
+  .sf-cf-total-instalment-content > sf-cf-finance-product-frequency {
+    @apply --font-style-h4;
+  }
+
+  .sf-cf-finance-details .sf-cf-total-instalment-content > sf-cf-finance-product-frequency,
+  .sf-cf-finance-details .sf-cf-total-instalment-content > .sf-cf-total-instalment-value,
+  .sf-cf-summary-parameters > tbody tr .sf-cf-content-value {
+    @apply --font-style-h5;
+  }
+
+  .sf-cf-finance-details .sf-cf-market-ru .sf-cf-total-instalment-content > sf-cf-finance-product-frequency,
+  .sf-cf-finance-details .sf-cf-market-ru .sf-cf-total-instalment-content > .sf-cf-total-instalment-value {
+    @apply --font-style-h2;
+  }
+
+  .sf-cf-summary-parameters > tbody tr .sf-cf-content-key,
+  .sf-cf-summary-parameters > tbody tr .sf-cf-content-title-key,
+  .sf-cf-total-instalment-content > .sf-cf-total-instalment-value,
+  .sf-cf-total-instalment-content > .sf-cf-total-instalment-or,
+  .sf-cf-total-instalment-content > sf-cf-finance-product-frequency {
+    @apply --font-style-copy;
+  }
+
+  .sf-cf-market-de.sf-cf-summary-parameters > tbody tr.sf-cf-content-title-key-value {
+    width: 90%;
+  }
+
+  .sf-cf-market-de .sf-cf-summary-parameters > tbody tr.sf-cf-content-title-key-value {
+    margin: var(--space-one) 0 0 calc(var(--space-two) * -1);
+  }
+
+  .sf-cf-market-de .sf-cf-summary-parameters > tbody tr .sf-cf-content-title-key h4 {
+    @apply --font-style-body;
+    text-transform: none;
+  }
+
+  .sf-cf-legal,
+  .sf-cf-disclaimer,
+  #disclaimerSection {
+    @apply --font-style-body-3;
+  }
+
+  .sub-title {
+    margin: var(--space-two-thirds) 0 var(--space-four-thirds);
+  }
+
+  .modal-header {
+    margin: var(--space-four) 0 var(--space-two-thirds) !important;
+  }
+
+  /* First Page */
+  .image-row {
+    display: block !important;
+    margin: 100px 0;
+  }
+
+  .engine-headline,
+  .con-table .value,
+  .price-overview .label,
+  .price-taxes .label,
+  .price-summary .label,
+  .sf-cf-summary-parameters > tbody tr .sf-cf-content-value {
+    color: var(--color-GS-80) !important;
+  }
+
+  .con-table .label,
+  .sf-cf-summary-parameters > tbody tr .sf-cf-content-key {
+    color: var(--color-GS-80) !important;
+  }
+
+  /* Engine Section */
+  .engine-headline {
+    margin: var(--space-four) 0 var(--space-two) !important;
+  }
+
+  .con-table .label {
+    padding: var(--space-two-thirds) 0 !important;
+    border-top: none !important;
+  }
+
+  .con-table .value {
+    padding-bottom: var(--space-two-thirds) !important;
+  }
+
+  .value .foot-note {
+    @apply --font-style-superscript;
+  }
+
+  .col-10-3 {
+    flex: 0 0 30%;
+  }
+
+  .col-10-4 {
+    flex: 0 0 40%;
+  }
+
+  /* Must be overwritten, special case */
+  .efficiencyGraphConsumption {
+    flex: 0 0 50%;
+  }
+
+  /* Efficiency graph section */
+  .col-m-6 {
+    flex: 0 0 50%;
+  }
+
+  /* Interior/Exterior options section */
+  .col-options {
+    flex-basis: 100%;
+  }
+
+  /* Options/Packages options section */
+  .print-title {
+    @apply --font-style-body;
+    margin-bottom: 5px !important;
+  }
+
+  .feature-name {
+    margin-top: 0 !important;
+    word-break: break-all !important;
+  }
+
+  .feature-price {
+    color: var(--color-GS-80);
+  }
+
+  .feature-details {
+    padding: 0 !important;
+  }
+
+  .accessories.row,
+  .row#includedOptionalOptions,
+  #summarySalesGroupSection .row {
+    display: block;
+  }
+
+  .option-tile-col {
+    display: inline-block !important;
+    width: 31% !important;
+    vertical-align: top !important;
+    margin: 0 10px 15px 0 !important;
+  }
+
+  .option-tile-col:nth-of-type(3n) {
+    margin-right: 0 !important;
+  }
+
+  #image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .image-container {
+    position: relative !important;
+  }
+
+  :host([adapt-to-summary]) .option-container {
+    border-top: 1px solid var(--color-GS-30);
+    border-bottom: 1px solid var(--color-GS-30);
+  }
+
+  /* Pricing section */
+  .main-headline,
+  .finance-headline,
+  .sf-cf-finance-page-headline {
+    margin: var(--space-three) 0 var(--space-one) !important;
+    letter-spacing: -1.13px !important;
+    text-transform: none !important;
+  }
+
+  .price-overview {
+    padding-top: var(--space-four-thirds) !important;
+    margin-bottom: var(--space-one) !important;
+  }
+
+  .price-overview .row,
+  .price-taxes .row,
+  .price-summary .row {
+    padding-bottom: var(--space-one) !important;
+  }
+
+  #priceSection .value,
+  #priceSection .total-price-value {
+    text-align: right;
+  }
+
+  .col-l-6 {
+    flex: 0 0 50%;
+  }
+
+  /* Sf section */
+  #financeSection {
+    padding: 0;
+  }
+
+  .finance-error-disclaimer {
+    @apply --font-style-body-2;
+  }
+
+  .sf-cf-finance-product-overview,
+  .sf-cf-finance-product-overview div {
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .sf-cf-finance-details .sf-cf-total-instalment {
+    margin: var(--space-one) 0;
+  }
+
+  .sf-cf-total-instalment-content sf-cf-info-icon {
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background: transparent;
+  }
+
+  .sf-cf-finance-details > .sf-cf-headline {
+    padding-bottom: var(--space-two-thirds) !important;
+  }
+
+  .sf-cf-print .sf-cf-summary-parameters {
+    padding-left: var(--space-two);
+  }
+
+  .sf-cf-summary-parameters > tbody {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    vertical-align: middle !important;
+    margin-right: calc(var(--grid-space) / -2) !important;
+    margin-left: calc(var(--grid-space) / -2) !important;
+  }
+
+  .sf-cf-market-de .sf-cf-summary-parameters > tbody {
+    display: block !important;
+    columns: 1;
+  }
+
+  .sf-cf-market-de .sf-cf-summary-parameters > tbody {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .sf-cf-market-de .sf-cf-summary-parameters > tbody tr {
+    flex-direction: row;
+  }
+
+  .sf-cf-market-de .sf-cf-summary-parameters > tbody tr td.sf-cf-content-key {
+    display: block !important;
+    width: 80%;
+  }
+
+  .sf-cf-market-de .sf-cf-summary-parameters > tbody tr td.sf-cf-content-value {
+    width: 20%;
+  }
+
+  .sf-cf-market-de .sf-cf-summary-parameters > tbody tr td.sf-cf-content-key,
+  .sf-cf-market-de .sf-cf-summary-parameters > tbody tr td sf-cf-tooltip,
+  .sf-cf-market-de. sf-cf-summary-parameters > tbody tr sf-cf-tooltip {
+    display: block !important;
+  }
+
+  .sf-cf-print .sf-cf-market-de .sf-cf-summary-parameters > tbody > tr > td > sf-cf-tooltip > div.sf-cf-printout-description {
+    @apply --font-style-body-3;
+    position: relative;
+    display: block !important;
+    margin: var(--space-one) 0 var(--space-one) var(--space-one);
+    white-space: pre-line;
+  }
+  .sf-cf-market-de .sf-cf-summary-parameters > tbody tr td.sf-cf-content-value {
+    padding: var(--space-two-thirds) !important;
+    border-top: 1px solid var(--color-GS-30) !important;
+    text-align: right;
+  }
+
+  .sf-cf-content-key-value[hidden],
+  .sf-cf-content-title-key-value[hidden] {
+    display: none;
+  }
+
+  .sf-cf-summary-parameters > tbody tr {
+    position: relative !important;
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: column;
+    box-sizing: border-box !important;
+    padding: 0 calc(var(--grid-space) / 2) !important;
+  }
+
+  .sf-cf-summary-parameters > tbody tr .sf-cf-content-key {
+    position: relative !important;
+    display: flex !important;
+    padding: var(--space-two-thirds) 0 var(--space-one-third) 0 !important;
+    border-top: 1px solid var(--color-GS-30) !important;
+  }
+
+  .sf-cf-summary-parameters > tbody tr .sf-cf-content-value {
+    padding-bottom: var(--space-two-thirds) !important;
+  }
+
+  .sf-cf-title {
+    position: relative;
+    margin: var(--space-four-thirds) 0;
+  }
+
+  /* ConfigId and disclaimers section */
+  .config-qr-code {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .print-wrapper .link-description {
+    @apply --font-style-body-3;
+    display: inline-block;
+    margin: var(--space-one) 0 0;
+  }
+
+  .print-wrapper #configId {
+    @apply --font-style-body;
+    height: auto;
+    padding: 0;
+    border: none;
+    margin: 0;
+  }
+
+  .config-id-wrapper {
+    padding-left: calc(var(--grid-space) / 2);
+  }
+
+  .print-wrapper .config-qr-code {
+    display: inline-block;
+    width: var(--qr-code-size);
+    height: var(--qr-code-size);
+    vertical-align: top;
+  }
+
+  .print-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - var(--qr-code-size));
+  }
+
+  .print-wrapper .link-title {
+    @apply --font-style-body-3;
+    margin: var(--space-one) 0 var(--space-one-third);
+  }
+
+  .print-wrapper .row:last-of-type .link-description {
+    margin-top: 0;
+  }
+
+  #disclaimerSection .content p a {
+    text-decoration: none;
+  }
+
+  sf-cf-finance-widget sf-cf-representative-example[open] {
+    display: none;
+  }
+
+  .sf-cf-print sf-cf-representative-example,
+  .sf-cf-print sf-cf-representative-example[open] {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    background: none;
+    page-break-after: always;
+  }
+
+  .sf-cf-print sf-cf-representative-example .sf-cf-modal-overview.overlay,
+  .sf-cf-print sf-cf-representative-example[open] .sf-cf-modal-overview.overlay[opened] {
+    display: block;
+    max-width: none;
+    max-height: none;
+    padding: 0;
+    border: none;
+  }
+
+  .sf-cf-print .sf-cf-header {
+    display: block;
+  }
+}
+
+

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { formDataState, fetchedDataState } from '../../components/recoilAtoms';
 import { Input, useSteps } from '@chakra-ui/react';
-import { Table } from 'semantic-ui-react'
+import { Table, Divider } from 'semantic-ui-react'
+import { Grid, } from 'semantic-ui-react'
 
 
 
@@ -26,7 +27,6 @@ const Form3 = () => {
         count: 3, // Total number of steps
     });
 
-
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
@@ -34,13 +34,6 @@ const Form3 = () => {
             [name]: value,
         }));
     };
-
-    /*
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        dispatch(updateFormData({ ...formData, [name]: value }));
-    };
-    */
 
     // Assuming the user-selected tax rate and number of months are stored in the formData state
     const total =
@@ -111,201 +104,278 @@ const Form3 = () => {
     const biweeklyqc = parseFloat((qc60 * 12 / 26).toFixed(2))
     const weeklyqc = parseFloat((qc60 * 12 / 52).toFixed(2))
 
-
-
-
-
-
-
     return (
         <>
-            <form>
-                <Table size='large' celled inverted selectable >
-                    <Table.Header>
-                        <Table.Row>
-                            <Table.HeaderCell>Finance</Table.HeaderCell>
-                            <Table.HeaderCell></Table.HeaderCell>
-                            <Table.HeaderCell></Table.HeaderCell>
-                            <Table.HeaderCell></Table.HeaderCell>
-                            <Table.HeaderCell></Table.HeaderCell>
-                        </Table.Row>
-                    </Table.Header>
-                    <Table.Body>
-                        <Table.Row>
-                            <Table.Cell>{formData.model}</Table.Cell>
-                            <Table.Cell>{formData.msrp}</Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell> </Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell>Total Pre-Tax</Table.Cell>
-                            <Table.Cell>{total}</Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell>Licensing</Table.Cell>
-                            <Table.Cell>{formData.licensing}</Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell>w/ ON sales tax</Table.Cell>
-                            <Table.Cell>{onTax}</Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell>w/ QC sales tax</Table.Cell>
-                            <Table.Cell>{qcTax}</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell>Deposit:  default $500</Table.Cell>
-                            <Table.Cell>
-                                <Input type="text"
-                             name="deposit"
+            <section id="priceSection" class="">
+                <h3 class="price-header" tabindex="0">Price overview.</h3>
+                <section tabindex="0" slot="" class="section price-overview">
+                <Grid>
+    <Grid.Column floated='left' width={5}>
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>MSRP</p>
+                    </span>
+                    </Grid.Column>
+    <Grid.Column floated='right' width={5}>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        $220,000
+                    </p>
+</Grid.Column>
+  </Grid>
+                </section>
+                <Divider />
+
+                <section tabindex="0" slot="" class="section price-taxes">
+                    <span tabindex="0" class="price-label  divider-line ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Freight &amp; PDI</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value  divider-line ">
+                        $3,999
+                    </p>
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Retailer Administration Fee</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        $595
+                    </p>
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Air Condtioning Tax</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        $100
+                    </p>
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Tire Tax</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        $15
+                    </p>
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Security Registration Fee</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        $72.76
+                    </p>
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Luxury Tax</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        $22,478.18
+                    </p>
+                </section>
+                <Divider />
+
+                <section tabindex="0" slot="" class="section price-summary">
+                    <span tabindex="0" class="price-label  divider-line ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Total Selling Price</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value  divider-line ">
+                        $247,259.90
+                    </p>
+                </section>
+
+            </section>
+            <Table size='large' celled inverted selectable >
+                <Table.Header>
+                    <Table.Row>
+                        <Table.HeaderCell>Finance</Table.HeaderCell>
+                        <Table.HeaderCell></Table.HeaderCell>
+                        <Table.HeaderCell></Table.HeaderCell>
+                        <Table.HeaderCell></Table.HeaderCell>
+                        <Table.HeaderCell></Table.HeaderCell>
+                    </Table.Row>
+                </Table.Header>
+                <Table.Body>
+                    <Table.Row>
+                        <Table.Cell>{formData.model}</Table.Cell>
+                        <Table.Cell>{formData.msrp}</Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell> </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell>Total Pre-Tax</Table.Cell>
+                        <Table.Cell>{total}</Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell>Licensing</Table.Cell>
+                        <Table.Cell>{formData.licensing}</Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell>w/ ON sales tax</Table.Cell>
+                        <Table.Cell>{onTax}</Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell>w/ QC sales tax</Table.Cell>
+                        <Table.Cell>{qcTax}</Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell>Deposit:  default $500</Table.Cell>
+                        <Table.Cell>
+                            <Input type="text"
+                                name="deposit"
                                 id="deposit"
                                 autoComplete="deposit"
                                 focusBorderColor="brand.400"
                                 shadow="sm"
                                 size="sm"
                                 w="full"
-                              
+
                                 rounded="md"
                                 value={formData.deposit} onChange={handleInputChange}
-                                /></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell>
+                            /></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell>
 
-                            </Table.Cell>
-                            <Table.Cell>
+                        </Table.Cell>
+                        <Table.Cell>
 
-                            </Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell>60 Months</Table.Cell>
-                            <Table.Cell>72 Months</Table.Cell>
-                            <Table.Cell>84 Months</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell>Months: <Input type="text"
-                                name="months"
-                                id="months"
-                                autoComplete="months"
-                                focusBorderColor="brand.400"
-                                shadow="sm"
-                                size="sm"
-                                w="full"
+                        </Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell>60 Months</Table.Cell>
+                        <Table.Cell>72 Months</Table.Cell>
+                        <Table.Cell>84 Months</Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell>Months: <Input type="text"
+                            name="months"
+                            id="months"
+                            autoComplete="months"
+                            focusBorderColor="brand.400"
+                            shadow="sm"
+                            size="sm"
+                            w="full"
 
-                                rounded="md"
-                                value={formData.months} onChange={handleInputChange}
-                            />
-                            </Table.Cell>
-                            <Table.Cell>ON</Table.Cell>
-                            <Table.Cell>{on60}</Table.Cell>
-                            <Table.Cell>{on72}</Table.Cell>
-                            <Table.Cell>{on84}</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell>biweekly</Table.Cell>
-                            <Table.Cell>{biweekly}</Table.Cell>
-                            <Table.Cell>weekly</Table.Cell>
-                            <Table.Cell>{weekly}</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell>Rate:  default 0.1099<Input type="text"
-                                name="iRate"
-                                id="iRate"
-                                autoComplete="iRate"
-                                focusBorderColor="brand.400"
-                                shadow="sm"
-                                size="sm"
-                                w="full"
-                                defaultValue="60"
-                                rounded="md"
-                                value={formData.iRate} onChange={handleInputChange}
-                            />
-                            </Table.Cell>
-                            <Table.Cell>QC</Table.Cell>
-                            <Table.Cell>{qc60}</Table.Cell>
-                            <Table.Cell>{qc72}</Table.Cell>
-                            <Table.Cell>{qc84}</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell>biweekly</Table.Cell>
-                            <Table.Cell>{biweeklyqc}</Table.Cell>
-                            <Table.Cell>weekly</Table.Cell>
-                            <Table.Cell>{weeklyqc}</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell></Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell></Table.Cell>
-                            <Table.Cell>Native</Table.Cell>
-                            <Table.Cell>{nat60}</Table.Cell>
-                            <Table.Cell>{nat84}</Table.Cell>
-                            <Table.Cell>{nat72}</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell>Tax % default 0.12%<Input type="text"
-                                name="taxOther"
-                                id="taxOther"
-                                autoComplete="taxOther"
-                                focusBorderColor="brand.400"
-                                shadow="sm"
-                                size="sm"
-                                w="full"
-                                defaultValue="0.13"
-                                rounded="md"
-                                value={formData.otherTax} onChange={handleInputChange}
-                            />
+                            rounded="md"
+                            value={formData.months} onChange={handleInputChange}
+                        />
+                        </Table.Cell>
+                        <Table.Cell>ON</Table.Cell>
+                        <Table.Cell>{on60}</Table.Cell>
+                        <Table.Cell>{on72}</Table.Cell>
+                        <Table.Cell>{on84}</Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell>biweekly</Table.Cell>
+                        <Table.Cell>{biweekly}</Table.Cell>
+                        <Table.Cell>weekly</Table.Cell>
+                        <Table.Cell>{weekly}</Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell>Rate:  default 0.1099<Input type="text"
+                            name="iRate"
+                            id="iRate"
+                            autoComplete="iRate"
+                            focusBorderColor="brand.400"
+                            shadow="sm"
+                            size="sm"
+                            w="full"
+                            defaultValue="60"
+                            rounded="md"
+                            value={formData.iRate} onChange={handleInputChange}
+                        />
+                        </Table.Cell>
+                        <Table.Cell>QC</Table.Cell>
+                        <Table.Cell>{qc60}</Table.Cell>
+                        <Table.Cell>{qc72}</Table.Cell>
+                        <Table.Cell>{qc84}</Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell>biweekly</Table.Cell>
+                        <Table.Cell>{biweeklyqc}</Table.Cell>
+                        <Table.Cell>weekly</Table.Cell>
+                        <Table.Cell>{weeklyqc}</Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell>Native</Table.Cell>
+                        <Table.Cell>{nat60}</Table.Cell>
+                        <Table.Cell>{nat84}</Table.Cell>
+                        <Table.Cell>{nat72}</Table.Cell>
+                    </Table.Row>
+                    <Table.Row>
+                        <Table.Cell>Tax % default 0.12%<Input type="text"
+                            name="taxOther"
+                            id="taxOther"
+                            autoComplete="taxOther"
+                            focusBorderColor="brand.400"
+                            shadow="sm"
+                            size="sm"
+                            w="full"
+                            defaultValue="0.13"
+                            rounded="md"
+                            value={formData.otherTax} onChange={handleInputChange}
+                        />
 
-                            </Table.Cell>
-                            <Table.Cell>Other Prov.</Table.Cell>
-                            <Table.Cell>{oth60}</Table.Cell>
-                            <Table.Cell>{oth84}</Table.Cell>
-                            <Table.Cell>{oth72}</Table.Cell>
-                        </Table.Row>
+                        </Table.Cell>
+                        <Table.Cell>Other Prov.</Table.Cell>
+                        <Table.Cell>{oth60}</Table.Cell>
+                        <Table.Cell>{oth84}</Table.Cell>
+                        <Table.Cell>{oth72}</Table.Cell>
+                    </Table.Row>
 
-                    </Table.Body>
-                    <Table.Footer>
-                        <Table.Row>
-                            <Table.HeaderCell colSpan='5'>
-                            </Table.HeaderCell>
-                        </Table.Row>
-                    </Table.Footer>
-                </Table>
-            </form >
+                </Table.Body>
+                <Table.Footer>
+                    <Table.Row>
+                        <Table.HeaderCell colSpan='5'>
+                        </Table.HeaderCell>
+                    </Table.Row>
+                </Table.Footer>
+            </Table>
+
         </>
     )
 }

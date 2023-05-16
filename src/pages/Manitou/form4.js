@@ -2,14 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Box, Input, useSteps, Flex, FormControl, GridItem, FormLabel, Text } from '@chakra-ui/react';
 import { useRecoilState } from 'recoil';
 import { formDataState, fetchedDataState } from '../../components/recoilAtoms';
-import { Table, Select } from 'semantic-ui-react'
 import ListOptions from './../CanAm/ListOptions';
-
-
+import { Table, Divider, Grid, Card, Segment, Header, Container,Accordion, Icon } from 'semantic-ui-react'
+import AccordionEx from './Accordian';
 
 const Form4 = () => {
-    const [step, setStep] = useState(3);
-    const [progress, setProgress] = useState(0);
     const [formData, setFormData] = useRecoilState(formDataState);
     const [fetchedData, setFetchedData] = useRecoilState(fetchedDataState);
 
@@ -18,17 +15,6 @@ const Form4 = () => {
         }
     }, [formData.model]);
 
-    const handleBack = () => {
-        setStep(step - 1);
-        setProgress(progress - 33.33);
-    };
-
-    const { activeStep } = useSteps({
-        index: step - 1, // Adjust the index to match the step
-        count: 4, // Total number of steps
-    });
-
-
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
@@ -36,16 +22,7 @@ const Form4 = () => {
             [name]: value,
         }));
     };
-
-    /*
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        dispatch(updateFormData({ ...formData, [name]: value }));
-    };
-    */
-
-    // Assuming the user-selected tax rate and number of months are stored in the formData state
-
+ 
     let total =
         // fetched
         parseInt(fetchedData.msrp) + parseInt(fetchedData.freight) +
@@ -78,7 +55,7 @@ const Form4 = () => {
 
     const onTax = (total * 1.13).toFixed(2);
     const qcTax = (total * 1.15).toFixed(2);
-    const otherTax = (total * 1.15).toFixed(2);
+    const otherTax = (total * formData.taxOther).toFixed(2);
     const native = total
 
     const loanAmountON = parseFloat(onTax) || 0; // Assuming loan amount is stored in formData as loanAmount
@@ -132,12 +109,270 @@ const Form4 = () => {
     const oth84 = parseFloat(
         (monthlyInterestRate * loanPrincipalOth / (1 - Math.pow(1 + monthlyInterestRate, -84))).toFixed(2)
     );
+
     const biweekly = parseFloat((on60 * 12 / 26).toFixed(2))
     const weekly = parseFloat((on60 * 12 / 52).toFixed(2))
     const biweeklyqc = parseFloat((qc60 * 12 / 26).toFixed(2))
     const weeklyqc = parseFloat((qc60 * 12 / 52).toFixed(2))
+    const biweeklNat = parseFloat((nat60 * 12 / 26).toFixed(2))
+    const weeklylNat = parseFloat((nat60 * 12 / 52).toFixed(2))
+    const biweekOth = parseFloat((oth60 * 12 / 26).toFixed(2))
+    const weeklyOth = parseFloat((oth60 * 12 / 52).toFixed(2))
+
     return (
-        <>
+        <>   <section id="priceSection" class="">
+            <h3 class="price-header" tabindex="0">Overview</h3>
+
+            <Divider horizontal>Model</Divider>
+            <section tabindex="0" slot="" class="section price-overview">
+                <span tabindex="0" class="price-label   ">
+                    <label class=" hidden undefined ">
+
+                    </label>
+                    <p>Model</p>
+                </span>
+                <p tabindex="0" class="bottom-aligned price-value   ">
+                    {fetchedData.model1}
+                </p>
+                <span tabindex="0" class="price-label   ">
+                    <label class=" hidden undefined ">
+
+                    </label>
+                    <p>Color</p>
+                </span>
+                <p tabindex="0" class="bottom-aligned price-value   ">
+                    {fetchedData.color}
+                </p>
+                <span tabindex="0" class="price-label   ">
+                    <label class=" hidden undefined ">
+
+                    </label>
+                    <p>Model Code</p>
+                </span>
+                <p tabindex="0" class="bottom-aligned price-value   ">
+                    {fetchedData.modelCode}
+                </p>
+
+            </section>
+            <section tabindex="0" slot="" class="section price-overview">
+
+            </section>
+
+            <Divider horizontal>Price</Divider>
+
+            <section tabindex="0" slot="" class="section price-taxes">
+                <span tabindex="0" class="price-label   ">
+                    <label class=" hidden undefined ">
+
+                    </label>
+                    <p>MSRP</p>
+                </span>
+                <p tabindex="0" class="bottom-aligned price-value   ">
+                    ${fetchedData.msrp}
+                </p>
+                <span tabindex="0" class="price-label  divider-line ">
+                    <label class=" hidden undefined ">
+                    </label>
+                    <p>Freight</p>
+                </span>
+                <p tabindex="0" class="bottom-aligned price-value  divider-line ">
+                    ${fetchedData.freight}
+                </p>
+                <span tabindex="0" class="price-label  divider-line ">
+                    <label class=" hidden undefined ">
+                    </label>
+                    <p>PDI</p>
+                </span>
+                <p tabindex="0" class="bottom-aligned price-value  divider-line ">
+                    ${fetchedData.pdi}
+                </p>
+
+                <span tabindex="0" class="price-label   ">
+                    <label class=" hidden undefined ">
+                    </label>
+                    <p>Commodity</p>
+                </span>
+                <p tabindex="0" class="bottom-aligned price-value   ">
+                    ${fetchedData.commodity}
+                </p>
+                <span tabindex="0" class="price-label   ">
+                    <label class=" hidden undefined ">
+                    </label>
+                    <p>Accessories</p>
+                </span>
+                <p tabindex="0" class="bottom-aligned price-value   ">
+                    ${formData.accessories}
+                </p>
+                <span tabindex="0" class="price-label   ">
+                    <label class=" hidden undefined ">
+                    </label>
+                    <p>Labour</p>
+                </span>
+                <p tabindex="0" class="bottom-aligned price-value   ">
+                    ${formData.labour}
+                </p>
+                <span tabindex="0" class="price-label   ">
+                    <label class=" hidden undefined ">
+                    </label>
+                    <p>Licensing &amp; Tire Tax</p>
+                </span>
+                <p tabindex="0" class="bottom-aligned price-value   ">
+                    $72.76
+                </p>
+            </section>
+            <Divider horizontal>Accessories</Divider>
+            <section tabindex="0" slot="" class="section price-taxes">
+                <span tabindex="0" class="price-label   ">
+                    <label class=" hidden undefined ">
+
+                    </label>
+                    <p>Options</p>
+                </span>
+                <p tabindex="0" class="bottom-aligned price-value   ">
+                    {formData.options}
+                </p>
+            </section>
+            <Divider />
+            <section tabindex="0" slot="" class="section price-summary">
+                <span tabindex="0" class="price-label   divider-line ">
+                    <h3 size="3.5em"><strong>Total Selling Price</strong></h3>
+                </span>
+                <h3 class="bottom-aligned  divider-line "><strong>${onTax}</strong> </h3>
+            </section>
+        </section>
+
+
+            <h1> </h1>
+            <h1> </h1>
+
+            <section>
+                <Header as='h2' >Finance</Header>
+                <Header width="100%" as='h4'>Standard Contact</Header>
+
+                <AccordionEx / >
+                <Divider horizontal>Ontario</Divider>
+                <h3> </h3>
+                <Grid columns={3} padded>
+                    <Grid.Column>
+                        <p>{on60}/Month</p>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>{biweekly}/Bi-weekly</p>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>{weekly}/Week</p>
+                    </Grid.Column>
+                </Grid><h3> </h3>
+                <Divider horizontal>Quebec</Divider>
+                <h3> </h3>
+                <Grid columns={3} padded>
+                    <Grid.Column>
+                        <p>{qc60}/Month</p>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>{biweeklyqc}/Bi-weekly</p>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>{weeklyqc}/Week</p>
+                    </Grid.Column>
+                </Grid>
+                <h3> </h3>
+                <Divider horizontal>No Taxes Collected</Divider>
+                <h3> </h3>
+                <Grid columns={3} padded >
+                    <Grid.Column>
+                        <p>{nat60}/Month</p>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>{biweeklNat}/Bi-weekly</p>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>{weeklylNat}/Week</p>
+                    </Grid.Column>
+                </Grid>
+                <h3> </h3>
+                <Divider horizontal>Other Provinces</Divider>
+                <h3> </h3>
+                <Grid columns={4} padded>
+                    <Grid.Column>
+                        Tax % default 13%<Input type="text"
+                            name="taxOther"
+                            id="taxOther"
+                            autoComplete="taxOther"
+                            focusBorderColor="brand.400"
+                            shadow="sm"
+                            size="sm"
+                            w="46px"
+                            defaultValue={formData.taxOther}
+                            rounded="md"
+                            value={formData.taxOther} onChange={handleInputChange}
+                        /></Grid.Column>
+                    <Grid.Column>
+                        <p>{oth60}/Month</p>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>{biweekOth}/Bi-weekly</p>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>{weeklyOth}/Week</p>
+                    </Grid.Column>
+                </Grid>
+                <h3> </h3>
+
+                <Divider horizontal>Terms</Divider>
+                <Grid columns={2} padded centered>
+                    <Grid.Column>
+                        <p>Term</p><Input type="text"
+                            name="months"
+                            id="months"
+                            autoComplete="months"
+                            focusBorderColor="brand.400"
+                            shadow="sm"
+                            size="sm"
+                            w="45px"
+                            rounded="md"
+                            value={formData.months} onChange={handleInputChange}
+                        />
+
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>Rate - Defaults to 10.99%</p>
+                        <Input type="text"
+                            name="iRate"
+                            id="iRate"
+                            autoComplete="iRate"
+                            focusBorderColor="brand.400"
+                            shadow="sm"
+                            size="sm"
+                            w="80px"
+
+                            rounded="md"
+                            value={formData.iRate} onChange={handleInputChange}
+                        />
+                    </Grid.Column>
+                </Grid>
+                <Grid columns={2} padded>
+                    <Grid.Column>
+                        <p>Deposit</p> <Input type="text"
+                            name="deposit"
+                            id="deposit"
+                            autoComplete="deposit"
+                            focusBorderColor="brand.400"
+                            shadow="sm"
+                            size="sm"
+                            w="80px"
+
+                            rounded="md"
+                            value={formData.deposit} Change={handleInputChange}
+                        />
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>Rate: Defaults to 10.99%</p>
+                    </Grid.Column>
+                </Grid>
+
+            </section>
+
             <Table size='large' celled inverted selectable >
                 <Table.Header>
                     <Table.Row>
@@ -197,7 +432,7 @@ const Form4 = () => {
                                 shadow="sm"
                                 size="sm"
                                 w="full"
-                              
+
                                 rounded="md"
                                 value={formData.deposit} onChange={handleInputChange}
                             /></Table.Cell>

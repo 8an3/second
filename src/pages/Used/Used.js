@@ -43,45 +43,20 @@ export default function Used() {
     doc.text(15, 211, `${formData.options}`); // Accessories field
     doc.text(118, 98, `${formData.msrp}`); // Accessories field
     doc.text(12, 108, `${formData.model}`); // Accessories field
-
-
     // Save the filled PDF document
     doc.save((`${formData.name}.pdf`));
   };
 
-
   //-----------
   const [step, setStep] = useState(1);
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(33.33);
   const [formData, setFormData] = useRecoilState(formDataState);
   const [fetchedData, setFetchedData] = useRecoilState(fetchedDataState);
-
 
   useEffect(() => {
     if (formData.model) {
     }
   }, [formData.model]);
-
-  const handleBack = () => {
-    setStep(step - 1);
-    setProgress(progress - 33.33);
-  };
-
-  const handleNext = () => {
-    if (step === 3) {
-      // Navigate to the CanAm2 page
-    } else {
-      setStep(step + 1);
-      setProgress(progress + 33.33);
-      if (step === 2) {
-      }
-    }
-  };
-
-  const { activeStep } = useSteps({
-    index: step - 1, // Adjust the index to match the step
-    count: 3, // Total number of steps
-  });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -91,16 +66,31 @@ export default function Used() {
     }));
   };
 
+  const handleBack = () => {
+    setStep(step - 1);
+    setProgress(progress - 33.33);
+  };
+
+  const handleNext = () => {
+    setStep(step + 1);
+    if (step === 3) {
+      setProgress(100);
+    } else {
+      setProgress(progress + 33.33);
+    }
+  };
+
+
   return (
     <>
-      <Box borderWidth="1px"
+    
         rounded="lg"
         shadow="1px 1px 3px rgba(0,0,0,0.3)"
         maxWidth={800}
         p={6}
         m="10px auto"
         as="form">
-        <Stepper size="lg" index={activeStep}>
+        <Stepper size="lg">
           {steps.map((step, index) => (
             <Step key={index}>
               <StepIndicator>
@@ -110,12 +100,10 @@ export default function Used() {
                   active={<StepNumber />}
                 />
               </StepIndicator>
-
               <Box flexShrink="0">
                 <StepTitle>{step.title}</StepTitle>
                 <StepDescription>{step.description}</StepDescription>
               </Box>
-
               <StepSeparator />
             </Step>
           ))}
@@ -155,16 +143,7 @@ export default function Used() {
             ) : null}
           </Flex>
         </ButtonGroup>
-      </Box>
-      <Box w="100%" textAlign={'center'} fontWeight="normal" mb="2%"
-        borderWidth="1px"
-        rounded="lg"
-        shadow="1px 1px 3px rgba(0,0,0,0.3)"
-        maxWidth={800}
-        p={6}
-        m="10px auto"
-        as="form">
-        <HStack spacing={6}>
+ 
           <Box w="100%" h="100%"
             bg={useColorModeValue('white', 'gray.800')}
             boxShadow={'2xl'}
@@ -203,37 +182,9 @@ export default function Used() {
               <Text color={'gray.500'}>Address: {formData.address}</Text>
             </Box>
           </Box>
-          <Box
-            w="100%"
-            height="100%"
-            bg={useColorModeValue('white', 'gray.800')}
-            boxShadow={'2xl'}
-            rounded={'md'}
-            overflow={'hidden'}>
-            <Image
-              h={'120px'}
-              w={'full'}
-              src={
-                'https://www.utvsportsmag.com/wp-content/uploads/2021/04/6_GBC_Dirt_Commander_2_USM-7947-scaled.jpg'
-              }
-              objectFit={'cover'}
-            />
-            <Box p={6}>
-              <Stack spacing={0} align={'center'} mb={5}>
-                <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-                </Heading>
-                <Text color={'gray.500'}>  {formData.model}</Text>
-              </Stack>
-              <Text color={'gray.500'}>Stock Number: {formData.stockNum}</Text>
-              <Text color={'gray.500'}>Year: {formData.year}</Text>
-              <Text color={'gray.500'}>Trade: {formData.trade}</Text>
-              <Text color={'gray.500'}>Deposit: {formData.deposit}</Text>
-              <Text color={'gray.500'}>Labour Hours: {formData.options}</Text>
-              <Text color={'gray.500'}>Trade: {formData.trade}</Text>
-            </Box>
-          </Box>
-        </HStack>
-      </Box >
+                
+       
+        
     </>
   );
 }

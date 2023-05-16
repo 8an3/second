@@ -1,0 +1,576 @@
+<sf-cf-finance-widget page="Summary" class="sf-conx-root sf-cf-market-ca
+    sf-cf-brand-bmwcar">
+    <h3 class="sf-cf-finance-page-headline">Financing</h3>
+    <section class="sf-cf-accessories-disclaimer">
+        <sf-cf-accessories-disclaimer disabled="">
+            <div class="accessoriesDisclaimerText">IMPORTANT: Please note the
+                finance example below is for the vehicle and selected
+                options/packages only. The accessories (such as selected Winter
+                Wheels and Home Charging) are not included for the purpose of
+                the calculator. Please contact your BMW Retailer for further
+                details.</div>
+        </sf-cf-accessories-disclaimer>
+    </section>
+    <sf-cf-finance-product-overview page="Summary" class="sf-cf-market-ca"
+        selected=""><div class="sf-cf-finance-product-overview">
+            <div>
+                <div class="sf-cf-print">
+                    <div class="sf-cf-header">Your financial options.</div>
+                </div>
+                <div class="sf-cf-finance-product-title">
+                    <sf-cf-label data-productcode="1001" data-label="name">Standard
+                        Lease</sf-cf-label>
+                </div>
+                <sf-cf-total-instalment type="Overview" class="sf-cf-market-ca"><div
+                        class="sf-cf-total-instalment">
+                        <div class="sf-cf-total-instalment-content">
+                            <span class="sf-cf-total-instalment-value"><sf-cf-number
+                                    class="sf-cf-payment" name="payment"
+                                    precision="0" type="currency" placeholder=""
+                                    value="3457.32"><span class="sf-cf-number">€3,457</span></sf-cf-number></span>
+                            <sf-cf-finance-product-frequency weekly="/ week"
+                                monthly="/ month" biweekly="/ bi-weekly"
+                                single=" " frequency="monthly">/ month</sf-cf-finance-product-frequency>
+                            <sf-cf-info-icon widget="financedetails"
+                                aria-label="Finance product details"
+                                placeholder="" tabindex="0"
+                                trackingname="TotalInstallment Overview -
+                                Standard Lease" style="cursor: pointer;"><div
+                                    class="sf-cf-modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <sf-cf-button type="close"
+                                            placeholder="">
+                                            <span type="button"
+                                                class="sf-confi-close close"
+                                                tabindex="0"></span>
+                                        </sf-cf-button>
+                                        <span class="sf-cf-modal-widget"></span>
+                                    </div>
+                                </div></sf-cf-info-icon>
+                        </div>
+                        <span class="sf-cf-total-instalment-incl-freight"
+                            style="display: none;">(Includes Freight &amp; PDI)</span>
+                        <span class="sf-cf-total-instalment-incl-taxes"
+                            style="display: none;">(Includes Sales Tax)</span>
+                        <span
+                            class="sf-cf-total-instalment-incl-freight-and-taxes"
+                            style="display: none;">(Includes Freight &amp; PDI
+                            and Sales Tax)</span>
+                    </div>
+                </sf-cf-total-instalment>
+                <div class="sf-cf-product-description">Competitive interest
+                    rates and monthly payments.</div>
+                <table class="sf-cf-summary-parameters">
+                    <tbody><tr class="sf-cf-content-key-value"
+                            parameterid="ProvinceName">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="ProvinceName"
+                                    data-label="text">Province</sf-cf-label>
+                                <sf-cf-tooltip trackingname="Province"
+                                    tabindex="0" style="display: inline-block;
+                                    cursor: help;">
+                                    <div class="sf-cf-aria-description">Province:
+                                        Selected Province.</div>
+                                    <div class="sf-cf-printout-description"
+                                        style="display: none">Selected Province.</div>
+                                    <span class="sf-cf-tooltip">
+                                        <span class="sf-cf-info-icon popup">
+                                            <sf-cf-popup role="alert"
+                                                content="Selected Province."
+                                                style="--label-width: 0px;">
+                                                <div class="sf-cf-popup">
+                                                    <span
+                                                        class="sf-cf-popuptext"
+                                                        style="cursor:
+                                                        pointer;">Selected
+                                                        Province.</span>
+                                                </div>
+                                            </sf-cf-popup>
+                                        </span>
+                                    </span>
+                                </sf-cf-tooltip>
+                            </td>
+                            <td class="sf-cf-content-value">
+                                <sf-cf-output data-productcode="1001"
+                                    data-parameterid="ProvinceName"
+                                    text="Manitoba">
+                                    <span class="sf-cf-output">Manitoba</span>
+                                </sf-cf-output>
+                            </td>
+                        </tr>
+                        <tr class="sf-cf-content-key-value" parameterid="Term">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="Term" data-label="text">Term</sf-cf-label>
+                                <sf-cf-tooltip trackingname="Term" tabindex="0"
+                                    style="display: inline-block; cursor:
+                                    help;">
+                                    <div class="sf-cf-aria-description">Term:
+                                        Duration of agreement</div>
+                                    <div class="sf-cf-printout-description"
+                                        style="display: none">Duration of
+                                        agreement</div>
+                                    <span class="sf-cf-tooltip">
+                                        <span class="sf-cf-info-icon popup">
+                                            <sf-cf-popup role="alert"
+                                                content="Duration of agreement"
+                                                style="--label-width: 0px;">
+                                                <div class="sf-cf-popup">
+                                                    <span
+                                                        class="sf-cf-popuptext"
+                                                        style="cursor:
+                                                        pointer;">Duration of
+                                                        agreement</span>
+                                                </div>
+                                            </sf-cf-popup>
+                                        </span>
+                                    </span>
+                                </sf-cf-tooltip>
+                            </td>
+                            <td class="sf-cf-content-value">
+                                <sf-cf-number data-productcode="1001"
+                                    data-parameterid="Term" type="decimal"
+                                    precision="0" unit="months" locale="en-CA"
+                                    placeholder="" value="48"><span
+                                        class="sf-cf-number">48 months</span></sf-cf-number>
+                            </td>
+                        </tr>
+                        <tr class="sf-cf-content-key-value" parameterid="APR">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="APR" data-label="text">Interest
+                                    Rate</sf-cf-label>
+                                <sf-cf-tooltip trackingname="Interest Rate"
+                                    tabindex="0" style="display: inline-block;
+                                    cursor: help;">
+                                    <div class="sf-cf-aria-description">Interest
+                                        Rate: Annual percentage rate being
+                                        charged as interest.</div>
+                                    <div class="sf-cf-printout-description"
+                                        style="display: none">Annual percentage
+                                        rate being charged as interest.</div>
+                                    <span class="sf-cf-tooltip">
+                                        <span class="sf-cf-info-icon popup">
+                                            <sf-cf-popup role="alert"
+                                                content="Annual percentage rate
+                                                being charged as interest."
+                                                style="--label-width: 0px;">
+                                                <div class="sf-cf-popup">
+                                                    <span
+                                                        class="sf-cf-popuptext"
+                                                        style="cursor:
+                                                        pointer;">Annual
+                                                        percentage rate being
+                                                        charged as interest.</span>
+                                                </div>
+                                            </sf-cf-popup>
+                                        </span>
+                                    </span>
+                                </sf-cf-tooltip>
+                            </td>
+                            <td class="sf-cf-content-value">
+                                <sf-cf-number data-productcode="1001"
+                                    data-parameterid="APR" type="percent"
+                                    precision="2" locale="en-CA" placeholder=""
+                                    value="0.0849"><span class="sf-cf-number">8.49
+                                        %</span></sf-cf-number>
+                            </td>
+                        </tr>
+                        <tr class="sf-cf-content-key-value"
+                            parameterid="DepositAmount">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="DepositAmount"
+                                    data-label="text">Down Payment</sf-cf-label>
+                                <sf-cf-tooltip trackingname="Down Payment"
+                                    tabindex="0" style="display: inline-block;
+                                    cursor: help;">
+                                    <div class="sf-cf-aria-description">Down
+                                        Payment: Lump sum amount paid up-front
+                                        to lower the payment and reduce the
+                                        amount financed.</div>
+                                    <div class="sf-cf-printout-description"
+                                        style="display: none">Lump sum amount
+                                        paid up-front to lower the payment and
+                                        reduce the amount financed.</div>
+                                    <span class="sf-cf-tooltip">
+                                        <span class="sf-cf-info-icon popup">
+                                            <sf-cf-popup role="alert"
+                                                content="Lump sum amount paid
+                                                up-front to lower the payment
+                                                and reduce the amount financed."
+                                                style="--label-width: 0px;">
+                                                <div class="sf-cf-popup">
+                                                    <span
+                                                        class="sf-cf-popuptext"
+                                                        style="cursor:
+                                                        pointer;">Lump sum
+                                                        amount paid up-front to
+                                                        lower the payment and
+                                                        reduce the amount
+                                                        financed.</span>
+                                                </div>
+                                            </sf-cf-popup>
+                                        </span>
+                                    </span>
+                                </sf-cf-tooltip>
+                            </td>
+                            <td class="sf-cf-content-value">
+                                <sf-cf-number data-productcode="1001"
+                                    data-parameterid="DepositAmount"
+                                    type="currency" precision="0" currency="CAD"
+                                    locale="en-CA" placeholder="" value="5000"><span
+                                        class="sf-cf-number">€5,000</span></sf-cf-number>
+                            </td>
+                        </tr>
+                        <tr class="sf-cf-content-key-value"
+                            parameterid="TradeInAmount">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="TradeInAmount"
+                                    data-label="text">Trade-in Value</sf-cf-label>
+                                <sf-cf-tooltip trackingname="Trade-in Value"
+                                    tabindex="0" style="display: inline-block;
+                                    cursor: help;">
+                                    <div class="sf-cf-aria-description">Trade-in
+                                        Value: Value of your trade-in vehicle
+                                        after payment of amounts owing, if any.</div>
+                                    <div class="sf-cf-printout-description"
+                                        style="display: none">Value of your
+                                        trade-in vehicle after payment of
+                                        amounts owing, if any.</div>
+                                    <span class="sf-cf-tooltip">
+                                        <span class="sf-cf-info-icon popup">
+                                            <sf-cf-popup role="alert"
+                                                content="Value of your trade-in
+                                                vehicle after payment of amounts
+                                                owing, if any."
+                                                style="--label-width: 0px;">
+                                                <div class="sf-cf-popup">
+                                                    <span
+                                                        class="sf-cf-popuptext"
+                                                        style="cursor:
+                                                        pointer;">Value of your
+                                                        trade-in vehicle after
+                                                        payment of amounts
+                                                        owing, if any.</span>
+                                                </div>
+                                            </sf-cf-popup>
+                                        </span>
+                                    </span>
+                                </sf-cf-tooltip>
+
+                            </td>
+                            <td class="sf-cf-content-value">
+
+
+                                <sf-cf-number data-productcode="1001"
+                                    data-parameterid="TradeInAmount"
+                                    type="currency" precision="0" currency="CAD"
+                                    locale="en-CA" placeholder=""><span
+                                        class="sf-cf-number">€0</span></sf-cf-number>
+                            </td>
+                        </tr>
+
+
+
+
+                        <tr class="sf-cf-content-key-value"
+                            parameterid="Mileage">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="Mileage"
+                                    data-label="text">Km/Year</sf-cf-label>
+                                <sf-cf-tooltip trackingname="Km/Year"
+                                    tabindex="0" style="display: inline-block;
+                                    cursor: help;">
+                                    <div class="sf-cf-aria-description">Km/Year:
+                                        Average number of kilometres driven per
+                                        year in agreement.</div>
+                                    <div class="sf-cf-printout-description"
+                                        style="display: none">Average number of
+                                        kilometres driven per year in agreement.</div>
+                                    <span class="sf-cf-tooltip">
+                                        <span class="sf-cf-info-icon popup">
+                                            <sf-cf-popup role="alert"
+                                                content="Average number of
+                                                kilometres driven per year in
+                                                agreement."
+                                                style="--label-width: 0px;">
+                                                <div class="sf-cf-popup">
+                                                    <span
+                                                        class="sf-cf-popuptext"
+                                                        style="cursor:
+                                                        pointer;">Average number
+                                                        of kilometres driven per
+                                                        year in agreement.</span>
+                                                </div>
+                                            </sf-cf-popup>
+                                        </span>
+                                    </span>
+                                </sf-cf-tooltip>
+
+                            </td>
+                            <td class="sf-cf-content-value">
+
+
+                                <sf-cf-number data-productcode="1001"
+                                    data-parameterid="Mileage" type="decimal"
+                                    precision="0" unit="km" locale="en-CA"
+                                    placeholder="" value="24000"><span
+                                        class="sf-cf-number">24,000 km</span></sf-cf-number>
+                            </td>
+                        </tr>
+
+
+
+
+                        <tr class="sf-cf-content-key-value"
+                            parameterid="IncludeFreightPDI">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="IncludeFreightPDI"
+                                    data-label="text">Include Freight &amp; PDI
+                                    in Payment</sf-cf-label>
+
+                                <sf-cf-tooltip trackingname="Include Freight
+                                    &amp; PDI in Payment" tabindex="0"
+                                    style="display: inline-block; cursor:
+                                    help;">
+                                    <div class="sf-cf-aria-description">Include
+                                        Freight &amp; PDI in Payment: Add
+                                        freight &amp; PDI into payment to remove
+                                        amount from the total amount due upon
+                                        delivery.</div>
+                                    <div class="sf-cf-printout-description"
+                                        style="display: none">Add freight &amp;
+                                        PDI into payment to remove amount from
+                                        the total amount due upon delivery.</div>
+                                    <span class="sf-cf-tooltip">
+                                        <span class="sf-cf-info-icon popup">
+                                            <sf-cf-popup role="alert"
+                                                content="Add freight &amp;amp;
+                                                PDI into payment to remove
+                                                amount from the total amount due
+                                                upon delivery."
+                                                style="--label-width: 0px;">
+                                                <div class="sf-cf-popup">
+                                                    <span
+                                                        class="sf-cf-popuptext"
+                                                        style="cursor:
+                                                        pointer;">Add freight
+                                                        &amp; PDI into payment
+                                                        to remove amount from
+                                                        the total amount due
+                                                        upon delivery.</span>
+                                                </div>
+                                            </sf-cf-popup>
+                                        </span>
+                                    </span>
+                                </sf-cf-tooltip>
+
+                            </td>
+                            <td class="sf-cf-content-value">
+
+
+                                <sf-cf-boolean data-productcode="1001"
+                                    data-parameterid="IncludeFreightPDI"
+                                    data-true="Yes" data-false="No"
+                                    placeholder="" value="false">
+                                    <span class="sf-cf-boolean">No</span>
+                                </sf-cf-boolean>
+
+
+
+                            </td>
+                        </tr>
+
+
+
+
+                        <tr class="sf-cf-content-key-value"
+                            parameterid="IncludeTaxes">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="IncludeTaxes"
+                                    data-label="text">Include Sales Tax in
+                                    Payment</sf-cf-label>
+
+                                <sf-cf-tooltip trackingname="Include Sales Tax
+                                    in Payment" tabindex="0" style="display:
+                                    inline-block; cursor: help;">
+                                    <div class="sf-cf-aria-description">Include
+                                        Sales Tax in Payment: Add Sales Tax into
+                                        payment amount.</div>
+                                    <div class="sf-cf-printout-description"
+                                        style="display: none">Add Sales Tax into
+                                        payment amount.</div>
+                                    <span class="sf-cf-tooltip">
+                                        <span class="sf-cf-info-icon popup">
+                                            <sf-cf-popup role="alert"
+                                                content="Add Sales Tax into
+                                                payment amount."
+                                                style="--label-width: 0px;">
+                                                <div class="sf-cf-popup">
+                                                    <span
+                                                        class="sf-cf-popuptext"
+                                                        style="cursor:
+                                                        pointer;">Add Sales Tax
+                                                        into payment amount.</span>
+                                                </div>
+                                            </sf-cf-popup>
+                                        </span>
+                                    </span>
+                                </sf-cf-tooltip>
+
+                            </td>
+                            <td class="sf-cf-content-value">
+
+
+                                <sf-cf-boolean data-productcode="1001"
+                                    data-parameterid="IncludeTaxes"
+                                    data-true="Yes" data-false="No"
+                                    placeholder="" value="false">
+                                    <span class="sf-cf-boolean">No</span>
+                                </sf-cf-boolean>
+
+
+
+                            </td>
+                        </tr>
+
+
+
+
+                        <tr class="sf-cf-content-key-value"
+                            parameterid="DeliveryCredit">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="DeliveryCredit"
+                                    data-label="text">Delivery Credit</sf-cf-label>
+                                <sf-cf-tooltip trackingname="Delivery Credit"
+                                    tabindex="0" style="display: inline-block;
+                                    cursor: help;">
+                                    <div class="sf-cf-aria-description">Delivery
+                                        Credit: Amount of delivery credit
+                                        available to customers on select special
+                                        offers.</div>
+                                    <div class="sf-cf-printout-description"
+                                        style="display: none">Amount of delivery
+                                        credit available to customers on select
+                                        special offers.</div>
+                                    <span class="sf-cf-tooltip">
+                                        <span class="sf-cf-info-icon popup">
+                                            <sf-cf-popup role="alert"
+                                                content="Amount of delivery
+                                                credit available to customers on
+                                                select special offers."
+                                                style="--label-width: 0px;">
+                                                <div class="sf-cf-popup">
+                                                    <span
+                                                        class="sf-cf-popuptext"
+                                                        style="cursor:
+                                                        pointer;">Amount of
+                                                        delivery credit
+                                                        available to customers
+                                                        on select special
+                                                        offers.</span>
+                                                </div>
+                                            </sf-cf-popup>
+                                        </span>
+                                    </span>
+                                </sf-cf-tooltip>
+                            </td>
+                            <td class="sf-cf-content-value">
+                                <sf-cf-number data-productcode="1001"
+                                    data-parameterid="DeliveryCredit"
+                                    type="currency" precision="0" currency="CAD"
+                                    locale="en-CA" placeholder=""><span
+                                        class="sf-cf-number">€0</span></sf-cf-number>
+                            </td>
+                        </tr>
+                        <tr class="sf-cf-content-key-value"
+                            parameterid="TotalCashPrice">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="TotalCashPrice"
+                                    data-label="text">Vehicle Price with Options</sf-cf-label>
+                                <sf-cf-tooltip trackingname="Vehicle Price with
+                                    Options" tabindex="0" style="display:
+                                    inline-block; cursor: help;">
+                                    <div class="sf-cf-aria-description">Vehicle
+                                        Price with Options: MSRP, Options,
+                                        Accessories and Freight &amp; PDI (as
+                                        selected).</div>
+                                    <div class="sf-cf-printout-description"
+                                        style="display: none">MSRP, Options,
+                                        Accessories and Freight &amp; PDI (as
+                                        selected).</div>
+                                    <span class="sf-cf-tooltip">
+                                        <span class="sf-cf-info-icon popup">
+                                            <sf-cf-popup role="alert"
+                                                content="MSRP, Options,
+                                                Accessories and Freight
+                                                &amp;amp; PDI (as selected)."
+                                                style="--label-width: 0px;">
+                                                <div class="sf-cf-popup">
+                                                    <span
+                                                        class="sf-cf-popuptext"
+                                                        style="cursor:
+                                                        pointer;">MSRP, Options,
+                                                        Accessories and Freight
+                                                        &amp; PDI (as selected).</span>
+                                                </div>
+                                            </sf-cf-popup>
+                                        </span>
+                                    </span>
+                                </sf-cf-tooltip>
+                            </td>
+                            <td class="sf-cf-content-value">
+                                <sf-cf-number data-productcode="1001"
+                                    data-parameterid="TotalCashPrice"
+                                    type="currency" precision="0" currency="CAD"
+                                    locale="en-CA" placeholder=""
+                                    value="220000"><span class="sf-cf-number">€220,000</span></sf-cf-number>
+                            </td>
+                        </tr>
+                        <tr class="sf-cf-content-key-value"
+                            parameterid="TotAmtDueOnSign">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="TotAmtDueOnSign"
+                                    data-label="text">Total Amount Due upon
+                                    Delivery</sf-cf-label>
+                            </td>
+                            <td class="sf-cf-content-value">
+                                <sf-cf-number data-productcode="1001"
+                                    data-parameterid="TotAmtDueOnSign"
+                                    type="currency" precision="0" currency="CAD"
+                                    locale="en-CA" placeholder=""
+                                    value="16739.39"><span class="sf-cf-number">€16,739</span></sf-cf-number>
+                            </td>
+                        </tr>
+                        <tr class="sf-cf-content-key-value"
+                            parameterid="ExcessMileageRate">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="ExcessMileageRate"
+                                    data-label="text">Each Additional Kilometre</sf-cf-label>
+                            </td>
+                            <td class="sf-cf-content-value">
+                                <sf-cf-number data-productcode="1001"
+                                    data-parameterid="ExcessMileageRate"
+                                    type="currency" precision="0" currency="CAD"
+                                    locale="en-CA" placeholder="" value="0.3"><span
+                                        class="sf-cf-number">€0.30</span></sf-cf-number>
+                            </td>
+                        </tr>
+                        <tr class="sf-cf-content-key-value"
+                            parameterid="BreakdownOfPayments">
+                            <td class="sf-cf-content-key">
+                                <sf-cf-label data-productcode="1001"
+                                    data-parameterid="BreakdownOfPayments"
+                                    data-label="text">Payment Summary</sf-cf-label>
+                            </section>
