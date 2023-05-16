@@ -11,8 +11,8 @@
 # production
 /build
 
-/srb
-/src/assets
+
+
 
 # misc
 .DS_Store

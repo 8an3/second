@@ -47,16 +47,17 @@ const Form3 = () => {
         parseInt(formData.licensing) +
         parseInt(formData.accessories) +
         parseInt(formData.labour) +
-        parseInt(formData.msrp) ;
+        parseInt(formData.msrp);
 
     const onTax = (total * 1.13).toFixed(2);
     const qcTax = (total * 1.15).toFixed(2);
-
+    const otherTax = (total * 1.15).toFixed(2);
     const native = total
 
     const loanAmountON = parseFloat(onTax) || 0; // Assuming loan amount is stored in formData as loanAmount
     const loanAmountQC = parseFloat(qcTax) || 0; // Assuming loan amount is stored in formData as loanAmount
     const loanAmountNAT = parseFloat(native) || 0; // Assuming loan amount is stored in formData as loanAmount
+    const loanAmountOther = parseFloat(otherTax) || 0; // Assuming loan amount is stored in formData as loanAmount
 
     const interestRate = parseFloat(formData.iRate) || 0.1099; // Assuming interest rate is stored in formData as interestRate
     const numberOfMonths = parseInt(formData.months) || 60;
@@ -66,6 +67,7 @@ const Form3 = () => {
     const loanPrincipalON = loanAmountON - downPayment;
     const loanPrincipalQC = loanAmountQC - downPayment;
     const loanPrincipalNAT = loanAmountNAT - downPayment;
+    const loanPrincipalOth = loanAmountOther - downPayment;
 
     const on60 = parseFloat(
         (monthlyInterestRate * loanPrincipalON / (1 - Math.pow(1 + monthlyInterestRate, -numberOfMonths))).toFixed(2)
@@ -94,6 +96,15 @@ const Form3 = () => {
     const nat84 = parseFloat(
         (monthlyInterestRate * loanPrincipalNAT / (1 - Math.pow(1 + monthlyInterestRate, -84))).toFixed(2)
     );
+    const oth60 = parseFloat(
+        (monthlyInterestRate * loanPrincipalOth / (1 - Math.pow(1 + monthlyInterestRate, -numberOfMonths))).toFixed(2)
+    );
+    const oth72 = parseFloat(
+        (monthlyInterestRate * loanPrincipalOth / (1 - Math.pow(1 + monthlyInterestRate, -72))).toFixed(2)
+    );
+    const oth84 = parseFloat(
+        (monthlyInterestRate * loanPrincipalOth / (1 - Math.pow(1 + monthlyInterestRate, -84))).toFixed(2)
+    );
 
     const biweekly = parseFloat((on60 * 12 / 26).toFixed(2))
     const weekly = parseFloat((on60 * 12 / 52).toFixed(2))
@@ -103,9 +114,9 @@ const Form3 = () => {
 
 
 
- 
- 
- 
+
+
+
     return (
         <>
             <form>
@@ -158,18 +169,18 @@ const Form3 = () => {
                         <Table.Row>
                             <Table.Cell>Deposit:  default $500</Table.Cell>
                             <Table.Cell>
-                            <Input type="text"
-                                name="iRate"
-                                id="iRate"
-                                autoComplete="iRate"
+                                <Input type="text"
+                             name="deposit"
+                                id="deposit"
+                                autoComplete="deposit"
                                 focusBorderColor="brand.400"
                                 shadow="sm"
                                 size="sm"
                                 w="full"
-                                defaultValue="60"
+                              
                                 rounded="md"
-                                value={formData.deposit}onChange={handleInputChange}
-                            /></Table.Cell>
+                                value={formData.deposit} onChange={handleInputChange}
+                                /></Table.Cell>
                             <Table.Cell></Table.Cell>
                             <Table.Cell>
 
@@ -281,9 +292,9 @@ const Form3 = () => {
 
                             </Table.Cell>
                             <Table.Cell>Other Prov.</Table.Cell>
-                            <Table.Cell>{nat60}</Table.Cell>
-                            <Table.Cell>{nat84}</Table.Cell>
-                            <Table.Cell>{nat72}</Table.Cell>
+                            <Table.Cell>{oth60}</Table.Cell>
+                            <Table.Cell>{oth84}</Table.Cell>
+                            <Table.Cell>{oth72}</Table.Cell>
                         </Table.Row>
 
                     </Table.Body>
