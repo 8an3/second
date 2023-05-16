@@ -6,7 +6,7 @@ function todo() {
         	  <p>Let me know you come accross any issues. 
 Everything works 
 [enter](https://8an3.github.io/public/infex.html)
-
+</p>
 
 <p>-- Current to do list ---</p>
 <p>-- XT options to add</p>
