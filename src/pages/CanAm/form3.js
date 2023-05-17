@@ -3,6 +3,7 @@ import { Box, Input, useSteps, Flex, FormControl, GridItem, FormLabel, } from '@
 import { useRecoilState } from 'recoil';
 import { formDataState, fetchedDataState } from '../../components/recoilAtoms';
 import { Table, Divider, Grid, Card, Segment, Header, Container } from 'semantic-ui-react'
+import { Accordion, AccordionTab } from 'primereact/accordion';
 
 const Form3 = () => {
     const [step, setStep] = useState(3);
@@ -103,210 +104,236 @@ const Form3 = () => {
 
     return (
         <>
-            
-                <section id="priceSection" class="">
-                    <h3 class="price-header" tabindex="0">Overview</h3>
 
-                    <Divider horizontal>Model</Divider>
-                    <section tabindex="0" slot="" class="section price-overview">
-                        <span tabindex="0" class="price-label   ">
-                            <label class=" hidden undefined ">
+            <section id="priceSection" class="">
+                <h3 class="price-header" tabindex="0">Overview</h3>
 
-                            </label>
-                            <p>Model</p>
-                        </span>
-                        <p tabindex="0" class="bottom-aligned price-value   ">
-                            {fetchedData.model1}
-                        </p>
-                        <span tabindex="0" class="price-label   ">
-                            <label class=" hidden undefined ">
+                <Divider horizontal>Model</Divider>
+                <section tabindex="0" slot="" class="section price-overview">
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
 
-                            </label>
-                            <p>Color</p>
-                        </span>
-                        <p tabindex="0" class="bottom-aligned price-value   ">
-                            {fetchedData.color}
-                        </p>
-                        <span tabindex="0" class="price-label   ">
-                            <label class=" hidden undefined ">
+                        </label>
+                        <p>Model</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        {fetchedData.model1}
+                    </p>
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
 
-                            </label>
-                            <p>Model Code</p>
-                        </span>
-                        <p tabindex="0" class="bottom-aligned price-value   ">
-                            {fetchedData.modelCode}
-                        </p>
+                        </label>
+                        <p>Color</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        {fetchedData.color}
+                    </p>
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
 
-                    </section>
-                    <section tabindex="0" slot="" class="section price-overview">
+                        </label>
+                        <p>Model Code</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        {fetchedData.modelCode}
+                    </p>
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
 
-                    </section>
+                        </label>
+                        <p>Year</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        {formData.year}
+                    </p>
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
 
-                    <Divider horizontal>Price</Divider>
+                        </label>
+                        <p>Stock Number</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        {formData.stockNum}
+                    </p>
+                </section>
+                <section tabindex="0" slot="" class="section price-overview">
 
-                    <section tabindex="0" slot="" class="section price-taxes">
-                        <span tabindex="0" class="price-label   ">
-                            <label class=" hidden undefined ">
-
-                            </label>
-                            <p>MSRP</p>
-                        </span>
-                        <p tabindex="0" class="bottom-aligned price-value   ">
-                            ${fetchedData.msrp}
-                        </p>
-                        <span tabindex="0" class="price-label  divider-line ">
-                            <label class=" hidden undefined ">
-                            </label>
-                            <p>Freight</p>
-                        </span>
-                        <p tabindex="0" class="bottom-aligned price-value  divider-line ">
-                            ${fetchedData.freight}
-                        </p>
-                        <span tabindex="0" class="price-label  divider-line ">
-                            <label class=" hidden undefined ">
-                            </label>
-                            <p>PDI</p>
-                        </span>
-                        <p tabindex="0" class="bottom-aligned price-value  divider-line ">
-                            ${fetchedData.pdi}
-                        </p>
-
-                        <span tabindex="0" class="price-label   ">
-                            <label class=" hidden undefined ">
-                            </label>
-                            <p>Commodity</p>
-                        </span>
-                        <p tabindex="0" class="bottom-aligned price-value   ">
-                            ${fetchedData.commodity}
-                        </p>
-                        <span tabindex="0" class="price-label   ">
-                            <label class=" hidden undefined ">
-                            </label>
-                            <p>Accessories</p>
-                        </span>
-                        <p tabindex="0" class="bottom-aligned price-value   ">
-                            ${formData.accessories}
-                        </p>
-                        <span tabindex="0" class="price-label   ">
-                            <label class=" hidden undefined ">
-                            </label>
-                            <p>Labour</p>
-                        </span>
-                        <p tabindex="0" class="bottom-aligned price-value   ">
-                            ${formData.labour}
-                        </p>
-                        <span tabindex="0" class="price-label   ">
-                            <label class=" hidden undefined ">
-                            </label>
-                            <p>Licensing &amp; Tire Tax</p>
-                        </span>
-                        <p tabindex="0" class="bottom-aligned price-value   ">
-                            $72.76
-                        </p>
-                    </section>
-                    <Divider horizontal>Accessories</Divider>
-                    <section tabindex="0" slot="" class="section price-taxes">
-                        <span tabindex="0" class="price-label   ">
-                            <label class=" hidden undefined ">
-
-                            </label>
-                            <p>Options</p>
-                        </span>
-                        <p tabindex="0" class="bottom-aligned price-value   ">
-                            {formData.options}
-                        </p>
-                    </section>
-                    <Divider />
-                    <section tabindex="0" slot="" class="section price-summary">
-                        <span tabindex="0" class="price-label   divider-line ">
-                            <h3 size="3.5em"><strong>Total Selling Price</strong></h3>
-                        </span>
-                        <h3 class="bottom-aligned  divider-line "><strong>${onTax}</strong> </h3>
-                    </section>
                 </section>
 
+                <Divider horizontal>Price</Divider>
 
-                <h1> </h1>
-                <h1> </h1>
+                <section tabindex="0" slot="" class="section price-taxes">
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
 
-                <section>
-                    <Header as='h2' >Finance</Header>
-                    
-                        <Header width="100%" as='h4'>Standard Contact</Header>
-                        <Divider horizontal>Ontario</Divider>
-                        <h3> </h3>
-                        <Grid columns={3} padded>                     
-                            <Grid.Column>
-                                <p>{on60}/Month</p>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <p>{biweekly}/Bi-weekly</p>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <p>{weekly}/Week</p>
-                            </Grid.Column>
-                        </Grid><h3> </h3>
-                        <Divider horizontal>Quebec</Divider>
-                        <h3> </h3>
-                        <Grid columns={3} padded>
-                  
-                            <Grid.Column>
-                                <p>{qc60}/Month</p>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <p>{biweeklyqc}/Bi-weekly</p>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <p>{weeklyqc}/Week</p>
-                            </Grid.Column>
-                        </Grid>
-                        <h3> </h3>
-                        <Divider horizontal>No Taxes Collected</Divider>
-                        <h3> </h3>
-                        <Grid columns={3} padded >
-                                                  <Grid.Column>
-                                <p>{nat60}/Month</p>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <p>{biweeklNat}/Bi-weekly</p>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <p>{weeklylNat}/Week</p>
-                            </Grid.Column>
-                        </Grid>
-                        <h3> </h3>
-                        <Divider horizontal>Other Provinces</Divider>
-                        <h3> </h3>
-                        <Grid columns={4} padded>
-                        <Grid.Column>
-                        Tax % default 13%<Input type="text"
-                            name="taxOther"
-                            id="taxOther"
-                            autoComplete="taxOther"
-                            focusBorderColor="brand.400"
-                            shadow="sm"
-                            size="sm"
-                            w="46px"
-                        defaultValue={formData.taxOther}
-                            rounded="md"
-                            value={formData.taxOther} onChange={handleInputChange}
-                        /></Grid.Column>
-                                                  <Grid.Column>
-                                <p>{oth60}/Month</p>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <p>{biweekOth}/Bi-weekly</p>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <p>{weeklyOth}/Week</p>
-                            </Grid.Column>
-                        </Grid>
-                        <h3> </h3>
+                        </label>
+                        <p>MSRP</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        ${fetchedData.msrp}
+                    </p>
+                    <span tabindex="0" class="price-label  divider-line ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Freight</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value  divider-line ">
+                        ${fetchedData.freight}
+                    </p>
+                    <span tabindex="0" class="price-label  divider-line ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>PDI</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value  divider-line ">
+                        ${fetchedData.pdi}
+                    </p>
 
-                        <Divider horizontal>Terms</Divider>
-                        <Grid columns={2} padded centered>
-                            <Grid.Column>
-                                <p>Term</p><Input type="text"
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Commodity</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        ${fetchedData.commodity}
+                    </p>
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Accessories</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        ${formData.accessories}
+                    </p>
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Labour</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        ${formData.labour}
+                    </p>
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
+                        </label>
+                        <p>Licensing &amp; Tire Tax</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        ${formData.licensing}
+                    </p>
+                </section>
+                <Divider horizontal>Accessories</Divider>
+                <section tabindex="0" slot="" class="section price-taxes">
+                    <span tabindex="0" class="price-label   ">
+                        <label class=" hidden undefined ">
+
+                        </label>
+                        <p>Options</p>
+                    </span>
+                    <p tabindex="0" class="bottom-aligned price-value   ">
+                        {formData.options}
+                    </p>
+                </section>
+                <Divider />
+                <section tabindex="0" slot="" class="section price-summary">
+                    <span tabindex="0" class="price-label   divider-line ">
+                        <h3 size="3.5em"><strong>Total Selling Price</strong></h3>
+                    </span>
+                    <h3 class="bottom-aligned  divider-line "><strong>${onTax}</strong> </h3>
+                </section>
+            </section>
+
+
+            <h1> </h1>
+            <h1> </h1>
+
+            <section>
+                <Header as='h2' >Finance</Header>
+
+                <Header width="100%" as='h4'>Standard Contact</Header>
+                <Divider header="Ontario" horizontal>Ontario</Divider>
+                <div className="card">
+                    <Accordion activeIndex={0}>
+                        <AccordionTab header="Ontario">
+                            <p className="m-0">
+                                <Grid columns={3} padded>
+                                    <Grid.Column>
+                                        <strong>${on60}/Month</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>${biweekly}/Bi-weekly</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>${weekly}/Week</strong>
+                                    </Grid.Column>
+                                </Grid>
+                            </p>
+                        </AccordionTab>
+                        <AccordionTab header="Quebec">
+                            <p className="m-0">
+                                <Grid columns={3} padded>
+                                    <Grid.Column>
+                                    <strong>${qc60}/Month</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>${biweeklyqc}/Bi-weekly</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>${weeklyqc}/Week</strong>
+                                    </Grid.Column>
+                                </Grid>
+                            </p>
+                        </AccordionTab>
+                        <AccordionTab header="No Taxes Collected">
+                            <p className="m-0">
+                                <Grid columns={3} padded >
+                                    <Grid.Column>
+                                    <strong>${nat60}/Month</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>${biweeklNat}/Bi-weekly</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                        <strong>${weeklylNat}/Week</strong>
+                                    </Grid.Column>
+                                </Grid>
+                            </p>
+                        </AccordionTab>
+                        <AccordionTab header="Other Provinces">
+                            <p className="m-0">
+                                <Grid columns={4} padded>
+                                    <Grid.Column>
+                                        Tax % default 13%<Input type="text"
+                                            name="taxOther"
+                                            id="taxOther"
+                                            autoComplete="taxOther"
+                                            focusBorderColor="brand.400"
+                                            shadow="sm"
+                                            size="sm"
+                                            w="46px"
+                                            defaultValue={formData.taxOther}
+                                            rounded="md"
+                                            value={formData.taxOther} onChange={handleInputChange}
+                                        /></Grid.Column>
+                                    <Grid.Column>
+                                    <strong>${oth60}/Month</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>${biweekOth}/Bi-weekly</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                        <strong>${weeklyOth}/Week</strong>
+                                    </Grid.Column>
+                                </Grid>
+                            </p>
+                        </AccordionTab>
+                    </Accordion>
+                </div>
+
+                <Divider horizontal>Terms</Divider>
+                <Grid columns={2} padded centered>
+                    <Grid.Column>
+                        <p>Term</p><Input type="text"
                             name="months"
                             id="months"
                             autoComplete="months"
@@ -318,51 +345,44 @@ const Form3 = () => {
                             value={formData.months} onChange={handleInputChange}
                         />
 
-                            </Grid.Column>
-                            <Grid.Column>
-                                <p>Rate - Defaults to 10.99%</p>
-                                <Input type="text"
-                                    name="iRate"
-                                    id="iRate"
-                                    autoComplete="iRate"
-                                    focusBorderColor="brand.400"
-                                    shadow="sm"
-                                    size="sm"
-                                    w="80px"
-                                   
-                                    rounded="md"
-                                    value={formData.iRate} onChange={handleInputChange}
-                                />
-                            </Grid.Column>
-                        </Grid>
-                        <Grid columns={2} padded>
-                            <Grid.Column>
-                                <p>Deposit</p> <Input type="text"
-                                    name="deposit"
-                                    id="deposit"
-                                    autoComplete="deposit"
-                                    focusBorderColor="brand.400"
-                                    shadow="sm"
-                                    size="sm"
-                                    w="80px"
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>Rate - Defaults to 10.99%</p>
+                        <Input type="text"
+                            name="iRate"
+                            id="iRate"
+                            autoComplete="iRate"
+                            focusBorderColor="brand.400"
+                            shadow="sm"
+                            size="sm"
+                            w="80px"
 
-                                    rounded="md"
-                                    value={formData.deposit} Change={handleInputChange}
-                                />
-                            </Grid.Column>
-                            <Grid.Column>
-                                <p>Rate: Defaults to 10.99%</p>
-                            </Grid.Column>
-                        </Grid>
-              
-                </section>
-           
+                            rounded="md"
+                            value={formData.iRate} onChange={handleInputChange}
+                        />
+                    </Grid.Column>
+                </Grid>
+                <Grid columns={2} padded>
+                    <Grid.Column>
+                        <p>Deposit</p>
+                        <Input type="text"
+                            name="deposit"
+                            id="deposit"
+                            autoComplete="deposit"
+                            focusBorderColor="brand.400"
+                            shadow="sm"
+                            size="sm"
+                            w="80px"
 
+                            rounded="md"
+                            value={formData.deposit} onChange={handleInputChange}
+                        />
+                    </Grid.Column>
+                    <Grid.Column>
 
-
-
-
-           
+                    </Grid.Column>
+                </Grid>
+            </section>
         </>
     )
 }

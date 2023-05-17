@@ -11,12 +11,6 @@ import Form3 from './form3';
 import jsPDF from 'jspdf'
 
 
-const steps = [
-  { title: 'Customer', description: 'Contact Details' },
-  { title: 'Model', description: 'Vehicle Selection' },
-  { title: 'Confirmation', description: 'Finance' },
-];
-
 export default function SeaDoo() {
 
    // ------- print pdf --------
@@ -85,11 +79,6 @@ export default function SeaDoo() {
     }
   };
 
-  const { activeStep } = useSteps({
-    index: step - 1, // Adjust the index to match the step
-    count: 3, // Total number of steps
-  });
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -117,30 +106,11 @@ export default function SeaDoo() {
       <Box borderWidth="1px"
         rounded="lg"
         shadow="1px 1px 3px rgba(0,0,0,0.3)"
-        maxWidth={800}
+        maxWidth={600}
         p={6}
         m="10px auto"
         as="form">
-        <Stepper size="lg" index={activeStep}>
-          {steps.map((step, index) => (
-            <Step key={index}>
-              <StepIndicator>
-                <StepStatus
-                  complete={<StepIcon />}
-                  incomplete={<StepNumber />}
-                  active={<StepNumber />}
-                />
-              </StepIndicator>
 
-              <Box flexShrink="0">
-                <StepTitle>{step.title}</StepTitle>
-                <StepDescription>{step.description}</StepDescription>
-              </Box>
-
-              <StepSeparator />
-            </Step>
-          ))}
-        </Stepper>
         {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : <Form3 />}
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">
@@ -167,8 +137,8 @@ export default function SeaDoo() {
             {step === 3 ? (
               <Button
                 w="7rem"
-                colorScheme="red"
-                variant="solid"
+                colorScheme="teal"
+                variant="outline"
              onClick={ModifyPdf}
               >
                 Print
@@ -179,87 +149,54 @@ export default function SeaDoo() {
       </Box>
 
       <Box w="100%" textAlign={'center'} fontWeight="normal" mb="2%"
-        borderWidth="1px"
-        rounded="lg"
-        shadow="1px 1px 3px rgba(0,0,0,0.3)"
-        maxWidth={800}
-        p={6}
-        m="10px auto"
-        as="form">
-
-        <HStack spacing={6}>
-
-          <Box w="100%" h="100%"
-            bg={useColorModeValue('white', 'gray.800')}
-            boxShadow={'2xl'}
-            rounded={'md'}
-            overflow={'hidden'}>
-            <Image
-              h={'120px'}
-              w={'full'}
-              src={
-                'https://www.sea-doo.com/content/sea-doo/en_ca/models/performance/_jcr_content/root/helperblock_2093136988.coreimg.jpeg/1683567171745/sea-my23-rxtx-23421-rgb-4096x2304.jpeg?imwidth=1024'
-              }
-              objectFit={'cover'}
-            />
-            <Flex justify={'center'} mt={-12}>
-              <Avatar
-                size={'xl'}
+          borderWidth="1px"
+          rounded="lg"
+          shadow="1px 1px 3px rgba(0,0,0,0.3)"
+          maxWidth={350}
+          p={6}
+          m="10px auto"
+          as="form">
+            <Box w="100%" h="100%"
+              bg={useColorModeValue('white', 'gray.800')}
+              boxShadow={'2xl'}
+              rounded={'md'}
+              overflow={'hidden'}>
+              <Image
+                h={'120px'}
+                w={'full'}
                 src={
-                  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
+                  'https://can-am.brp.com/content/dam/global/en/can-am-off-road/my22/photos/lifestyle/ORV-SSV-MY21-Lifestyle-Scouting-DSCF8693-RGB-6240x3512-1600x1600.jpeg'
                 }
-                alt={'Author'}
-                css={{
-                  border: '2px solid white',
-                }}
+                objectFit={'cover'}
               />
-            </Flex>
+              <Flex justify={'center'} mt={-12}>
+                <Avatar
+                  size={'xl'}
+                  src={
+                    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
+                  }
+                  alt={'Author'}
+                  css={{
+                    border: '2px solid white',
+                  }}
+                />
+              </Flex>
 
-            <Box p={6}>
-              <Stack spacing={0} align={'center'} mb={5}>
-                <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
+              <Box p={6}>
+                <Stack spacing={0} align={'center'} mb={5}>
+                  <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
 
-                </Heading>
-                <Text color={'gray.500'}>{formData.name}</Text>
-              </Stack>
+                  </Heading>
+                  <Text color={'gray.500'}>{formData.name}</Text>
+                </Stack>
 
-              <Text color={'gray.500'}>Phone: {formData.phone}</Text>
-              <Text color={'gray.500'}>Email: {formData.email}</Text>
-              <Text color={'gray.500'}>Address: {formData.address}</Text>
+                <Text color={'gray.500'}>Phone: {formData.phone}</Text>
+                <Text color={'gray.500'}>Email: {formData.email}</Text>
+                <Text color={'gray.500'}>Address: {formData.address}</Text>
+              </Box>
             </Box>
-          </Box>
-          <Box
-            w="100%"
-            height="100%"
-            bg={useColorModeValue('white', 'gray.800')}
-            boxShadow={'2xl'}
-            rounded={'md'}
-            overflow={'hidden'}>
-            <Image
-              h={'120px'}
-              w={'full'}
-              src={
-                'https://www.sea-doo.com/content/dam/global/en/sea-doo/my23/lifestyle/SEA-MY23-GTXL-18827-RGB-4096x2304.jpg'
-              }
-              objectFit={'cover'}
-            />
-            <Box p={6}>
-              <Stack spacing={0} align={'center'} mb={5}>
-                <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-
-                </Heading>
-                <Text color={'gray.500'}>  {formData.model}</Text>
-              </Stack>
-              <Text color={'gray.500'}>Stock Number: {formData.stockNum}</Text>
-              <Text color={'gray.500'}>Year: {formData.year}</Text>
-              <Text color={'gray.500'}>Trade: {formData.trade}</Text>
-              <Text color={'gray.500'}>Deposit: {formData.deposit}</Text>
-              <Text color={'gray.500'}>Labour Hours: {formData.options}</Text>
-              <Text color={'gray.500'}>Trade: {formData.trade}</Text>
             </Box>
-          </Box>
-        </HStack>
-      </Box >
+    
 
       </form>
     </>

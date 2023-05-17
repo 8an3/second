@@ -22,18 +22,7 @@ const Form1 = () => {
             setProgress(progress + 33.33);
         }
     };
-
-    const steps = [
-        { title: 'Customer', description: 'Contact Details' },
-        { title: 'Model', description: 'Vehicle Selection' },
-        { title: 'Confirmation', description: 'Finance' },
-    ];
-
-    const { activeStep } = useSteps({
-        index: step - 1, // Adjust the index to match the step
-        count: steps.length,
-    });
-
+    
     const [formData, setFormData] = useRecoilState(formDataState);
 
     const handleInputChange = (e) => {

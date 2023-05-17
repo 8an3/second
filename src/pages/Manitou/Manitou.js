@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, ButtonGroup, Button, Heading, HStack, Flex, Image, Stack, Text, Avatar,
-  Step, StepDescription, StepIcon, StepIndicator, StepNumber, StepSeparator, StepStatus, StepTitle, Stepper, useSteps, useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, ButtonGroup, Button, Heading, HStack, Flex, Image, Stack, Text, Avatar, useColorModeValue,} from '@chakra-ui/react';
 import { useRecoilState } from 'recoil';
 import { formDataState, fetchedDataState } from '../../components/recoilAtoms';
 import Form1 from './form1';
@@ -32,6 +30,178 @@ export default function Manitou() {
     doc.text(134, 53, `${formData.phone}`); // Phone field
     doc.text(134, 60, `${formData.email}`); // Email field
 
+    // optional equip
+    if (formData.battery > 0) {
+      doc.text(30, 135, `Battery: ${formData.battery}`);
+    }
+    if (formData.propeller > 0) {
+      doc.text(30, 140, `Propeller: ${formData.propeller}`);
+    }
+    if (formData.gps > 0) {
+      doc.text(30, 145, `GPS: ${formData.gps}`);
+    }
+    if (formData.saltwaterPkg > 0) {
+      doc.text(30, 150, `Saltwater Package: ${formData.saltwaterPkg}`);
+    }
+    
+    //cr 
+    if (formData.biminiCr > 0) {
+    doc.text(82, 134, `Bimini Cr: ${formData.biminiCr}`);
+    }
+    if (formData.wallColCr !== '') {
+      doc.text(82, 138, `Wall Col Cr: ${formData.wallColCr}`);
+    }
+    if (formData.colorCruise !== '') {
+      doc.text(82, 142, `Color Cruise: ${formData.colorCruise}`);
+    }
+
+    // explore
+    if (formData.sigPkgExplore > 0) {
+      doc.text(82, 134, `Sig Pkg Explore: ${formData.sigPkgExplore}`);
+    }
+    if (formData.selPkgExplore > 0) {
+      doc.text(82, 138, `Sel Pkg Explore: ${formData.selPkgExplore}`);
+    }
+    if (formData.tubesExplore > 0) {
+      doc.text(82, 142, `Tubes Explore: ${formData.tubesExplore}`);
+    }
+    if (formData.colorExplore !== '') {
+      doc.text(82, 146, `Color Explore: ${formData.colorExplore}`);
+    }
+    if (formData.wallColorExplore !== '') {
+      doc.text(82, 150, `Wall Color Explore: ${formData.wallColorExplore}`);
+    }
+    
+    // lx
+    if (formData.sigPkgLX > 0) {
+      doc.text(82, 134, `Sig Pkg LX: ${formData.sigPkgLX}`);
+    }
+    if (formData.selRFXPkgLX > 0) {
+      doc.text(82, 138, `Sel RFX Pkg LX: ${formData.selRFXPkgLX}`);
+    }
+    if (formData.selRFXWPkgLX > 0) {
+      doc.text(82, 142, `Sel RFXW Pkg LX: ${formData.selRFXWPkgLX}`);
+    }
+    if (formData.blkPkgLX > 0) {
+      doc.text(82, 146, `Blk Pkg LX: ${formData.blkPkgLX}`);
+    }
+    if (formData.colMatchedFiberLX > 0) {
+      doc.text(82, 150, `Col Matched Fiber LX: ${formData.colMatchedFiberLX}`);
+    }
+    if (formData.powderCoatingLX > 0) {
+      doc.text(82, 154, `Powder Coating LX: ${formData.powderCoatingLX}`);
+    }
+    if (formData.blackAnoLX > 0) {
+      doc.text(82, 158, `Black Ano LX: ${formData.blackAnoLX}`);
+    }
+    if (formData.premiumJLLX > 0) {
+      doc.text(82, 162, `Premium JL LX: ${formData.premiumJLLX}`);
+    }
+    if (formData.JLTowerLX > 0) {
+      doc.text(82, 166, `JL Tower LX: ${formData.JLTowerLX}`);
+    }
+    if (formData.wallColorLX !== '') {
+      doc.text(82, 170, `Wall Color LX: ${formData.wallColorLX}`);
+    }
+    if (formData.wallGraphicLX !== '') {
+      doc.text(82, 174, `Wall Graphic LX: ${formData.wallGraphicLX}`);
+    }
+    if (formData.wallGraphicAccentLX !== '') {
+      doc.text(82, 178, `Wall Graphic Accent LX: ${formData.wallGraphicAccentLX}`);
+    }
+    if (formData.fibreGlassPodsLX !== '') {
+      doc.text(82, 182, `Fibre Glass Pods LX: ${formData.fibreGlassPodsLX}`);
+    }
+    if (formData.powderCoatLX !== '') {
+      doc.text(82, 186, `Powder Coat LX: ${formData.powderCoatLX}`);
+    }
+    if (formData.furnitureLX !== '') {
+      doc.text(82, 190, `Furniture LX: ${formData.furnitureLX}`);
+    }
+    if (formData.flooringLX !== '') {
+      doc.text(82, 194, `Flooring LX: ${formData.flooringLX}`);
+    }
+    // xt if 
+    if (formData.blackoutPkgXT !== 0) {
+  doc.text(82, 134, `Blackout Package XT: ${formData.blackoutPkgXT}`);
+}
+if (formData.signaturePkgXT !== 0) {
+  doc.text(82, 138, `Signature Package XT: ${formData.signaturePkgXT}`);
+}
+if (formData.premAudioPkg !== 0) {
+  doc.text(82, 142, `Premium Audio Package: ${formData.premAudioPkg}`);
+}
+if (formData.XTPremiumcolor !== 0) {
+  doc.text(82, 146, `XT Premium Color: ${formData.XTPremiumcolor}`);
+}
+if (formData.JLPremiumxt !== 0) {
+  doc.text(82, 150, `JL Premium XT: ${formData.JLPremiumxt}`);
+}
+if (formData.JlPremiumAudio !== 0) {
+  doc.text(82, 154, `JL Premium Audio: ${formData.JlPremiumAudio}`);
+}
+if (formData.fibreglassFrontXT !== '') {
+  doc.text(82, 158, `Fibreglass Front XT: ${formData.fibreglassFrontXT}`);
+}
+if (formData.WallGraphicXT !== '') {
+  doc.text(82, 162, `Wall Graphic XT: ${formData.WallGraphicXT}`);
+}
+if (formData.powderCoatXT !== '') {
+  doc.text(82, 166, `Powder Coat XT: ${formData.powderCoatXT}`);
+}
+if (formData.furnitureXT !== '') {
+  doc.text(82, 170, `Furniture XT: ${formData.furnitureXT}`);
+}
+    // acc
+    if (formData.baseInst > 0) {
+      doc.text(152, 130, `Base Installation: ${formData.baseInst}`);
+    }
+    if (formData.cupHolder > 0) {
+      doc.text(152, 134, `Cup Holder: ${formData.cupHolder}`);
+    }
+    if (formData.multiHolder > 0) {
+      doc.text(152, 138, `Multi Holder: ${formData.multiHolder}`);
+    }
+    if (formData.cooler13 > 0) {
+      doc.text(152, 142, `Cooler 13: ${formData.cooler13}`);
+    }
+    if (formData.stemwareHolder > 0) {
+      doc.text(152, 146, `Stemware Holder: ${formData.stemwareHolder}`);
+    }
+    if (formData.coolerExtension > 0) {
+      doc.text(152, 150, `Cooler Extension: ${formData.coolerExtension}`);
+    }
+    if (formData.coolerBag14 > 0) {
+      doc.text(152, 154, `Cooler Bag 14: ${formData.coolerBag14}`);
+    }
+    if (formData.singleHolder > 0) {
+      doc.text(152, 158, `Single Holder: ${formData.singleHolder}`);
+    }
+    if (formData.cargoBox10 > 0) {
+      doc.text(152, 162, `Cargo Box 10: ${formData.cargoBox10}`);
+    }
+    if (formData.cargoBox20 > 0) {
+      doc.text(152, 166, `Cargo Box 20: ${formData.cargoBox20}`);
+    }
+    if (formData.cargoBox30 > 0) {
+      doc.text(152, 170, `Cargo Box 30: ${formData.cargoBox30}`);
+    }
+    if (formData.rodHolder > 0) {
+      doc.text(152, 174, `Rod Holder: ${formData.rodHolder}`);
+    }
+    if (formData.batteryCharger > 0) {
+      doc.text(152, 178, `Battery Charger: ${formData.batteryCharger}`);
+    }
+    if (formData.bowFillerBench > 0) {
+      doc.text(152, 182, `Bow Filler Bench: ${formData.bowFillerBench}`);
+    }
+    if (formData.skiTowMirror > 0) {
+      doc.text(152, 186, `Ski Tow Mirror: ${formData.skiTowMirror}`);
+    }
+    if (formData.portAquaLounge > 0) {
+      doc.text(152, 190, `Port Aqua Lounge: ${formData.portAquaLounge}`);
+    }
+    
 
     doc.text(39, 102, `${formData.stockNum}`); // StockNum field
     // motor
@@ -65,8 +235,8 @@ export default function Manitou() {
     doc.text(185, 188, `${fetchedData.engineRigging}`);
 
     // model options 
-    // optional equip
-    // accessories
+
+    // accessories 
     // model total 
     // fees total 
     // pre tax 
@@ -145,7 +315,7 @@ export default function Manitou() {
                 onClick={handleBack}
                 isDisabled={step === 1}
                 colorScheme="teal"
-                variant="solid"
+                variant="outline"
                 w="7rem"
                 mr="5%">
                 Back
@@ -163,8 +333,8 @@ export default function Manitou() {
             {step === 4 ? (
               <Button
                 w="7rem"
-                colorScheme="red"
-                variant="solid"
+                colorScheme="teal"
+                variant="outline"
                 onClick={ModifyPdf}
               >
                 Print

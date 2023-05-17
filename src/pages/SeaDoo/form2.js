@@ -43,9 +43,10 @@ const Form2 = () => {
                             className="px-4 py-3 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
                             list="SeaListOptions"
                             id="model"
+                             maxWidth={555}
                             name="model"
                             placeholder="Type to search..."
-                            style={{ width: "600px" }}
+                       
                             value={formData.model} onChange={handleInputChange}
                         />
                         <SeaListOptions />
@@ -276,7 +277,7 @@ const Form2 = () => {
                                 color: 'gray.50',
                             }}
                             mt="2%">
-                            Licensing
+                            Licensing and Tire Tax
                         </FormLabel>
                         <Select placeholder='Select option'
                             name='licensing'

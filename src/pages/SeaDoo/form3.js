@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Input, useSteps, Flex, FormControl, GridItem, FormLabel, } from '@chakra-ui/react';
+import {  Input } from '@chakra-ui/react';
 import { useRecoilState } from 'recoil';
 import { formDataState, fetchedDataState } from '../../components/recoilAtoms';
-import { Table, Select } from 'semantic-ui-react'
-
+import {  Divider, Grid, Header } from 'semantic-ui-react'
+import { Accordion, AccordionTab } from 'primereact/accordion';
 
 
 const Form3 = () => {
@@ -22,26 +22,13 @@ const Form3 = () => {
         setProgress(progress - 33.33);
     };
 
-    const { activeStep } = useSteps({
-        index: step - 1, // Adjust the index to match the step
-        count: 3, // Total number of steps
-    });
-
-
-    const handleInputChange = (e) => {
+      const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
             [name]: value,
         }));
     };
-
-    /*
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        dispatch(updateFormData({ ...formData, [name]: value }));
-    };
-    */
 
     // Assuming the user-selected tax rate and number of months are stored in the formData state
     const total =
@@ -52,296 +39,355 @@ const Form3 = () => {
         parseInt(fetchedData.msrp) +
         parseInt(fetchedData.pdi) +
         parseInt(fetchedData.freight) +
-        parseInt(fetchedData.commodity) ;
+        parseInt(fetchedData.commodity);
 
-        const onTax = (total * 1.13).toFixed(2);
-        const qcTax = (total * 1.15).toFixed(2);
-        const otherTax = (total * 1.15).toFixed(2);
-        const native = total
-    
-        const loanAmountON = parseFloat(onTax) || 0; // Assuming loan amount is stored in formData as loanAmount
-        const loanAmountQC = parseFloat(qcTax) || 0; // Assuming loan amount is stored in formData as loanAmount
-        const loanAmountNAT = parseFloat(native) || 0; // Assuming loan amount is stored in formData as loanAmount
-        const loanAmountOther = parseFloat(otherTax) || 0; // Assuming loan amount is stored in formData as loanAmount
-    
-        const interestRate = parseFloat(formData.iRate) || 0.1099; // Assuming interest rate is stored in formData as interestRate
-        const numberOfMonths = parseInt(formData.months) || 60;
-        const downPayment = parseFloat(formData.deposit) || 0; // Assuming down payment is stored in formData as downPayment
-        const monthlyInterestRate = interestRate / 12;
-    
-        const loanPrincipalON = loanAmountON - downPayment;
-        const loanPrincipalQC = loanAmountQC - downPayment;
-        const loanPrincipalNAT = loanAmountNAT - downPayment;
-        const loanPrincipalOth = loanAmountOther - downPayment;
-    
-        const on60 = parseFloat(
-            (monthlyInterestRate * loanPrincipalON / (1 - Math.pow(1 + monthlyInterestRate, -numberOfMonths))).toFixed(2)
-        );
-        const on72 = parseFloat(
-            (monthlyInterestRate * loanPrincipalON / (1 - Math.pow(1 + monthlyInterestRate, -72))).toFixed(2)
-        );
-        const on84 = parseFloat(
-            (monthlyInterestRate * loanPrincipalON / (1 - Math.pow(1 + monthlyInterestRate, -84))).toFixed(2)
-        );
-        const qc60 = parseFloat(
-            (monthlyInterestRate * loanPrincipalQC / (1 - Math.pow(1 + monthlyInterestRate, -numberOfMonths))).toFixed(2)
-        );
-        const qc72 = parseFloat(
-            (monthlyInterestRate * loanPrincipalQC / (1 - Math.pow(1 + monthlyInterestRate, -72))).toFixed(2)
-        );
-        const qc84 = parseFloat(
-            (monthlyInterestRate * loanPrincipalQC / (1 - Math.pow(1 + monthlyInterestRate, -84))).toFixed(2)
-        );
-        const nat60 = parseFloat(
-            (monthlyInterestRate * loanPrincipalNAT / (1 - Math.pow(1 + monthlyInterestRate, -numberOfMonths))).toFixed(2)
-        );
-        const nat72 = parseFloat(
-            (monthlyInterestRate * loanPrincipalNAT / (1 - Math.pow(1 + monthlyInterestRate, -72))).toFixed(2)
-        );
-        const nat84 = parseFloat(
-            (monthlyInterestRate * loanPrincipalNAT / (1 - Math.pow(1 + monthlyInterestRate, -84))).toFixed(2)
-        );
-        const oth60 = parseFloat(
-            (monthlyInterestRate * loanPrincipalOth / (1 - Math.pow(1 + monthlyInterestRate, -numberOfMonths))).toFixed(2)
-        );
-        const oth72 = parseFloat(
-            (monthlyInterestRate * loanPrincipalOth / (1 - Math.pow(1 + monthlyInterestRate, -72))).toFixed(2)
-        );
-        const oth84 = parseFloat(
-            (monthlyInterestRate * loanPrincipalOth / (1 - Math.pow(1 + monthlyInterestRate, -84))).toFixed(2)
-        );
+    const onTax = (total * 1.13).toFixed(2);
+    const qcTax = (total * 1.15).toFixed(2);
+    const otherTax = (total * formData.taxOther).toFixed(2);
+    const native = total
+
+    const loanAmountON = parseFloat(onTax) || 0; // Assuming loan amount is stored in formData as loanAmount
+    const loanAmountQC = parseFloat(qcTax) || 0; // Assuming loan amount is stored in formData as loanAmount
+    const loanAmountNAT = parseFloat(native) || 0; // Assuming loan amount is stored in formData as loanAmount
+    const loanAmountOther = parseFloat(otherTax) || 0; // Assuming loan amount is stored in formData as loanAmount
+
+    const interestRate = parseFloat(formData.iRate) || 0.1099; // Assuming interest rate is stored in formData as interestRate
+    const numberOfMonths = parseInt(formData.months) || 60;
+    const downPayment = parseFloat(formData.deposit) || 0; // Assuming down payment is stored in formData as downPayment
+    const monthlyInterestRate = interestRate / 12;
+
+    const loanPrincipalON = loanAmountON - downPayment;
+    const loanPrincipalQC = loanAmountQC - downPayment;
+    const loanPrincipalNAT = loanAmountNAT - downPayment;
+    const loanPrincipalOth = loanAmountOther - downPayment;
+
+    const on60 = parseFloat(
+        (monthlyInterestRate * loanPrincipalON / (1 - Math.pow(1 + monthlyInterestRate, -numberOfMonths))).toFixed(2)
+    );
+    const on72 = parseFloat(
+        (monthlyInterestRate * loanPrincipalON / (1 - Math.pow(1 + monthlyInterestRate, -72))).toFixed(2)
+    );
+    const on84 = parseFloat(
+        (monthlyInterestRate * loanPrincipalON / (1 - Math.pow(1 + monthlyInterestRate, -84))).toFixed(2)
+    );
+    const qc60 = parseFloat(
+        (monthlyInterestRate * loanPrincipalQC / (1 - Math.pow(1 + monthlyInterestRate, -numberOfMonths))).toFixed(2)
+    );
+    const qc72 = parseFloat(
+        (monthlyInterestRate * loanPrincipalQC / (1 - Math.pow(1 + monthlyInterestRate, -72))).toFixed(2)
+    );
+    const qc84 = parseFloat(
+        (monthlyInterestRate * loanPrincipalQC / (1 - Math.pow(1 + monthlyInterestRate, -84))).toFixed(2)
+    );
+    const nat60 = parseFloat(
+        (monthlyInterestRate * loanPrincipalNAT / (1 - Math.pow(1 + monthlyInterestRate, -numberOfMonths))).toFixed(2)
+    );
+    const nat72 = parseFloat(
+        (monthlyInterestRate * loanPrincipalNAT / (1 - Math.pow(1 + monthlyInterestRate, -72))).toFixed(2)
+    );
+    const nat84 = parseFloat(
+        (monthlyInterestRate * loanPrincipalNAT / (1 - Math.pow(1 + monthlyInterestRate, -84))).toFixed(2)
+    );
+    const oth60 = parseFloat(
+        (monthlyInterestRate * loanPrincipalOth / (1 - Math.pow(1 + monthlyInterestRate, -numberOfMonths))).toFixed(2)
+    );
+    const oth72 = parseFloat(
+        (monthlyInterestRate * loanPrincipalOth / (1 - Math.pow(1 + monthlyInterestRate, -72))).toFixed(2)
+    );
+    const oth84 = parseFloat(
+        (monthlyInterestRate * loanPrincipalOth / (1 - Math.pow(1 + monthlyInterestRate, -84))).toFixed(2)
+    );
 
     const biweekly = parseFloat((on60 * 12 / 26).toFixed(2))
     const weekly = parseFloat((on60 * 12 / 52).toFixed(2))
     const biweeklyqc = parseFloat((qc60 * 12 / 26).toFixed(2))
     const weeklyqc = parseFloat((qc60 * 12 / 52).toFixed(2))
+    const biweeklNat = parseFloat((nat60 * 12 / 26).toFixed(2))
+    const weeklylNat = parseFloat((nat60 * 12 / 52).toFixed(2))
+    const biweekOth = parseFloat((oth60 * 12 / 26).toFixed(2))
+    const weeklyOth = parseFloat((oth60 * 12 / 52).toFixed(2))
 
-    console.log(formData.otherTax);
-    console.log(onTax);
-    console.log(on60);
     return (
         <>
+            <section id="priceSection" className="">
+                <h3 className="price-header" tabIndex="0">Overview</h3>
 
-            <Table size='large' celled inverted selectable >
-                <Table.Header>
-                    <Table.Row>
-                        <Table.HeaderCell>Finance</Table.HeaderCell>
-                        <Table.HeaderCell></Table.HeaderCell>
-                        <Table.HeaderCell></Table.HeaderCell>
-                        <Table.HeaderCell></Table.HeaderCell>
-                        <Table.HeaderCell></Table.HeaderCell>
-                    </Table.Row>
-                </Table.Header>
-                <Table.Body>
-                    <Table.Row>
-                        <Table.Cell>{formData.model}</Table.Cell>
-                        <Table.Cell>{fetchedData.msrp}</Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>PDI</Table.Cell>
-                        <Table.Cell>
-                            <Input type="text"
-                                name="pdi"
-                                id="pdi"
-                                autoComplete="pdi"
-                                focusBorderColor="brand.400"
-                                shadow="sm"
-                                size="sm"
-                                w="full"
-                                defaultValue={fetchedData.pdi}
-                                rounded="md"
-                            />
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>Freight</Table.Cell>
-                        <Table.Cell>
-                            <Input type="text"
-                                name="freight"
-                                id="freight"
-                                autoComplete="freight"
-                                focusBorderColor="brand.400"
-                                shadow="sm"
-                                size="sm"
-                                w="full"
-                                defaultValue={fetchedData.freight}
-                            />
-                        </Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>Commodity</Table.Cell>
-                        <Table.Cell>
-                            <Input type="text"
-                                name="commodity"
-                                id="commodity"
-                                autoComplete="commodity"
-                                focusBorderColor="brand.400"
-                                shadow="sm"
-                                size="sm"
-                                w="full"
-                                defaultValue={fetchedData.commodity}
-                                rounded="md"
-                            />
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>Total Pre-Tax</Table.Cell>
-                        <Table.Cell>{total}</Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>Trailer</Table.Cell>
-                        <Table.Cell>{formData.trailer}</Table.Cell>
-                        <Table.Cell>Licensing</Table.Cell>
-                        <Table.Cell>{formData.licensing}</Table.Cell>
-                        <Table.Cell></Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>w/ ON sales tax</Table.Cell>
-                        <Table.Cell>{onTax}</Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>w/ QC sales tax</Table.Cell>
-                        <Table.Cell>{qcTax}</Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                    <Table.Cell>Deposit:  default $500</Table.Cell>
-                            <Table.Cell>
-                            <Input type="text"
-                               name="deposit"
-                                id="deposit"
-                                autoComplete="deposit"
-                                focusBorderColor="brand.400"
-                                shadow="sm"
-                                size="sm"
-                                w="full"
-                              
-                                rounded="md"
-                                value={formData.deposit} onChange={handleInputChange}
-                            /></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>
+                <Divider horizontal>Model</Divider>
+                <section tabIndex="0" slot="" className="section price-overview">
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
 
-                        </Table.Cell>
-                        <Table.Cell>
+                        </label>
+                        <p>Model</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        {fetchedData.model1}
+                    </p>
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
 
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>60 Months</Table.Cell>
-                        <Table.Cell>72 Months</Table.Cell>
-                        <Table.Cell>84 Months</Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>Months: <Input type="text"
+                        </label>
+                        <p>Color</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        {fetchedData.color}
+                    </p>
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
+
+                        </label>
+                        <p>Model Code</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        {fetchedData.modelCode}
+                    </p>
+                    
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
+
+                        </label>
+                        <p>Year</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        {formData.year}
+                    </p>
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
+
+                        </label>
+                        <p>Stock Number</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        {formData.stockNum}
+                    </p>
+
+                </section>
+                <section tabIndex="0" slot="" className="section price-overview">
+
+                </section>
+
+                <Divider horizontal>Price</Divider>
+
+                <section tabIndex="0" slot="" className="section price-taxes">
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
+
+                        </label>
+                        <p>MSRP</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        ${fetchedData.msrp}
+                    </p>
+                    <span tabIndex="0" className="price-label  divider-line ">
+                        <label className=" hidden undefined ">
+                        </label>
+                        <p>Freight</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value  divider-line ">
+                        ${fetchedData.freight}
+                    </p>
+                    <span tabIndex="0" className="price-label  divider-line ">
+                        <label className=" hidden undefined ">
+                        </label>
+                        <p>PDI</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value  divider-line ">
+                        ${fetchedData.pdi}
+                    </p>
+
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
+                        </label>
+                        <p>Commodity</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        ${fetchedData.commodity}
+                    </p>
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
+                        </label>
+                        <p>Accessories</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        ${formData.accessories}
+                    </p>
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
+                        </label>
+                        <p>Labour</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        ${formData.labour}
+                    </p>
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
+                        </label>
+                        <p>Licensing &amp; Tire Tax</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        ${formData.licensing}
+                    </p>
+    
+                </section>
+                <Divider horizontal>Accessories</Divider>
+                <section tabIndex="0" slot="" className="section price-taxes">
+                    <span tabIndex="0" className="price-label   ">
+                        <label className=" hidden undefined ">
+
+                        </label>
+                        <p>Options</p>
+                    </span>
+                    <p tabIndex="0" className="bottom-aligned price-value   ">
+                        {formData.options}
+                    </p>
+                </section>
+                <Divider />
+                <section tabIndex="0" slot="" className="section price-summary">
+                    <span tabIndex="0" className="price-label   divider-line ">
+                        <h3 size="3.5em"><strong>Total Selling Price</strong></h3>
+                    </span>
+                    <h3 className="bottom-aligned  divider-line "><strong>${onTax}</strong> </h3>
+                </section>
+            </section>
+            <section>
+
+                <h1></h1>
+                <h1></h1>
+                <Header as='h2' >Finance</Header>
+
+                <Divider header="Standard Contact Options" horizontal>Standard Contact Options</Divider>
+                <div className="card">
+                    <Accordion activeIndex={0}>
+                        <AccordionTab header="Ontario">
+                            <p className="m-0">
+                                <Grid columns={3} padded>
+                                    <Grid.Column>
+                                    <strong>  ${on60}/Month</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>   ${biweekly}/Bi-weekly</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>       ${weekly}/Week</strong>
+                                    </Grid.Column>
+                                </Grid>
+                            </p>
+                        </AccordionTab>
+                        <AccordionTab header="Quebec">
+                            <p className="m-0">
+                                <Grid columns={3} padded>
+                                    <Grid.Column>
+                                    <strong>   ${qc60}/Month</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>  ${biweeklyqc}/Bi-weekly</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>  ${weeklyqc}/Week</strong>
+                                    </Grid.Column>
+                                </Grid>
+                            </p>
+                        </AccordionTab>
+                        <AccordionTab header="No Taxes Collected">
+                            <p className="m-0">
+                                <Grid columns={3} padded >
+                                    <Grid.Column>
+                                    <strong>        ${nat60}/Month</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>   ${biweeklNat}/Bi-weekly</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>       ${weeklylNat}/Week</strong>
+                                    </Grid.Column>
+                                </Grid>
+                            </p>
+                        </AccordionTab>
+                        <AccordionTab header="Other Provinces">
+                            <p className="m-0">
+                                <Grid columns={4} padded>
+                                    <Grid.Column>
+                                        Tax % default 13%<Input type="text"
+                                            name="taxOther"
+                                            id="taxOther"
+                                            autoComplete="taxOther"
+                                            focusBorderColor="brand.400"
+                                            shadow="sm"
+                                            size="sm"
+                                            w="46px"
+                                            defaultValue={formData.taxOther}
+                                            rounded="md"
+                                            value={formData.taxOther} onChange={handleInputChange}
+                                        /></Grid.Column>
+                                    <Grid.Column>
+                                    <strong>         ${oth60}/Month</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>         ${biweekOth}/Bi-weekly</strong>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                    <strong>      ${weeklyOth}/Week</strong>
+                                    </Grid.Column>
+                                </Grid>
+                            </p>
+                        </AccordionTab>
+                    </Accordion>
+                </div>
+
+                <Divider horizontal>Terms</Divider>
+                <Grid columns={2} padded centered>
+                    <Grid.Column>
+                        <p>Term</p><Input type="text"
                             name="months"
                             id="months"
                             autoComplete="months"
                             focusBorderColor="brand.400"
                             shadow="sm"
                             size="sm"
-                            w="full"
-
+                            w="45px"
                             rounded="md"
                             value={formData.months} onChange={handleInputChange}
                         />
-                        </Table.Cell>
-                        <Table.Cell>ON</Table.Cell>
-                        <Table.Cell>{on60}</Table.Cell>
-                        <Table.Cell>{on72}</Table.Cell>
-                        <Table.Cell>{on84}</Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>biweekly</Table.Cell>
-                        <Table.Cell>{biweekly}</Table.Cell>
-                        <Table.Cell>weekly</Table.Cell>
-                        <Table.Cell>{weekly}</Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>Rate:  default 0.1099<Input type="text"
+
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>Rate - Defaults to 10.99%</p>
+                        <Input type="text"
                             name="iRate"
                             id="iRate"
                             autoComplete="iRate"
                             focusBorderColor="brand.400"
                             shadow="sm"
                             size="sm"
-                            w="full"
-                            defaultValue="60"
+                            w="80px"
+
                             rounded="md"
                             value={formData.iRate} onChange={handleInputChange}
                         />
-                        </Table.Cell>
-                        <Table.Cell>QC</Table.Cell>
-                        <Table.Cell>{qc60}</Table.Cell>
-                        <Table.Cell>{qc72}</Table.Cell>
-                        <Table.Cell>{qc84}</Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>biweekly</Table.Cell>
-                        <Table.Cell>{biweeklyqc}</Table.Cell>
-                        <Table.Cell>weekly</Table.Cell>
-                        <Table.Cell>{weeklyqc}</Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>Native</Table.Cell>
-                        <Table.Cell>{nat60}</Table.Cell>
-                        <Table.Cell>{nat84}</Table.Cell>
-                        <Table.Cell>{nat72}</Table.Cell>
-                    </Table.Row>
-                    <Table.Row>
-                        <Table.Cell>Tax % default 0.12%<Input type="text"
-                            name="taxOther"
-                            id="taxOther"
-                            autoComplete="taxOther"
+                    </Grid.Column>
+                </Grid>
+                <Grid columns={2} padded>
+                    <Grid.Column>
+                        <p>Deposit</p>
+                        <Input type="text"
+                            name="deposit"
+                            id="deposit"
+                            autoComplete="deposit"
                             focusBorderColor="brand.400"
                             shadow="sm"
                             size="sm"
-                            w="full"
-                            defaultValue="0.13"
+                            w="80px"
+
                             rounded="md"
-                            value={formData.otherTax} onChange={handleInputChange}
+                            value={formData.deposit} onChange={handleInputChange}
                         />
+                    </Grid.Column>
+                    <Grid.Column>
 
-                        </Table.Cell>
-                       <Table.Cell>Other Prov.</Table.Cell>
-                        <Table.Cell>{oth60}</Table.Cell>
-                        <Table.Cell>{oth84}</Table.Cell>
-                        <Table.Cell>{oth72}</Table.Cell>
-                    </Table.Row>
+                    </Grid.Column>
+                </Grid>
 
-                </Table.Body>
-                <Table.Footer>
-                    <Table.Row>
-                        <Table.HeaderCell colSpan='5'>
-                        </Table.HeaderCell>
-                    </Table.Row>
-                </Table.Footer>
-            </Table>
+            </section>
         </>
     )
 }

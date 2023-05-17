@@ -234,7 +234,7 @@ const Form2 = () => {
                             focusBorderColor="brand.400"
                             shadow="sm"
                             size="sm"
-                        fluid
+                        
                         maxWidth={555}
                             rounded="md"
                             value={formData.options} onChange={handleInputChange}

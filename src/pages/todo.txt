@@ -1,16 +1,4 @@
-XT options	
-signature pkg	17658
-xt blackout pkg	516
-prem audio pkg	1505
-flooring snap in marine mat	
-23	3338
-25	3498
-27	3658
-xt prem color	1920
-blackout pkg	516
-saltwater pkg	596
-speaker upgrade jl tower speakers signature pkg only	3338
-spealer upgade jl ultra prem base package only	1505
+
 	
 engine pre rig price 	
 must be add to all outbaords	
@@ -21,12 +9,21 @@ color matched FG
 rfx/srs	12531
 rfxw/srw	14007
 
-accessories
-barrery charger	545
-bow filler bench	1011
-port aqua lounger	342
-ski tow mirror	516
-
 dream list
 dashboard
 hit up the website to see if its in stock when you put it in
+
+
+XT options	
+
+flooring snap in marine mat	
+23	3338
+25	3498
+27	3658
+
+
+
+
+speaker upgrade jl tower speakers signature pkg only	3338
+spealer upgade jl ultra prem base package only	1505
+

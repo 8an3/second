@@ -73,6 +73,17 @@ export const formDataState = atom({
     furnitureLX: '',
     flooringLX: '',
 
+    blackoutPkgXT:0,
+    signaturePkgXT:0,
+    premAudioPkg:0,
+    XTPremiumcolor:0,
+    JLPremiumxt:0,
+    JlPremiumAudio:0,
+    fibreglassFrontXT:'',
+    WallGraphicXT:'',
+    powderCoatXT:'',
+    furnitureXT:'',
+
     battery: 0,
     propeller: 0,
     gps: 0,
@@ -90,17 +101,12 @@ export const formDataState = atom({
     cargoBox20: 0,
     cargoBox30: 0,
     rodHolder: 0,
-
-
-
-
-
-
-
-
+    batteryCharger:0,
+    bowFillerBench:0,
+    skiTowMirror:0,
+    portAquaLounger:0,
   }
 });
-
 
 
 // Export other atoms as needed
