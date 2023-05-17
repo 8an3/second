@@ -1,7 +1,7 @@
 {
-  "name": "quote",
-  "version": "0.1.0",
   "homepage": "https://8an3.github.io/",
+  "name": "quote",
+  "version": "0.1.0",  
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
