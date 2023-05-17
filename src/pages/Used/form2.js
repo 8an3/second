@@ -23,19 +23,9 @@ const Form2 = () => {
     return (
         <>
             <Box>
-                <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
-                    Model Information
-                </Heading>
+                <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">  Model Information </Heading>
                 <FormControl as={GridItem} colSpan={[6, 3]}>
-                    <FormLabel
-                        htmlFor="model"
-                        fontSize="sm"
-                        fontWeight="md"
-                        color="gray.700"
-                        _dark={{
-                            color: 'gray.50',
-                        }}>
-                        Select Model
+                    <FormLabel  htmlFor="model"  fontSize="sm"  fontWeight="md" color="gray.700" _dark={{  color: 'gray.50', }}>  Select Model
                     </FormLabel>
                     <div>
                         <Input

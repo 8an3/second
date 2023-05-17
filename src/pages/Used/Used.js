@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Box, ButtonGroup, Button, Heading, HStack, Flex, Image, Stack, Text, Input, InputGroup, Avatar, Textarea,
-  Step, StepDescription, StepIcon, StepIndicator, StepNumber, StepSeparator, StepStatus, StepTitle, Stepper, useSteps, useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, ButtonGroup, Button, Heading, Flex, Image, Stack, Text,  Avatar, useColorModeValue } from '@chakra-ui/react';
 import { useRecoilState } from 'recoil';
 import { formDataState, fetchedDataState } from '../../components/recoilAtoms';
 import Form1 from './form1';
@@ -10,12 +7,6 @@ import Form2 from './form2';
 import Form3 from './form3';
 import jsPDF from 'jspdf'
 
-
-const steps = [
-  { title: 'Customer', description: 'Contact Details' },
-  { title: 'Model', description: 'Vehicle Selection' },
-  { title: 'Confirmation', description: 'Finance' },
-];
 
 export default function Used() {
 
